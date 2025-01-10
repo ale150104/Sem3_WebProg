@@ -1,0 +1,79 @@
+img{
+    height: 100%;
+}
+#container{
+width: 60%;
+margin-left: 20%;
+padding: 10px;
+}
+
+
+.GameContainer{
+    box-shadow: 2px 4px rgba(204, 194, 194, 0.473);
+    border: 1px solid rgb(204, 194, 194);
+    border-radius: 10px;
+    min-height: 50px;
+
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    max-height: 75px;
+
+    text-align: center;
+
+}
+
+.team1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+}
+
+.team2{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+}
+
+.dateAndTime{
+    font-size: small;
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.result{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+}
+
+.gameLocation{
+    font-size: small;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+}
+
+
+
+.gameDetails{
+    
+}
+
+.gameDetails hr {
+    width: 80%;
+
+}
