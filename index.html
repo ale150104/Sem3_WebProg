@@ -4,19 +4,36 @@
 <head>
     <title>Schalke 04</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <style>
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        a {
+            color: #fff;
+        }
+        .slideshow {
+            margin-left:40%;
+        }
         li {
             display: inline;
+            color: #fff;
         }
 
         nav {
             background-color: #004b9c;
+            height: 1.5rem;
+            align-content: center;
+
+        }
+
+        footer {
+            background-color: #004b9c;
+            align-content: end;
         }
     </style>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide">
 
-    </script>
 </head>
 
 <body>
@@ -28,26 +45,36 @@
         <li><a href="#teams">Teams</a></li>
     </nav>
     <main>
-        <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                    <li class="glide__slide"><img src="schalke1.jpeg"></li>
-                    <li class="glide__slide"><img src="schalke2.jpeg"></li>
-                    <li class="glide__slide"><img src="schalke3.jpeg"></li>
-                </ul>
-            </div>
+        <div class="slideshow-container">
+            <div class="slideshow"><img width="100%" height="auto" src="schalke1.jpeg"></div>
+            <div class="slideshow"><img width="100%" height="auto" src="schalke2.jpeg"></div>
+            <div class="slideshow"><img width="100%" height="auto" src="schalke3.jpeg"></div>
         </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slideshow");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 8000);
 
+            }
+        </script>
     </main>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-
-    <script>
-        new Glide('.glide').mount()
-    </script>
 
     <footer>
-        <li>AGB</li>
-        <li>Impressum</li>
+        <div>
+            <li>AGB</li>
+            <li>Impressum</li>
+        </div>
     </footer>
 </body>
 
