@@ -1,0 +1,104 @@
+img{
+    width: 600px;
+    height: 300px;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+h2{
+    background-color: #1666ba;
+    border: 3px solid #0b4481;
+    color: white;
+    font-size: 50px;
+    padding-left: 10px;
+    margin: 0;
+}
+header{
+    padding: 0%;
+
+}
+
+.main{
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 'men women';
+    padding-top:0%;
+}
+#männer{
+    background-color: #1666ba;
+    border: 3px solid #0b4481;
+    grid-area: men;
+    padding-bottom: 50px;
+
+    margin-right: 5px;
+}
+
+#frauen{
+    background: #1666ba;
+    border: 3px solid #0b4481;
+    grid-area: women;
+    margin-left: 5px;
+    padding-bottom: 50px;
+
+}
+
+
+
+footer{
+   
+    margin-top: 20px;
+    background-color: #1666ba;
+    color: white;
+    border: 3px solid #0b4481;
+    font-size: larger;
+    height: 30%;
+}
+h1{
+    margin-bottom: 0px;
+    color: white;
+    width: 600px;
+    padding-top:0px;
+    padding-bottom:10px
+}
+#erwin{
+    position:absolute;
+    height: 100px;
+    width: 100px;
+    left:710px;
+    top: 800px;
+    border:0px;
+}
+
+#logo{
+    position: relative;
+    height: 67px;
+    width: 67px;
+    border: 0px;
+    bottom: 65px;
+    left: 1270px;
+    
+}
+
+.thefoot{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'p1 p2 p3';
+}
+
+
+#foot1{
+    grid-area: p1;
+}
+
+#foot2{
+    grid-area: p2;
+}
+
+#foot3{
+    grid-area: p3;
+}
