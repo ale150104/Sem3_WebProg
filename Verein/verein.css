@@ -1,0 +1,122 @@
+nav {
+    background-color: #004b9c;
+    padding: 0.5rem; /* Abstand um die Navigation */
+}
+
+nav ul {
+    display: flex; /* Ordnet die Elemente nebeneinander an */
+    justify-content: space-around; /* Verteilt die Links gleichmäßig */
+    list-style: none; /* Entfernt Aufzählungszeichen */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 10px; /* Abstand zwischen den Links */
+}
+
+nav li a {
+    text-decoration: none; /* Entfernt Unterstreichungen */
+    color: white; /* Weißer Text */
+    padding: 0.5rem 1rem; /* Innenabstände für die Links */
+    display: block; /* Vergrößert den klickbaren Bereich */
+    background-color: #003366; /* Hintergrundfarbe der Links */
+    border-radius: 5px; /* Abgerundete Ecken */
+    text-align: center;
+}
+
+nav li a:hover {
+    background-color: #001f4d; /* Hintergrundfarbe beim Hover */
+    color: white; /* Optional: Textfarbe beim Hover */
+}
+
+.container {
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    /*border: 1px solid black;*/
+}
+
+.video {
+    position: relative;
+    left: 15%;
+    width: 70%;
+}
+
+.teilnahme {
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+    background-image: url('https://t3.ftcdn.net/jpg/01/01/82/72/360_F_101827223_m5F7hZKTb2hLljk0TwQEfGbl79FQcmRF.jpg'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt den Container vollständig aus, könnte aber abgeschnitten werden */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat;
+}
+
+.leitbild {
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+    background-image: url('https://t3.ftcdn.net/jpg/01/01/82/72/360_F_101827223_m5F7hZKTb2hLljk0TwQEfGbl79FQcmRF.jpg'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt den Container vollständig aus, könnte aber abgeschnitten werden */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat;
+}
+
+.article {
+    width: 100%;
+    height: 600px;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+}
+
+.erfolge {
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+}
+
+.trophäen {
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.columns {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-image: url('https://kochundbergfeld.de/wp-content/uploads/2020/11/dfb-meisterschale-sterlingsilber.png'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt den Container vollständig aus */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease; /* Sanfter Übergang bei der Vergrößerung */
+}
+
+.columns:hover {
+    transform: scale(1.1); /* Vergrößert das Bild um 10% */
+}
+
+
+footer {
+    height: 500px;
+    background-color: blue;
+}
+
+#picture_historie {
+    float: right;
+    margin: 10px;
+    max-width: 800px;
+    /*border: 5px solid black;*/
+    transition: transform 0.3s ease; /* Übergang für die Transformation */
+}
+
+#picture_historie:hover {
+    transform: scale(1.02); /* Bild wird um 10% vergrößert */
+}
+
