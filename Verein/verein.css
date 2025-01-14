@@ -48,6 +48,10 @@ nav li a:hover {
     height: 150px;
     /*border: 1px solid black;*/
     border-radius: 15px;
+    background-image: url('https://t3.ftcdn.net/jpg/01/01/82/72/360_F_101827223_m5F7hZKTb2hLljk0TwQEfGbl79FQcmRF.jpg'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt den Container vollständig aus, könnte aber abgeschnitten werden */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat;
 }
 
 .leitbild {
@@ -55,11 +59,15 @@ nav li a:hover {
     height: 150px;
     /*border: 1px solid black;*/
     border-radius: 15px;
+    background-image: url('https://t3.ftcdn.net/jpg/01/01/82/72/360_F_101827223_m5F7hZKTb2hLljk0TwQEfGbl79FQcmRF.jpg'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt den Container vollständig aus, könnte aber abgeschnitten werden */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat;
 }
 
 .article {
     width: 100%;
-    height: 550px;
+    height: 600px;
     /*border: 1px solid black;*/
     border-radius: 15px;
 }
