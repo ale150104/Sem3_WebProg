@@ -84,14 +84,24 @@ nav li a:hover {
     border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 
 .columns {
     width: 100%;
     height: 100%;
     border: 1px solid black;
+    background-image: url('https://kochundbergfeld.de/wp-content/uploads/2020/11/dfb-meisterschale-sterlingsilber.png'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt den Container vollständig aus */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease; /* Sanfter Übergang bei der Vergrößerung */
 }
+
+.columns:hover {
+    transform: scale(1.1); /* Vergrößert das Bild um 10% */
+}
+
 
 footer {
     height: 500px;
@@ -103,5 +113,10 @@ footer {
     margin: 10px;
     max-width: 800px;
     /*border: 5px solid black;*/
-    border-radius: 15px;
+    transition: transform 0.3s ease; /* Übergang für die Transformation */
 }
+
+#picture_historie:hover {
+    transform: scale(1.02); /* Bild wird um 10% vergrößert */
+}
+
