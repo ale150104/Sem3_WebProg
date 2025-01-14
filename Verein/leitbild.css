@@ -1,0 +1,41 @@
+nav {
+    background-color: #004b9c;
+    padding: 0.5rem; /* Abstand um die Navigation */
+}
+
+nav ul {
+    display: flex; /* Ordnet die Elemente nebeneinander an */
+    justify-content: space-around; /* Verteilt die Links gleichmäßig */
+    list-style: none; /* Entfernt Aufzählungszeichen */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 10px; /* Abstand zwischen den Links */
+}
+
+nav li a {
+    text-decoration: none; /* Entfernt Unterstreichungen */
+    color: white; /* Weißer Text */
+    padding: 0.5rem 1rem; /* Innenabstände für die Links */
+    display: block; /* Vergrößert den klickbaren Bereich */
+    background-color: #003366; /* Hintergrundfarbe der Links */
+    border-radius: 5px; /* Abgerundete Ecken */
+    text-align: center;
+}
+
+nav li a:hover {
+    background-color: #001f4d; /* Hintergrundfarbe beim Hover */
+    color: white; /* Optional: Textfarbe beim Hover */
+}
+
+.container {
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+}
+
+img {
+    width: 100%;
+}
