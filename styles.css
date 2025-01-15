@@ -1,6 +1,10 @@
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+html *{
+    border: black solid;
+}
+
+
+#home{
+    margin-left: 15px;
 }
 
 .navigationbar a {
@@ -15,13 +19,17 @@ main {
     margin-bottom: 10px;
 
 }
-.slideshow {
-    margin-left:40%;
-}
+
 li {
     margin: 5px;
     display: inline;
     color: #fff;
+    
+}
+
+a {
+
+    padding-bottom:17px ;
 }
 
 nav {
@@ -30,7 +38,15 @@ nav {
     align-content: center;
 
 }
+p{
+    display: inline-block;
+}
 
+article{
+    clear: none;
+    display: inline-block;
+    padding: 15px;
+}
 
 footer {
     background-color: #004b9c;
@@ -46,4 +62,15 @@ footer {
 .navigationbar a.active{
     background-color: #fff;
     color: black;
+}
+.slideshow-container{
+    display: flex;
+    width: 48%;
+    float: left;
+    margin-top: 10px;
+}
+
+img{
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }

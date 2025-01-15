@@ -10,50 +10,61 @@
 
 <body>
     <nav class="navigationbar">
-        <li><a class="navbar active" href="index.html">Home</a></li>
+        <li><a id="home" class="navbar active" href="index.html">Home</a></li>
         <li><a class="navbar" href="#news">News</a></li>
         <li><a class="navbar" href="aktuelleSpiele/spiele.html">Spiele</a></li>
         <li><a class="navbar" href="Verein/verein.html">Verein</a></li>
         <li><a class="navbar" href="teams/teams.html">Teams</a></li>
     </nav>
     <script>
-    const navbar = document.querySelectorAll(".navbar");
-    navbar.forEach(link=>{
-        link.addEventListener("click",function(){
-            navbar.forEach(nav=> 
-                nav.classList.remove("active"));
+        const navbar = document.querySelectorAll(".navbar");
+        navbar.forEach(link => {
+            link.addEventListener("click", function () {
+                navbar.forEach(nav =>
+                    nav.classList.remove("active"));
                 this.classList.add("active");
-            
+
+            });
         });
-    });
     </script>
 
     <main>
         <div class="slideshow-container">
-            <div class="slideshow"><img width="100%" height="auto" src="schalke1.jpeg"></div>
-            <div class="slideshow"><img width="100%" height="auto" src="schalke2.jpeg"></div>
-            <div class="slideshow"><img width="100%" height="auto" src="schalke3.jpeg"></div>
+            <img class="slideshow" width="100%" height="auto" src="https://www.derwesten.de/wp-content/uploads/sites/8/2022/06/Schalke04-Mustafi-1.jpg" alt="Manschaftsbild">
+            <img class="slideshow" width="100%" height="auto" src="https://www.bondguide.de/wp-content/uploads/2016/06/Schalke04-1.jpg" alt="Manschaftsbild">
+            <img class="slideshow" width="100%" height="auto" src="https://storage.schalke04.de/sites/1/2024/03/240318_arena-1440x810.jpg" alt="Manschaftsbild">
         </div>
         <script>
-        let slideIndex = 0;
-showSlides();
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slideshow");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 8000);
-}
-</script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slideshow");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 8000);
+            }
+        </script>
+        <article>
+            <h2>BlaBla</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+        </article>
+        <article>
+            <h2>sfsg</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </article>
 
     </main>
 
+   <a href="https://www.instagram.com/s04" target="_blank">
+    <img src="https://img.freepik.com/vektoren-premium/ein-farbenfrohes-logo-fuer-die-kamera-auf-einem-transparenten-hintergrund_975374-5278.jpg" >
+   </a>
     <footer>
         <div id="AGBImpressum">
             <li>AGB</li>
