@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aktuelle Spiele</title>
     <script src="./aktuelleSpiele.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <link rel="stylesheet" href="./aktuelleSpiele.css">
+
     <link rel="stylesheet" href="./../style.css">
+
+
+
+    <style>
+        img{
+            width: 50px;
+            height: auto;
+            margin-left: calc((100% - 50px) /2);
+            }
+
+        #container{
+            width: 90%;
+            margin-left: 5%;
+            padding: 10px;
+        }
+
+
+        .GameContainer{
+            box-shadow: 2px 4px rgba(204, 194, 194, 0.473);
+            border: 1px solid rgb(204, 194, 194);
+            border-radius: 10px;
+            min-height: 50px;
+
+        }
+    </style>
 
 
 </head>
@@ -15,16 +41,16 @@
 <body>
     <section id="container">
         <article class="GameContainer">
-            <article class="card">
-                <aside class="team1"><img src="../assets/schalke.png" alt="Schalke-Logo"></aside>
-                <article class="dateAndTime">Fr., 20.12.2024, 18:30 Uhr</article>
-                <article class="result">
+            <article class="w3-row w3-display-container">
+                <aside class="team1 w3-col" style="width: 33.33%;"><img src="../assets/schalke.png" alt="Schalke-Logo"></aside>
+                <article class="dateAndTime w3-hide-small">Fr., 20.12.2024, 18:30 Uhr</article>
+                <article class="result w3-col" style="width: 33.33%;">
                     <button>4</button>
                     <span>:</span>
                     <button>1</button>
                 </article>
-                <article class="gameLocation">URSAPHARM-Arena an der Kaiserlinde</article>
-                <aside class="team2"><img src="../assets/Elversberg.png" alt="Elversberg-Logo"></aside>
+                <article class="gameLocation w3-hide-small">URSAPHARM-Arena an der Kaiserlinde</article>
+                <aside class="team2 w3-col" style="width: 33.33%;"><img src="../assets/Elversberg.png" alt="Elversberg-Logo"></aside>
             </article>
 
             <article class="gameDetails">

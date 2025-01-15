@@ -1,25 +1,10 @@
-img{
-    height: 100%;
-}
-#container{
-width: 60%;
-margin-left: 20%;
-padding: 10px;
-}
 
-
-.GameContainer{
-    box-shadow: 2px 4px rgba(204, 194, 194, 0.473);
-    border: 1px solid rgb(204, 194, 194);
-    border-radius: 10px;
-    min-height: 50px;
-
-}
 .card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     max-height: 75px;
+    max-width: 100%;
 
     text-align: center;
 
