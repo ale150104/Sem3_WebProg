@@ -2,12 +2,12 @@ img{
     width: 600px;
     height: 300px;
     border: 3px solid white;
-    cursor: pointer;
 }
 
 body{
     margin-left: 5%;
     margin-right: 5%;
+    box-sizing: border-box;
 }
 h2{
     background-color: #1666ba;
@@ -15,19 +15,45 @@ h2{
     color: white;
     font-size: 50px;
     padding-left: 10px;
-    margin: 0;
+    margin-top: 20px;
 }
 header{
     padding: 0%;
 
 }
 
+/*.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+*/
 .main{
     margin-top: 0px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: 'men women';
     padding-top:0%;
+    cursor: pointer;
+
 }
 #männer{
     background-color: #1666ba;
@@ -63,14 +89,16 @@ h1{
     color: white;
     width: 600px;
     padding-top:0px;
-    padding-bottom:10px
+    padding-bottom:10px;
+    text-decoration: underline white;
+
 }
 #erwin{
     position:absolute;
     height: 100px;
     width: 100px;
     left:710px;
-    top: 800px;
+    top: 925px;
     border:0px;
 }
 
@@ -79,7 +107,7 @@ h1{
     height: 67px;
     width: 67px;
     border: 0px;
-    bottom: 65px;
+    bottom: 106px;
     left: 1270px;
     
 }
@@ -101,4 +129,35 @@ h1{
 
 #foot3{
     grid-area: p3;
+}
+
+.navigationbar a {
+    text-decoration: none;
+    font-size:20pt;
+    color: #fff;
+    background-color: #004b9c;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-left:5px;
+    padding-right:5px;
+    margin-bottom: 10px;
+
+}
+
+li {
+    margin: 5px;
+    display: inline;
+    color: #fff;
+    
+}
+
+a {
+
+    padding-bottom:17px ;
+}
+nav {
+    background-color: #004b9c;
+    height: 4rem;
+    align-content: center;
+
 }

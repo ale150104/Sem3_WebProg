@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/Teams/styleTeams.css">
+    <script src="/Teams/scriptTeams.js"></script>
+
 
     
 </head>
 <body>
+    
     <header>
+
+        <nav class="navigationbar">
+            <li><a id="home" class="navbar active" href="index.html">Home</a></li>
+            <li><a class="navbar" href="#news">News</a></li>
+            <li><a class="navbar" href="aktuelleSpiele/spiele.html">Spiele</a></li>
+            <li><a class="navbar" href="Verein/verein.html">Verein</a></li>
+            <li><a class="navbar" href="teams/teams.html">Teams</a></li>
+        </nav>
+
+        <script>
+            const navbar = document.querySelectorAll(".navbar");
+            navbar.forEach(link => {
+                link.addEventListener("click", function () {
+                    navbar.forEach(nav =>
+                        nav.classList.remove("active"));
+                    this.classList.add("active");
+    
+                });
+            });
+        </script>
             <h2>Teams</h2>
             <img id="logo" src="/Teams/bilder/th.png" alt="Schalke-Logo">
 
