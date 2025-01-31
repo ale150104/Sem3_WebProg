@@ -10,6 +10,7 @@ a {
 
 p {
     display: inline-block;
+   
 }
 
 /* Container für die Slideshow + den ersten Artikel */
@@ -37,6 +38,8 @@ article {
     width: 100%;
     clear: both;
     padding: 15px;
+    background-color: #004b9c;
+    color: white;
 }
 
 /* Slideshow Bilder */
@@ -45,3 +48,4 @@ img {
     width: 100%;
     transition: transform 0.5s ease-in-out;
 }
+
