@@ -17,6 +17,14 @@
         <li><a class="navbar" href="teams/teams.html">Teams</a></li>
     </nav>
     <script>
+        fetch("navbarandfooter.html")
+            .then(Response=>response.text())
+            .then(data=>{
+                document.getElementById("navbarandfooterbody").innerHTML = data;
+            })
+            .catch(error=>console.error("Fehler beim Laden von Navbar und Footer!",error));
+    </script>
+    <script>
         const navbar = document.querySelectorAll(".navbar");
         navbar.forEach(link => {
             link.addEventListener("click", function () {
