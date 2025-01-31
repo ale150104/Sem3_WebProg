@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="de">
-    <header>
+    <head>
         <meta charset="UTF-8">
         <Title>Herren</Title>
-    </header>
+    </head>
     <body>
         <header>
+
+            <nav class="navigationbar">
+                <li><a id="home" class="navbar active" href="index.html">Home</a></li>
+                <li><a class="navbar" href="#news">News</a></li>
+                <li><a class="navbar" href="aktuelleSpiele/spiele.html">Spiele</a></li>
+                <li><a class="navbar" href="Verein/verein.html">Verein</a></li>
+                <li><a class="navbar" href="teams/teams.html">Teams</a></li>
+            </nav>
+    
+            <script>
+                const navbar = document.querySelectorAll(".navbar");
+                navbar.forEach(link => {
+                    link.addEventListener("click", function () {
+                        navbar.forEach(nav =>
+                            nav.classList.remove("active"));
+                        this.classList.add("active");
+        
+                    });
+                });
+            </script>
+            <style>
+
+            .navigationbar a {
+                text-decoration: none;
+                font-size:20pt;
+                color: #fff;
+                background-color: #004b9c;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding-left:5px;
+                padding-right:5px;
+                margin-bottom: 10px;
+
+            }
+
+            li {
+                margin: 5px;
+                display: inline;
+                color: #fff;
+    
+            }
+
+            a {
+
+                padding-bottom:17px ;
+            }
+            nav {
+                background-color: #004b9c;
+                height: 4rem;
+                align-content: center;
+
+            }
+            </style>
+
+        </header>
             <center>
                
                 
@@ -149,8 +204,8 @@
                 
 
                 #bild1{
-                    background-color: #1666ba;
-                    border: 3px solid #0b4481;
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
                     padding: 50px;
                 }
                 body{
@@ -168,23 +223,29 @@
                     align-items: center;
                 }
                 div{
-                    background-color: #1666ba;
-                    border: 3px solid #0b4481;
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
 
                 }
 
                 h1{
-                    background-color: #1666ba;
-                    border: 3px solid #0b4481;
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
                     color: white;
                     font-size: 50px;
                     padding-left: 10px;
                     margin: 0;
-                    margin-bottom: 30px;
-}
+                    margin-bottom: 1px;
+                }
+
+
+                header{
+                    margin-bottom: 20px;
+                }
             </style>
 
-        </header>
+
+      
 
         <main>
 
