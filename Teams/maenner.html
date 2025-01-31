@@ -5,6 +5,7 @@
 
 
         <title>Herren</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     </head>
     <body>
@@ -12,10 +13,57 @@
 
 
         </header>
+           
             <center>
-               
+               <nav class="Navigating">
                 
-                <h1>1. Herren</h1>
+                <h1>Herren</h1>
+                <h3 onclick="switchToKader()">Kader</h3>
+                <h4 onclick="switchToInfos()">Infos</h4>
+
+
+               </nav>
+
+               <script>
+                function switchToInfos(){
+                    console.log("wasd geht");
+                    let e= document.getElementsByTagName("main");
+                    let uncover=document.getElementById("hidden");
+                    let infos=document.getElementsByTagName("h4");
+                    let kader=document.getElementsByTagName("h3");
+                    e[0].style.display="none";
+                    if (uncover) {
+        uncover.style.display = "block";
+    } else {
+        console.log("Das Element 'hidden' wurde nicht gefunden.");
+    }
+                    infos[0].style.color="#53defd";
+                    infos[0].style.border="3px solid #53defd";
+                    kader[0].style.color="white";
+                    
+                    
+
+                }
+
+                function switchToKader(){
+                    console.log("wasd geht");
+                    let e= document.getElementsByTagName("main");
+                    let uncover=document.getElementById("hidden");
+                    let infos=document.getElementsByTagName("h4");
+                    let kader=document.getElementsByTagName("h3");
+                    e[0].style.display="block";
+                    uncover.style.display = "none";
+   
+                    kader[0].style.color="#53defd";
+                    kader[0].style.border="3px solid #53defd";
+                    infos[0].style.color="white";
+                    
+
+                }
+                
+               </script>
+               
+
                 <div id="bild1">
                     <img id="Mannschaftsbild" src="/Teams/bilder/mannschaftsfoto_24_25.jpg" alt="mannschaftsfoto_24_25">
                     <p id="Unterschrift">Mannschaftsbild des ersten FC Schalke 04</p>
@@ -23,6 +71,21 @@
                 </div>
            
             <br>
+            <main>
+                
+
+                    <article id="hidden" style="display: none;">
+                        <p>Die Herrenmannschaft des FC Schalke 04
+Die Herrenmannschaft des FC Schalke 04 gehört zu den traditionsreichsten und bekanntesten Fußballvereinen in Deutschland. Gegründet im Jahr 1904, hat der Verein im Laufe seiner Geschichte eine Vielzahl von Erfolgen erzielt und sich sowohl national als auch international einen Namen gemacht. Schalke 04 hat insgesamt 7 Deutsche Meisterschaften gewonnen und 5 DFB-Pokale in die Vitrine gestellt.
+
+Die Mannschaft hat in den letzten Jahren stets für aufregende Spiele und dramatische Wendungen gesorgt. In der Veltins-Arena, einer der modernsten Fußballstadien Europas, tragen die Königsblauen ihre Heimspiele aus und bieten den treuen Fans unvergessliche Momente. In den vergangenen Jahrzehnten konnte der Verein auch in europäischen Wettbewerben wie der Champions League und der Europa League überzeugen, wobei Schalke immer wieder als stolzer Vertreter der deutschen Fußballtradition auftritt.
+
+Der Verein setzt stark auf Nachwuchsförderung und die Integration junger Talente. Viele der Spieler, die heute in der ersten Bundesliga auflaufen, haben ihre Wurzeln in der Schalker Knappenschmiede, einer der renommiertesten Jugendakademien in Europa. Diese Mischung aus erfahrenen Profis und vielversprechenden Talenten macht den FC Schalke 04 zu einem wichtigen Bestandteil des deutschen Fußballs.
+                    
+</p>
+            </article>
+
+
                 <div class="Spieler">
 
 
@@ -169,8 +232,8 @@
                     border: solid 3px #0b4481;
                 }
                 #Mannschaftsbild{
-                    width: 1100px;
-                    height: 500px;
+                    width: auto;
+                    height: 600px;
                     align-items: center;
                 }
                 div{
@@ -187,7 +250,47 @@
                     padding-left: 10px;
                     margin: 0;
                     margin-bottom: 1px;
+                    grid-area: Herren;
+
                 }
+
+                h3{
+                    background-color: #004b9c;
+                    border: 3px solid #53defd;
+                    color: #53defd;
+                    font-size: 35px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Kader;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                h4{
+                    background-color: #004b9c;
+                    border: 3px solid #53defd;
+                    color: white;
+                    font-size: 35px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Infos;
+                    cursor: pointer;
+                }
+
+                .Navigating{
+                    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);;
+                    grid-template-areas:'Kader Herren Infos';
+
+                }
+
+
 
 
                 header{
@@ -195,18 +298,13 @@
                 }
             </style>
 
-
-      
-
-        <main>
-
         </main>
 
         <footer>
             <center>
                 <div class="thefoot">
                     <article id="foot1">
-                        <h3>Fc Schalke 04</h3>
+                        <h5>FC Schalke 04</h5>
                         <p >FC Gelsenkirchen-Schalke 04 e.V. <br>
         
                             Ernst-Kuzorra-Weg 1
@@ -224,7 +322,7 @@
                     </article>
                     
                     <article id="foot2">
-                        <h3>Infos</h3>
+                        <h5>Infos</h5>
     
                         <p >
                             Impressum
@@ -244,7 +342,7 @@
                     </article>
     
                     <article id="foot3">
-                        <h3>Social Media</h3>
+                        <h5>Social Media</h5>
     
                         <p>
                             Facebook <br>
@@ -269,7 +367,6 @@
 
                     <style>
                     footer{
-   
                         margin-top: 20px;
                         background-color: #004b9c;
                         color: white;
@@ -286,6 +383,7 @@
 
 
                     #foot1{
+                    
                        grid-area: p1;
                     }
 
@@ -295,6 +393,11 @@
 
                     #foot3{
                         grid-area: p3;
+                    }
+
+                    h5{
+                        border: 0px;
+                        font-weight: bolder;
                     }
 
                     </style>
