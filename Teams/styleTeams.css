@@ -10,8 +10,8 @@ body{
     box-sizing: border-box;
 }
 h2{
-    background-color: #1666ba;
-    border: 3px solid #0b4481;
+    background-color: #004b9c;
+    border: 3px solid #042c56;
     color: white;
     font-size: 50px;
     padding-left: 10px;
@@ -56,8 +56,8 @@ header{
 
 }
 #männer{
-    background-color: #1666ba;
-    border: 3px solid #0b4481;
+    background-color: #004b9c;
+    border: 3px solid #042c56;
     grid-area: men;
     padding-bottom: 50px;
 
@@ -65,8 +65,8 @@ header{
 }
 
 #frauen{
-    background: #1666ba;
-    border: 3px solid #0b4481;
+    background: #004b9c;
+    border: 3px solid #042c56;
     grid-area: women;
     margin-left: 5px;
     padding-bottom: 50px;
@@ -78,9 +78,9 @@ header{
 footer{
    
     margin-top: 20px;
-    background-color: #1666ba;
+    background-color: #004b9c;
     color: white;
-    border: 3px solid #0b4481;
+    border: 3px solid #042c56;
     font-size: larger;
     height: 30%;
 }
