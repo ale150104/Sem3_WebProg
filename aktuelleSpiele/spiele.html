@@ -8,7 +8,61 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-    <link rel="stylesheet" href="./../style.css">
+
+    <script>
+        //TEMP
+        function detailsVisibility(id)
+         {
+            let el = document.getElementById("gameDetails");
+            if(el.style.display == "none")
+             {
+                el.style.display = "block";
+                return;
+            }
+
+            el.style.display = "none";
+    
+         }
+
+
+
+        let Player = {
+            URLImage: String,
+            Name: String
+        };
+
+         let singleGame = {
+            DateOfGame: String,
+            LocationOfGame: String,
+            Logo1URL: String,
+            Name1: String,
+            Goals1: Number,
+            Players1: [Player],
+            Reserve1: [Player],
+            Logo2URL: String,
+            Name2: String,
+            Goals2: Number,
+            Players2: [Player],
+            Reserve2: [Player],
+
+         };
+
+
+         let games = [singleGame];
+
+         function buildGamesView()
+         {
+            //...
+         }
+
+        //  function scaleImage(id, factor)
+        //  {
+        //     document.getElementById(id). = "scale(" + factor + ")" ;
+        //  }
+
+    </script>
+
+
 
 
 
@@ -16,8 +70,66 @@
         img{
             width: 50px;
             height: auto;
-            margin-left: calc((100% - 50px) /2);
+            position: relative;
+            top: calc((100% - 50px) /2);
+        }
+
+        @media only screen and (min-width: 601px) {
+            img{
+                width: 70px;
+                top: calc((100% - 70px) /2);
             }
+        }
+
+        .ShortInfo {
+            display: flex;
+            font-size: small;
+            font-style: italic;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .team1 {
+            width: 33.33%;
+        }
+
+        .result {
+            width: 33.33%;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+            
+        }
+
+        .result button {
+            border: 1px solid grey;
+            border-radius: 7px;
+            background-color: transparent;
+            height: 30px;
+            margin: 3px;
+        }
+
+        .ResultAndLocation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            width: 33.33%;
+            
+        }
+
+        .ResultAndLocation>article
+        {
+            max-width: 100%;
+            text-overflow: ellipsis;
+        }
+
+        .team2 {
+            width: 33.33%;
+        }
 
         #container{
             width: 90%;
@@ -27,11 +139,48 @@
 
 
         .GameContainer{
-            box-shadow: 2px 4px rgba(204, 194, 194, 0.473);
-            border: 1px solid rgb(204, 194, 194);
-            border-radius: 10px;
             min-height: 50px;
+            box-shadow: 7px 7px 7px rgb(185, 185, 185);
 
+        }
+
+        .gameDetails {
+            /* display: none; */
+        }
+
+        .NameOfTeam{
+            margin: 0px;
+            padding-top: 15px;
+
+        }
+
+        .detailedInfos > article h5{
+            text-decoration: underline;
+            font-weight: bolder;
+            
+        }
+
+        .Player-Informations > article{
+            width: 80%;
+            max-height: 50px;
+            margin: auto;
+        }
+
+        .Player-Informations > article *
+        {
+            padding: 5px 0px 5px 0px;
+        }
+
+        .Player-Informations > article img {
+            height: 45px;
+            width: auto;
+            border-radius: 15px;
+            margin-right: 10px;
+
+        }
+
+        .gameDetails hr {
+            width: 80%;
         }
     </style>
 
@@ -40,22 +189,96 @@
 
 <body>
     <section id="container">
-        <article class="GameContainer">
-            <article class="w3-row w3-display-container">
-                <aside class="team1 w3-col" style="width: 33.33%;"><img src="../assets/schalke.png" alt="Schalke-Logo"></aside>
-                <article class="dateAndTime w3-hide-small">Fr., 20.12.2024, 18:30 Uhr</article>
-                <article class="result w3-col" style="width: 33.33%;">
-                    <button>4</button>
-                    <span>:</span>
-                    <button>1</button>
+        <article class="GameContainer w3-center w3-border w3-round-xlarge w3-hover-shadow w3-padding-16" onclick="detailsVisibility()">
+
+            <article class="ShortInfo">
+                <aside class="team1">
+                    <img src="../assets/schalke.png" id="schalke" alt="Schalke-Logo">
+                    <p class="NameOfTeam">Schalke 04</p>
+                </aside>
+
+                <article class="ResultAndLocation">
+                    <article class="dateAndTime w3-hide-small">Fr., 20.12.2024, 18:30 Uhr</article>
+                    <article class="result">
+                        <button>4</button>
+                        <span>:</span>
+                        <button>1</button>
+                    </article>
+                    <article class="gameLocation w3-hide-small">URSAPHARM-Arena </article>
                 </article>
-                <article class="gameLocation w3-hide-small">URSAPHARM-Arena an der Kaiserlinde</article>
-                <aside class="team2 w3-col" style="width: 33.33%;"><img src="../assets/Elversberg.png" alt="Elversberg-Logo"></aside>
+
+                <aside class="team2">
+                    <img src="../assets/Elversberg.png" alt="Elversberg-Logo">
+                    <p class="NameOfTeam">...</p>
+                </aside>
             </article>
 
-            <article class="gameDetails">
+            <article class="gameDetails w3-animate-opacity" id="gameDetails">
                 <hr>
-                Hier kommen die Details
+                <section class="detailedInfos">
+                    
+                    <article class="mySlides w3-animate-right">
+                        <h5>Aufstellung 1</h5>
+                        <section class="Player-Informations">
+                            
+                            <article class="w3-border-top w3-border-bottom">
+                                <img 
+                                src="../assets/Person_Image_Placeholder.png" 
+                                alt="Player" >
+                                <span class="Player-Name">Herr Unbekannt</span>
+                            </article>
+                            <article class="w3-border-top w3-border-bottom">
+                                <img 
+                                src="../assets/Person_Image_Placeholder.png" 
+                                alt="Player" >
+                                <span class="Player-Name">Herr Unbekannt 2</span>
+                            </article>
+
+                            <hr style="opacity: 0;">
+                            <h5>Bank 1</h5>
+                            <article class="w3-border-top w3-border-bottom">
+                                <img 
+                                src="../assets/Person_Image_Placeholder.png" 
+                                alt="Player" >
+                                <span class="Player-Name">Herr Unbekannt 2</span>
+                            </article>
+
+
+
+                        </section>
+
+                    </article>
+                    
+                    
+                    <article class="mySlides w3-animate-right">
+                        <a target="_blank" href="http://rwu.de">Für Mehr Infos zu diesem Spiel, Klicken sie Hier</a>
+                    </article>
+
+                </section>
+            
+                    
+                <script>
+                    
+                    var slideIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none"; 
+                        }
+                        slideIndex++;
+                        if (slideIndex > x.length) {slideIndex = 1} 
+                        x[slideIndex-1].style.display = "block"; 
+                        // scaleImage("schalke", 1.5);
+                        setTimeout(carousel, 5000); 
+                        // scaleImage("schalke", 1.00);
+                    }
+                </script>
+
+
+                
             </article>
         </article>
 
