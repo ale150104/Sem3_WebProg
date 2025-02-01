@@ -1,66 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Schalke 04</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="verein.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="navfooter" href="navbarandfooter.css">
-    <link rel="stylesheet" href="verein.css">
-    <script src="script.js"></script>
-    <meta charset="UTF-8">
 </head>
-
 <body>
-    <nav id="navbarbody"></nav>
-    <h1>FC Schalke 04 - mehr als ein Verein</h1>
-    <div id="main">
-
-        <div class="video-container">
-            <iframe src="https://www.youtube-nocookie.com/embed/6KPTpcSWKBg?si=brHhWzQbqckvNdYf"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-        <section class="banner">Werde Teil der Familie</section>
-
-        <div class="box-container">
-            <div class="box">
-                Historie
-                <div class="content">Hier kommt der auszurollende Text für Historie.</div>
-            </div>
-            <div class="box">
-                Tradition
-                <div class="content">Hier kommt der auszurollende Text für Tradition.</div>
-            </div>
-            <div class="box">
-                Nachhaltigkeit
-                <div class="content">Hier kommt der auszurollende Text für Abteilungen.</div>
-            </div>
-            <div class="box">
-                Schalke hilft
-                <div class="content">Hier kommt der auszurollende Text für Schalke hilft.</div>
-            </div>
-        </div>
-
-
-        <section class="banner">Unser Leitbild</section>
-
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2025 FC Schalke 04. Alle Rechte vorbehalten.</p>
-            <div class="footer-links">
-                <a href="#">Impressum</a>
-                <a href="#">Datenschutz</a>
-                <a href="#">Kontakt</a>
-            </div>
-        </div>
-    </footer>
+    <nav id="navbarbody">
+        <script>
+            fetch("../navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbarbody").innerHTML = data;
+                })
+                .catch(error => console.error("Fehler beim Laden von Navbar und Footer!", error));
+        </script>
+    </nav>
 
     <script src="verein.js"></script>
 </body>
-
 </html>
