@@ -3,83 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover-Effect</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Text bei Mauszeiger</title>
 </head>
 <body>
 
     <div class="image-container">
-        <div class="image-wrapper">
-            <img src="/Teams/bilder/amin-younes8_profil_2-375x349.webp" alt="Bild" class="image">
-            <div class="info">
-                <h3>Bild Information</h3>
-                <p>Dies sind weitere Details zum Bild, die beim Hover angezeigt werden.</p>
-            </div>
-        </div>
+        <img src="https://via.placeholder.com/300" alt="Beispielbild" class="image">
+        <div id="infoText" class="info-text">Hier ist ein Info-Text!</div>
     </div>
 
-</body>
-<style>
-/* Grundlegendes Styling */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-}
+    <script>
+        // Referenzen auf das Bild und den Text
+const image = document.querySelector('.image');
+const infoText = document.getElementById('infoText');
 
-/* Container, der das Bild und die Information enthält */
+// Eventlistener, um die Position des Mauszeigers zu verfolgen
+image.addEventListener('mousemove', function(event) {
+    // Berechnung der Mausposition relativ zum Bild
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    // Positioniere den Text an der Mausposition
+    infoText.style.left = mouseX + 'px';
+    infoText.style.top = mouseY + 'px';
+
+    // Zeige den Text an, wenn der Mauszeiger über dem Bild ist
+    infoText.style.display = 'block';
+});
+
+// Verstecke den Text, wenn der Mauszeiger das Bild verlässt
+image.addEventListener('mouseleave', function() {
+    infoText.style.display = 'none';
+});
+
+    </script>
+
+        <style>
+            /* Container für das Bild */
 .image-container {
-    perspective: 1000px; /* Perspektive für 3D-Effekt */
+    position: relative;
+    display: inline-block;
 }
 
-.image-wrapper {
-    position: relative;
+/* Bildstile */
+.image {
     width: 300px;
     height: 300px;
-    transform-style: preserve-3d; /* Erhalte 3D-Transformationen bei Rotation */
-    transition: transform 0.5s ease;
+    display: block;
 }
 
-/* Bild Styling */
-.image {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Verhindert, dass das Bild sichtbar ist, wenn es sich dreht */
-    object-fit: cover; /* Bild an den Container anpassen */
-}
-
-/* Informationen auf der Rückseite */
-.info {
+/* Text der an der Mausposition erscheint */
+.info-text {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    pointer-events: none; /* Verhindert, dass der Text den Mauszeiger blockiert */
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    backface-visibility: hidden; /* Verhindert, dass die Info-Box sichtbar ist, wenn sie sich dreht */
-    padding: 10px;
-    text-align: center;
-    transition: opacity 0.5s ease;
-    transform: rotateY(180deg); /* Die Info-Box wird um 180 Grad gedreht, sodass sie nach hinten zeigt */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Text ist zunächst unsichtbar */
 }
 
-/* Hover-Effekte */
-.image-container:hover .image-wrapper {
-    transform: rotateY(180deg); /* Drehen des Bildes um die Y-Achse */
-}
-
-.image-container:hover .info {
-    opacity: 1; /* Sichtbarkeit der Info-Box beim Hover */
-    transform: rotateY(0deg); /* Drehen der Info-Box auf die Vorderseite */
-}
-</style>
+        </style>
+</body>
 </html>

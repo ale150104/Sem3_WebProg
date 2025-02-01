@@ -8,7 +8,9 @@ body{
     margin-left: 5%;
     margin-right: 5%;
     box-sizing: border-box;
+    border-radius: 8px;
 }
+
 h2{
     background-color: #004b9c;
     border: 3px solid #042c56;
@@ -16,6 +18,7 @@ h2{
     font-size: 50px;
     padding-left: 10px;
     margin-top: 20px;
+    border-radius: 8px;
 }
 header{
     padding: 0%;
@@ -61,7 +64,7 @@ header{
     border: 3px solid #042c56;
     grid-area: men;
     padding-bottom: 50px;
-
+    border-radius: 8px;
     margin-right: 5px;
 }
 
@@ -71,6 +74,7 @@ header{
     grid-area: women;
     margin-left: 5px;
     padding-bottom: 50px;
+    border-radius: 8px;
 
 }
 
@@ -84,6 +88,7 @@ footer{
     border: 3px solid #042c56;
     font-size: larger;
     height: 30%;
+    border-radius: 8px;
 }
 h1{
     margin-bottom: 0px;
@@ -92,26 +97,10 @@ h1{
     padding-top:0px;
     padding-bottom:10px;
     text-decoration: underline white;
+    border-radius: 8px;
 
 }
-#erwin{
-    position:absolute;
-    height: 100px;
-    width: 100px;
-    left:710px;
-    top: 925px;
-    border:0px;
-}
 
-#logo{
-    position: relative;
-    height: 67px;
-    width: 67px;
-    border: 0px;
-    bottom: 106px;
-    left: 1270px;
-    
-}
 
 .thefoot{
     display:grid;
