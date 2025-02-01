@@ -2,30 +2,99 @@
 <html lang="de">
     <head>
         <meta charset="UTF-8">
+
+
         <title>Herren</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     </head>
     <body>
         <header>
+
+
+        </header>
+           
             <center>
-               
+               <nav class="Navigating">
                 
-                <h1>1. Herren</h1>
+                <h1>Herren</h1>
+                <h3 onclick="switchToKader()">Kader</h3>
+                <h4 onclick="switchToInfos()">Infos</h4>
+
+
+               </nav>
+
+               <script>
+                function switchToInfos(){
+                    console.log("wasd geht");
+                    let e= document.getElementsByTagName("main");
+                    let uncover=document.getElementById("hidden");
+                    let infos=document.getElementsByTagName("h4");
+                    let kader=document.getElementsByTagName("h3");
+                    e[0].style.display="none";
+                    if (uncover) {
+        uncover.style.display = "block";
+    } else {
+        console.log("Das Element 'hidden' wurde nicht gefunden.");
+    }
+                    infos[0].style.color="#53defd";
+                    infos[0].style.border="3px solid #53defd";
+                    kader[0].style.color="white";
+                    
+                    
+
+                }
+
+                function switchToKader(){
+                    console.log("wasd geht");
+                    let e= document.getElementsByTagName("main");
+                    let uncover=document.getElementById("hidden");
+                    let infos=document.getElementsByTagName("h4");
+                    let kader=document.getElementsByTagName("h3");
+                    e[0].style.display="block";
+                    uncover.style.display = "none";
+   
+                    kader[0].style.color="#53defd";
+                    kader[0].style.border="3px solid #53defd";
+                    infos[0].style.color="white";
+                    
+
+                }
+                
+               </script>
+               
+
                 <div id="bild1">
-                    <img id="Mannschaftsbild" src="/Sem3_WebProg/Teams/bilder/mannschaftsfoto_24_25.jpg" alt="mannschaftsfoto_24_25">
+                    <img id="Mannschaftsbild" src="/Teams/bilder/mannschaftsfoto_24_25.jpg" alt="mannschaftsfoto_24_25">
                     <p id="Unterschrift">Mannschaftsbild des ersten FC Schalke 04</p>
 
                 </div>
            
             <br>
+            <main>
+                
+
+                    <article id="hidden" style="display: none;">
+                        <p>Die Herrenmannschaft des FC Schalke 04
+Die Herrenmannschaft des FC Schalke 04 gehört zu den traditionsreichsten und bekanntesten Fußballvereinen in Deutschland. Gegründet im Jahr 1904, hat der Verein im Laufe seiner Geschichte eine Vielzahl von Erfolgen erzielt und sich sowohl national als auch international einen Namen gemacht. Schalke 04 hat insgesamt 7 Deutsche Meisterschaften gewonnen und 5 DFB-Pokale in die Vitrine gestellt.
+
+Die Mannschaft hat in den letzten Jahren stets für aufregende Spiele und dramatische Wendungen gesorgt. In der Veltins-Arena, einer der modernsten Fußballstadien Europas, tragen die Königsblauen ihre Heimspiele aus und bieten den treuen Fans unvergessliche Momente. In den vergangenen Jahrzehnten konnte der Verein auch in europäischen Wettbewerben wie der Champions League und der Europa League überzeugen, wobei Schalke immer wieder als stolzer Vertreter der deutschen Fußballtradition auftritt.
+
+Der Verein setzt stark auf Nachwuchsförderung und die Integration junger Talente. Viele der Spieler, die heute in der ersten Bundesliga auflaufen, haben ihre Wurzeln in der Schalker Knappenschmiede, einer der renommiertesten Jugendakademien in Europa. Diese Mischung aus erfahrenen Profis und vielversprechenden Talenten macht den FC Schalke 04 zu einem wichtigen Bestandteil des deutschen Fußballs.
+                    
+</p>
+            </article>
+
+
                 <div class="Spieler">
 
 
                     <h2>Torwart</h2>
                     <section class="Torwart">
                         
-                        <img id="T1" src="/Sem3_WebProg/Teams/bilder/luca-podlech32_profil_2-375x349.webp" alt=""> 
-                        <img id="T2" src="/Sem3_WebProg/Teams/bilder/justin-heekeren28_profil_2-375x349.webp" alt="">                        
-                        <img id="T3" src="/Sem3_WebProg/Teams/bilder/michael-langer34_profil_2-375x349.webp" alt="">
+                        <img id="T1" src="/Teams/bilder/luca-podlech32_profil_2-375x349.webp" alt=""> 
+                        <img id="T2" src="/Teams/bilder/justin-heekeren28_profil_2-375x349.webp" alt="">                        
+                        <img id="T3" src="/Teams/bilder/michael-langer34_profil_2-375x349.webp" alt="">
                    
                     </section>
 
@@ -33,12 +102,12 @@
                     <h2>Verteidiger</h2>
                     <section  class="Verteidiger">
 
-                        <img id="V1" src="/Sem3_WebProg/Teams/bilder/steve_noode4_profil_2-375x349.webp" alt="">
-                        <img id="V2" src="/Sem3_WebProg/Teams/bilder/derry-john-murkin5_profil_2-375x349.webp" alt="">
-                        <img id="V3" src="/Sem3_WebProg/Teams/bilder/tomas-kalas26_profil_2-375x349.webp" alt="">
-                        <img id="V4" src="/Sem3_WebProg/Teams/bilder/taylan-bulut31_profil_2-375x349.webp" alt="">
-                        <img id="V5" src="/Sem3_WebProg/Teams/bilder/mehmet-aydin23_profil_2-375x349.jpg" alt="">
-                        <img id="V6" src="/Sem3_WebProg/Teams/bilder/felipe-sanchez2_profil_2-375x349.webp" alt="">
+                        <img id="V1" src="/Teams/bilder/steve_noode4_profil_2-375x349.webp" alt="">
+                        <img id="V2" src="/Teams/bilder/derry-john-murkin5_profil_2-375x349.webp" alt="">
+                        <img id="V3" src="/Teams/bilder/tomas-kalas26_profil_2-375x349.webp" alt="">
+                        <img id="V4" src="/Teams/bilder/taylan-bulut31_profil_2-375x349.webp" alt="">
+                        <img id="V5" src="/Teams/bilder/mehmet-aydin23_profil_2-375x349.jpg" alt="">
+                        <img id="V6" src="/Teams/bilder/felipe-sanchez2_profil_2-375x349.webp" alt="">
                    
                     </section>
 
@@ -46,10 +115,10 @@
                     <h2>Mittelfeld</h2>
                     <section class="Mittelfeld">
                         
-                        <img id="M1" src="/Sem3_WebProg/Teams/bilder/paul-seguin7_profil_2-375x349.jpg" alt="">
-                        <img id="M2" src="/Sem3_WebProg/Teams/bilder/ron-schallenberg6_profil_2-375x349.webp" alt="">
-                        <img id="M3" src="/Sem3_WebProg/Teams/bilder/tobias-mohr29_profil_2-375x349.webp" alt="">
-                        <img id="M4" src="/Sem3_WebProg/Teams/bilder/max-grüger37_profil_2-375x349.webp" alt="">
+                        <img id="M1" src="/Teams/bilder/paul-seguin7_profil_2-375x349" alt="">
+                        <img id="M2" src="/Teams/bilder/ron-schallenberg6_profil_2-375x349.webp" alt="">
+                        <img id="M3" src="/Teams/bilder/tobias-mohr29_profil_2-375x349.webp" alt="">
+                        <img id="M4" src="/Teams/bilder/max-grüger37_profil_2-375x349.webp" alt="">
                     
                     </section>
 
@@ -57,9 +126,9 @@
                     <h2>Stürmer</h2>
                     <section class="Stürmer">
                        
-                        <img id="S1" src="/Sem3_WebProg/Teams/bilder/amin-younes8_profil_2-375x349.webp" alt="">
-                        <img id="S2" src="/Sem3_WebProg/Teams/bilder/sylla-moussa9_profil_2-375x349.webp" alt="">
-                        <img id="S3" src="/Sem3_WebProg/Teams/bilder/ilyes_hamache24_profil-375x349.webp" alt="">
+                        <img id="S1" src="/Teams/bilder/amin-younes8_profil_2-375x349.webp" alt="">
+                        <img id="S2" src="/Teams/bilder/sylla-moussa9_profil_2-375x349.webp" alt="">
+                        <img id="S3" src="/Teams/bilder/ilyes_hamache24_profil-375x349.webp" alt="">
 
                     </section>
                     
@@ -149,8 +218,8 @@
                 
 
                 #bild1{
-                    background-color: #1666ba;
-                    border: 3px solid #0b4481;
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
                     padding: 50px;
                 }
                 body{
@@ -163,34 +232,178 @@
                     border: solid 3px #0b4481;
                 }
                 #Mannschaftsbild{
-                    width: 1100px;
-                    height: 500px;
+                    width: auto;
+                    height: 600px;
                     align-items: center;
                 }
                 div{
-                    background-color: #1666ba;
-                    border: 3px solid #0b4481;
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
 
                 }
 
                 h1{
-                    background-color: #1666ba;
-                    border: 3px solid #0b4481;
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
                     color: white;
                     font-size: 50px;
                     padding-left: 10px;
                     margin: 0;
-                    margin-bottom: 30px;
-}
+                    margin-bottom: 1px;
+                    grid-area: Herren;
+
+                }
+
+                h3{
+                    background-color: #004b9c;
+                    border: 3px solid #53defd;
+                    color: #53defd;
+                    font-size: 35px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Kader;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                h4{
+                    background-color: #004b9c;
+                    border: 3px solid #53defd;
+                    color: white;
+                    font-size: 35px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Infos;
+                    cursor: pointer;
+                }
+
+                .Navigating{
+                    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);;
+                    grid-template-areas:'Kader Herren Infos';
+
+                }
+
+
+
+
+                header{
+                    margin-bottom: 20px;
+                }
             </style>
-
-        </header>
-
-        <main>
 
         </main>
 
         <footer>
+            <center>
+                <div class="thefoot">
+                    <article id="foot1">
+                        <h5>FC Schalke 04</h5>
+                        <p >FC Gelsenkirchen-Schalke 04 e.V. <br>
+        
+                            Ernst-Kuzorra-Weg 1
+                            <br>
+                            45891 Gelsenkirchen
+                            <br>
+                            
+                            E-Mail: wirdSindEigKeineSchalkeFans@schalke04.de
+                            <br>
+                            Telefon: 0209 | 97751877
+                            <br>
+                            
+                            © 1904-2025 FC Gelsenkirchen-Schalke 04 e.V.</p>
+    
+                    </article>
+                    
+                    <article id="foot2">
+                        <h5>Infos</h5>
+    
+                        <p >
+                            Impressum
+                            <br>
+                            Kontakt Schalke 04
+                            <br>
+                            FAQ
+                            <br>
+                            Medien/Presse
+                            <br>
+                            Datenschutz
+                            <br>
+                            Haftungsausschluss
+                            <br>
+                            Cookie-Einstellungen</p>
+    
+                    </article>
+    
+                    <article id="foot3">
+                        <h5>Social Media</h5>
+    
+                        <p>
+                            Facebook <br>
+                            X <br>
+                            Instagram <br>
+                            Threads <br>
+                            YouTube <br>
+                            WhatsApp <br>
+                            TikTok <br>
+                            Sina Weibo <br>
+                            LinkedIn</p>
+    
+                    </article>
+                       
+            
+                           
+        
+        
+        
+                </div>
+                
+
+                    <style>
+                    footer{
+                        margin-top: 20px;
+                        background-color: #004b9c;
+                        color: white;
+                        border: 3px solid #042c56;
+                        font-size: larger;
+                        height: 30%;
+                    }
+
+                    .thefoot{
+                        display:grid;
+                        grid-template-columns: 1fr 2fr 1fr;
+                        grid-template-areas: 'p1 p2 p3';
+                    }
+
+
+                    #foot1{
+                    
+                       grid-area: p1;
+                    }
+
+                    #foot2{
+                       grid-area: p2;
+                    }
+
+                    #foot3{
+                        grid-area: p3;
+                    }
+
+                    h5{
+                        border: 0px;
+                        font-weight: bolder;
+                    }
+
+                    </style>
+    
+    
+            </center>
 
         </footer>
     </body>

@@ -4,73 +4,113 @@
 <head>
     <title>Schalke 04</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="navfooter" href="navbarandfooter.css">
     <script src="script.js"></script>
     <meta charset="UTF-8">
 </head>
 
 <body>
-    <nav class="navigationbar">
-        <li><a id="home" class="navbar active" href="index.html">Home</a></li>
-        <li><a class="navbar" href="#news">News</a></li>
-        <li><a class="navbar" href="aktuelleSpiele/spiele.html">Spiele</a></li>
-        <li><a class="navbar" href="Verein/verein.html">Verein</a></li>
-        <li><a class="navbar" href="teams/teams.html">Teams</a></li>
-    </nav>
-    <script>
-        const navbar = document.querySelectorAll(".navbar");
-        navbar.forEach(link => {
-            link.addEventListener("click", function () {
-                navbar.forEach(nav =>
-                    nav.classList.remove("active"));
-                this.classList.add("active");
-
-            });
-        });
-    </script>
-
-    <main>
-        <div class="slideshow-container">
-            <img class="slideshow" width="100%" height="auto" src="https://www.derwesten.de/wp-content/uploads/sites/8/2022/06/Schalke04-Mustafi-1.jpg" alt="Manschaftsbild">
-            <img class="slideshow" width="100%" height="auto" src="https://www.bondguide.de/wp-content/uploads/2016/06/Schalke04-1.jpg" alt="Manschaftsbild">
-            <img class="slideshow" width="100%" height="auto" src="https://storage.schalke04.de/sites/1/2024/03/240318_arena-1440x810.jpg" alt="Manschaftsbild">
-        </div>
+    <nav id="navbarbody">
         <script>
-            let slideIndex = 0;
-            showSlides();
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("slideshow");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                slides[slideIndex - 1].style.display = "block";
-                setTimeout(showSlides, 8000);
-            }
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbarbody").innerHTML = data;
+                })
+                .catch(error => console.error("Fehler beim Laden von Navbar und Footer!", error));
         </script>
-        <article>
-            <h2>BlaBla</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
-        </article>
-        <article>
-            <h2>sfsg</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        </article>
+    </nav>
 
+    <main class="main-container">
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-1.jpg" alt="Manschaftsbild">
+            <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-2.jpg" alt="Manschaftsbild">
+            <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-3.jpg" alt="Manschaftsbild">
+        </div>
+
+        <!-- Erster Artikel neben der Slideshow -->
+        <article class="ersterarticle">
+            <h1>Willkommen beim FC Schalke 04</h1>
+            <p>Der FC Schalke 04 ist nicht nur ein Fußballverein – er ist eine Leidenschaft, eine Tradition und eine
+                Familie, die Generationen verbindet. Seit 1904 stehen wir für Emotionen, Teamgeist und den
+                einzigartigen
+                Kampfgeist, der uns auszeichnet. Unsere Fans, unsere Stadt und unsere Geschichte machen uns zu dem,
+                was
+                wir sind: Echte Liebe in Königsblau!</p>
+        </article>
     </main>
 
-   <a href="https://www.instagram.com/s04" target="_blank">
-    
-   </a>
-    <footer>
-        <div id="AGBImpressum">
-            <li>AGB</li>
-            <li>Impressum</li>
-        </div>
-    </footer>
+    <!-- Weitere Artikel darunter -->
+    <article>
+        <h2>Aktuelle News – Alles rund um S04</h2>
+        <p>Bleib immer auf dem Laufenden! Hier findest du die neuesten Entwicklungen, exklusive Interviews und alles
+            Wissenswerte rund um den Verein.<br>
+            📢 Breaking News: [Neuester Transfer, Trainer-Updates oder Vereinspolitik]<br>
+            ⚽ Spielberichte: Analyse der letzten Spiele mit allen Highlights<br>
+            🎙 Exklusive Interviews: Stimmen der Spieler, Trainer und Legenden<br>
+
+            👉 Jetzt mehr erfahren</p>
+    </article>
+
+    <article>
+        <h2>Nächstes Spiel – Sei dabei!</h2>
+        <p> 📅 Schalke 04 vs. [Gegner]<br>
+            📍 Veltins-Arena, Gelsenkirchen<br>
+            ⏰ Anpfiff: [Uhrzeit]<br>
+
+                Erlebe die einzigartige Atmosphäre unserer Heimspielstätte und unterstütze die Mannschaft live!<br>
+            🎟 Sichere dir jetzt dein Ticket und werde Teil der königsblauen Wand!</p>
+    </article>
+
+    <article>
+        <h2>Die Veltins-Arena – Unsere Festung</h2>
+        <p> Unsere Heimat, unser Stolz! Die Veltins-Arena gehört zu den modernsten Stadien Europas und bietet Platz
+            für über 60.000 leidenschaftliche Fans. Egal ob Bundesliga, DFB-Pokal oder internationale Spiele – hier
+            schlägt das königsblaue Herz besonders laut!
+
+            Highlights der Arena:<br>
+            🏟 Schiebedach und Rasen-Kassettensystem – Einzigartige Technik für jede Wetterlage<br>
+            🎤 Events und Konzerte – Auch Stars wie Ed Sheeran oder Metallica rockten hier<br>
+            🍻 Fan-Erlebnis – Große Auswahl an königsblauen Fanartikeln und Stadionklassikern</p>
+    </article>
+
+    <article>
+        <h2>Nachwuchs und Tradition – Die Zukunft des S04</h2>
+        <p>  🔹 Knappenschmiede – Eine der besten Talentschmieden Deutschlands: Hier begannen Karrieren von Spielern
+            wie Manuel Neuer, Leroy Sané oder Mesut Özil.<br>
+            🔹 Schalker Legenden – Wir ehren unsere größten Helden und ihre Verdienste für den Verein.<br>
+            🔹 Soziales Engagement – Schalke setzt sich für die Region ein und lebt Solidarität.</p>
+    </article>
+
+    <article>
+        <h2>Werde Teil der Schalker Familie!</h2>
+        <p>💙 Mitglied werden – Profitiere von exklusiven Vorteilen und sei Teil unserer Gemeinschaft.<br>
+            🎫 Dauerkarte sichern – Deine Eintrittskarte zu unvergesslichen Momenten.<br>
+            🛒 Offizieller Fanshop – Trage Königsblau mit Stolz!<br><br>
+
+            🔵⚪ Wir leben Schalke. Wir sind Schalke!</p>
+    </article>
+
+    <footer></footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("slideshow");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 8000);
+        }
+    </script>
 </body>
 
 </html>
