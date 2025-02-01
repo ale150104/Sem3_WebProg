@@ -5,184 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aktuelle Spiele</title>
     <script src="./aktuelleSpiele.js"></script>
+    <link rel="stylesheet" href="./aktuelleSpiele.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
     <script>
-        //TEMP
-        function detailsVisibility(id)
-         {
-            let el = document.getElementById("gameDetails");
-            if(el.style.display == "none")
-             {
-                el.style.display = "block";
-                return;
-            }
-
-            el.style.display = "none";
-    
-         }
-
-
-
+        
+        
         let Player = {
             URLImage: String,
             Name: String
         };
 
          let singleGame = {
-            DateOfGame: String,
-            LocationOfGame: String,
-            Logo1URL: String,
-            Name1: String,
-            Goals1: Number,
-            Players1: [Player],
-            Reserve1: [Player],
-            Logo2URL: String,
-            Name2: String,
-            Goals2: Number,
-            Players2: [Player],
-            Reserve2: [Player],
+            additionalInfo: "http://rwu.de",
+            DateOfGame: "Fr., 20.12.2024, 18:30 Uhr",
+            LocationOfGame: "URSAPHARM-Arena",
+            Logo1URL: "../assets/schalke.png",
+            Name1: "Schalke 04",
+            Goals1: 4,
+            Players1: [
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 1"
+                },
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 2"
+                },
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 3"
+                }
+            ],
+            Reserve1: [
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 1"
+                }
+            ],
+            Logo2URL: "../assets/Elversberg.png",
+            Name2: "Elversberg",
+            Goals2: 1,
+            Players2: [
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 1"
+                },
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 2"
+                },
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 3"
+                }
+            ],
+            Reserve2: [
+                {
+                    URLImage: "../assets/Person_Image_Placeholder.png",
+                    Name : "Unbekannt 1"
+                }
+            ],
 
          };
 
 
          let games = [singleGame];
 
-         function buildGamesView()
-         {
-            //...
-         }
 
-        //  function scaleImage(id, factor)
-        //  {
-        //     document.getElementById(id). = "scale(" + factor + ")" ;
-        //  }
+
+         
 
     </script>
-
-
-
-
-
-    <style>
-        img{
-            width: 50px;
-            height: auto;
-            position: relative;
-            top: calc((100% - 50px) /2);
-        }
-
-        @media only screen and (min-width: 601px) {
-            img{
-                width: 70px;
-                top: calc((100% - 70px) /2);
-            }
-        }
-
-        .ShortInfo {
-            display: flex;
-            font-size: small;
-            font-style: italic;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .team1 {
-            width: 33.33%;
-        }
-
-        .result {
-            width: 33.33%;
-            align-content: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-style: normal;
-            
-        }
-
-        .result button {
-            border: 1px solid grey;
-            border-radius: 7px;
-            background-color: transparent;
-            height: 30px;
-            margin: 3px;
-        }
-
-        .ResultAndLocation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            row-gap: 10px;
-            width: 33.33%;
-            
-        }
-
-        .ResultAndLocation>article
-        {
-            max-width: 100%;
-            text-overflow: ellipsis;
-        }
-
-        .team2 {
-            width: 33.33%;
-        }
-
-        #container{
-            width: 90%;
-            margin-left: 5%;
-            padding: 10px;
-        }
-
-
-        .GameContainer{
-            min-height: 50px;
-            box-shadow: 7px 7px 7px rgb(185, 185, 185);
-
-        }
-
-        .gameDetails {
-            /* display: none; */
-        }
-
-        .NameOfTeam{
-            margin: 0px;
-            padding-top: 15px;
-
-        }
-
-        .detailedInfos > article h5{
-            text-decoration: underline;
-            font-weight: bolder;
-            
-        }
-
-        .Player-Informations > article{
-            width: 80%;
-            max-height: 50px;
-            margin: auto;
-        }
-
-        .Player-Informations > article *
-        {
-            padding: 5px 0px 5px 0px;
-        }
-
-        .Player-Informations > article img {
-            height: 45px;
-            width: auto;
-            border-radius: 15px;
-            margin-right: 10px;
-
-        }
-
-        .gameDetails hr {
-            width: 80%;
-        }
-    </style>
 
 
 </head>
@@ -289,4 +185,27 @@
 
     
 </body>
+
+<script>
+        function buildGamesView()
+        {
+
+            let container = document.getElementById("container");
+            console.log("hallo")
+            if(container == null)
+            {
+                return;
+            }
+            console.log("Geschafft")
+
+            games.forEach((game) => {
+                console.log("ich mach eine build");
+                let singleGame = buildSingleGameView(game);
+                container.appendChild(singleGame);
+
+            })
+         }
+
+         buildGamesView();
+</script>
 </html>
