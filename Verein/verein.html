@@ -10,16 +10,12 @@
     <link rel="navfooter" href="navbarandfooter.css">
 </head>
 <body>
-    <nav id="navbarbody">
-        <script>
-            fetch("../navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("navbarbody").innerHTML = data;
-                })
-                .catch(error => console.error("Fehler beim Laden von Navbar und Footer!", error));
-        </script>
-    </nav>
+    <nav class=" w3-bar" style="background-color:#004b9c">
+        <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
+        <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
+        <a style="color: white;" class="w3-bar-item w3-button" href="verein.html">Verein</a>
+        <a style="color: white;" class="w3-bar-item w3-button" href="../Teams/teams.html">Teams</a>
+    </nav> 
 
     <script src="verein.js"></script>
 </body>

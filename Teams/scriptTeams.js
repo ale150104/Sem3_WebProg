@@ -1,9 +1,9 @@
 
 function switchToMaenner(){
-    window.location.href = '/Teams/maenner.html'; // Weiterleitung zur neuen Seite
+    window.location.href = '../Teams/maenner.html'; // Weiterleitung zur neuen Seite
 };
 
 function switchToFrauen(){
-    window.location.href = '/Teams/frauen.html';
+    window.location.href = '../Teams/frauen.html';
 
 }
