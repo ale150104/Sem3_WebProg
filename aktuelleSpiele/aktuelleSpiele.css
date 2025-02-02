@@ -20,9 +20,20 @@ img{
     overflow: hidden;
 }
 
+.team {
+    width: 33.33%;
+}
+
+/* Provisorisch für die Probe-Ansicht in HTML */
 .team1 {
     width: 33.33%;
 }
+
+.team2 {
+    width: 33.33%;
+}
+
+/* ------------------------------------ */
 
 .result {
     width: 33.33%;
@@ -58,10 +69,6 @@ img{
     text-overflow: ellipsis;
 }
 
-.team2 {
-    width: 33.33%;
-}
-
 #container{
     width: 90%;
     margin-left: 5%;
@@ -78,8 +85,12 @@ img{
 
 }
 
+.GameContainer *{
+    pointer-events: none;
+}
+
 .gameDetails {
-    /* display: none; */
+    display: none;
 }
 
 .NameOfTeam{
