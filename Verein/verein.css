@@ -16,6 +16,7 @@ h1 {
     text-align: left;
     background-color: #004990;
     padding: 20px;
+    width: 100%;
 }
 
 .video-container {
@@ -119,7 +120,8 @@ h1 {
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -296,6 +298,10 @@ h1 {
     p {
         font-size: 1.2rem;
     }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 599px) {
@@ -313,6 +319,10 @@ h1 {
     }
 
     .box h2 {
+        font-size: 0.9rem;
+    }
+
+    .banner h2 {
         font-size: 0.9rem;
     }
 
