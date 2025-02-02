@@ -99,7 +99,6 @@ h1 {
     opacity: 0;
 }
 
-
 .box:hover::before {
     background: rgba(0, 0, 0, 0.9);
 }
@@ -122,7 +121,6 @@ h1 {
     justify-content: center;
     align-items: flex-end;
     margin-top: 20px;
-
 }
 
 #banner1 {
@@ -130,7 +128,6 @@ h1 {
 }
 
 #banner2 {
-
     background-image: url('https://pbs.twimg.com/media/FQOLMqiWYAUlKK_.jpg:large');
     background-position: bottom center;
     background-size: cover;
@@ -138,25 +135,67 @@ h1 {
 }
 
 .slider_container {
-    border: 1px solid black;
+    position: relative;
     width: 100%;
     height: 30vh;
     margin-top: 20px;
     padding: 10%;
+    z-index: 1;
 }
 
 .inner_box {
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #ddd;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 6px;
+    z-index: 3;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hover-Effekte */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-color: #bbb;
+}
+
+.prev:focus,
+.next:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
 
 .Meisterschale {
     position: relative;
     left: 0;
     width: 30%;
     height: 100%;
-    border: 1px solid black;
     background-image: url('imgbin_fc-bayern-munich-dfb-pokal-1966-67-bundesliga-meisterschale-football-png.png');
     background-size: contain;
     background-position: center;
@@ -170,7 +209,6 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    border: 1px solid black;
     background-image: url('dfb-pokal-trophaee.png');
     background-size: contain;
     background-position: center;
@@ -184,7 +222,6 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    border: 1px solid black;
     background-image: url('13ecrl1650460604.png');
     background-size: contain;
     background-position: center;
@@ -198,7 +235,6 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    border: 1px solid black;
     background-image: url('5842fe18a6515b1e0ad75b3d.png');
     background-size: contain;
     background-position: center;
@@ -207,12 +243,11 @@ h1 {
     margin-right: 15px;
 }
 
-.DFL-Supercup  {
+.DFL-Supercup {
     position: relative;
     left: 0;
     width: 30%;
     height: 100%;
-    border: 1px solid black;
     background-image: url('312.png');
     background-size: contain;
     background-position: center;
@@ -223,9 +258,7 @@ h1 {
 
 .trophy_picture {
     width: 100%;
-    /* Optional: Wenn du später ein Bild in einem anderen Container hast */
     height: 100%;
-
 }
 
 .text_container {
@@ -281,5 +314,13 @@ h1 {
 
     .box h2 {
         font-size: 0.9rem;
+    }
+
+    .prev,
+    .next {
+        top: auto;
+        bottom: 10px;
+        transform: none;
+        font-size: 12px;
     }
 }
