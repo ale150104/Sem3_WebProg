@@ -1,22 +1,21 @@
  function buildSingleGameView(gameObj)
  {
     let gameContainer = document.createElement("article");
-    // let gameContainerAttributes = ["GameContainer", "w3-center",  "w3-border",  "w3-round-xlarge",  "w3-hover-shadow",  "w3-padding-16"];
     gameContainer.classList.add("GameContainer");
     gameContainer.classList.add("w3-center");
     gameContainer.classList.add("w3-border");
     gameContainer.classList.add("w3-round-xlarge");
     gameContainer.classList.add("w3-hover-shadow");
     gameContainer.classList.add("w3-padding-16");
-    gameContainer.addEventListener("click", 
-        (event) => {
-            console.log("Ein Spiel wurde angeklickt, hier das Event:");
-            detailsVisibility("Details_" + event.target.id);
 
-    });
 
 
     let randomString = gameObj.Name1 + "_" + gameObj.Name2 + "_" + Str_Random(10);
+
+    gameContainer.addEventListener("click", 
+      () => {
+          detailsVisibility("Details_" + randomString);
+   });
 
     let shortInfo = buildShortInfoView(gameObj, randomString);
 
@@ -40,88 +39,11 @@
     shortInfoAttribute = "ShortInfo";
     shortInfo.classList.add(shortInfoAttribute);
 
-    //-----------------------------------
+    let team1 = buildLogoContainerOfTeam(gameObj.Name1, gameObj.Logo1URL, randomID);
 
-    let team1 = document.createElement("aside");
-    let team1Attributes = "team1";
-    team1.classList.add(team1Attributes);
+    let ResultAndLocationOfGame = buildGameAndLocationView(gameObj);
 
-    let imgTeam1 = document.createElement("img");
-    imgTeam1.id = randomID;
-    imgTeam1.src = gameObj.Logo1URL;
-    imgTeam1.alt = "Logo der Mannschaft " + gameObj.Name1;
-
-    let NameOfTeam1 = document.createElement("p");
-    let NameOfTeam1Attributes = "NameOfTeam";
-    NameOfTeam1.classList.add(NameOfTeam1Attributes);
-    NameOfTeam1.innerHTML = gameObj.Name1;
-
-    team1.appendChild(imgTeam1);
-    team1.appendChild(NameOfTeam1);
-
-
-    //------------------------
-
-    let ResultAndLocationOfGame = document.createElement("article");
-    let ResultAndLocationOfGameAttributes = "ResultAndLocation";
-    ResultAndLocationOfGame.classList.add(ResultAndLocationOfGameAttributes);
-
-    let dateAndTimeOfGame = document.createElement("article");
-    // let dateAndTimeOfGameAttributes = ["dateAndTime" , "w3-hide-small"];
-
-    dateAndTimeOfGame.classList.add("dateAndTime");
-    dateAndTimeOfGame.classList.add("w3-hide-small");
-    dateAndTimeOfGame.innerHTML = gameObj.DateOfGame;
-
-    let resultOfGame = document.createElement("article");
-    let resultOfGameAttributes = "result";
-    resultOfGame.classList.add(resultOfGameAttributes);
-
-    let locationOfGame = document.createElement("article");
-    locationOfGame.classList.add("gameLocation");
-    locationOfGame.classList.add("w3-hide-small");
-    locationOfGame.innerHTML = gameObj.LocationOfGame;
-
-    ResultAndLocationOfGame.appendChild(dateAndTimeOfGame);
-    ResultAndLocationOfGame.appendChild(resultOfGame);
-    ResultAndLocationOfGame.appendChild(locationOfGame);
-
-    let goalsTeam1 = document.createElement("button");
-    goalsTeam1.innerHTML = gameObj.Goals1;
-
-    let span = document.createElement("span");
-    span.innerHTML = ":";
-
-    let goalsTeam2 = document.createElement("button");
-    goalsTeam2.innerHTML = gameObj.Goals2;
-
-    resultOfGame.appendChild(goalsTeam1);
-    resultOfGame.appendChild(span);
-    resultOfGame.appendChild(goalsTeam2);
-
-
-    //------------------------
-
-    
-    let team2 = document.createElement("aside");
-    let team2Attributes = "team2";
-    team2.classList.add(team2Attributes);
-
-    let imgTeam2 = document.createElement("img");
-    imgTeam2.id = randomID;
-    imgTeam2.src = gameObj.Logo2URL;
-    imgTeam2.alt = "Logo der Mannschaft " + gameObj.Name2;
-
-    let NameOfTeam2 = document.createElement("p");
-    let NameOfTeam2Attributes = "NameOfTeam";
-    NameOfTeam2.classList.add(NameOfTeam2Attributes);
-    NameOfTeam2.innerHTML = gameObj.Name2;
-
-    team2.appendChild(imgTeam2);
-    team2.appendChild(NameOfTeam2);
-
-
-    //--------------------------
+    let team2 = buildLogoContainerOfTeam(gameObj.Name2, gameObj.Logo2URL, randomID);
 
     shortInfo.appendChild(team1);
     shortInfo.appendChild(ResultAndLocationOfGame);
@@ -130,6 +52,71 @@
     return shortInfo;
  }
 
+
+ function buildLogoContainerOfTeam(NameOfTeam, LogoOfTeam, randomID)
+ {
+   let team = document.createElement("aside");
+   let teamAttributes = "team";
+   team.classList.add(teamAttributes);
+
+   let imgTeam = document.createElement("img");
+   imgTeam.id = randomID;
+   imgTeam.src = LogoOfTeam;
+   imgTeam.alt = "Logo der Mannschaft " + NameOfTeam;
+
+   let TeamName = document.createElement("p");
+   let TeamNameAttributes = "NameOfTeam";
+   TeamName.classList.add(TeamNameAttributes);
+   TeamName.innerHTML = NameOfTeam;
+
+   team.appendChild(imgTeam);
+   team.appendChild(TeamName);
+
+   return team;
+
+ }
+ 
+ function buildGameAndLocationView(gameObj)
+ {
+   let ResultAndLocationOfGame = document.createElement("article");
+   let ResultAndLocationOfGameAttributes = "ResultAndLocation";
+   ResultAndLocationOfGame.classList.add(ResultAndLocationOfGameAttributes);
+
+   let dateAndTimeOfGame = document.createElement("article");
+
+   dateAndTimeOfGame.classList.add("dateAndTime");
+   dateAndTimeOfGame.classList.add("w3-hide-small");
+   dateAndTimeOfGame.innerHTML = gameObj.DateOfGame;
+
+   let resultOfGame = document.createElement("article");
+   let resultOfGameAttributes = "result";
+   resultOfGame.classList.add(resultOfGameAttributes);
+
+   let locationOfGame = document.createElement("article");
+   locationOfGame.classList.add("gameLocation");
+   locationOfGame.classList.add("w3-hide-small");
+   locationOfGame.innerHTML = gameObj.LocationOfGame;
+
+   ResultAndLocationOfGame.appendChild(dateAndTimeOfGame);
+   ResultAndLocationOfGame.appendChild(resultOfGame);
+   ResultAndLocationOfGame.appendChild(locationOfGame);
+
+   let goalsTeam1 = document.createElement("button");
+   goalsTeam1.innerHTML = gameObj.Goals1;
+
+   let span = document.createElement("span");
+   span.innerHTML = ":";
+
+   let goalsTeam2 = document.createElement("button");
+   goalsTeam2.innerHTML = gameObj.Goals2;
+
+   resultOfGame.appendChild(goalsTeam1);
+   resultOfGame.appendChild(span);
+   resultOfGame.appendChild(goalsTeam2);
+
+   return ResultAndLocationOfGame;
+
+ }
 
  function buildGameDetails(gameObj, randomID)
  {
