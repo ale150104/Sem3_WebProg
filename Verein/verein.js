@@ -12,3 +12,14 @@ function changeSlide(direction) {
 }
 
 showSlide(currentSlide);
+
+document.querySelectorAll(".inner_box").forEach(box => {
+    box.addEventListener("click", () => {
+        const confettiSettings = { target: 'confetti-canvas' };
+        const confetti = new ConfettiGenerator(confettiSettings);
+        
+        confetti.render(); // Startet das Konfetti
+
+        setTimeout(() => confetti.clear(), 10000); // Stoppt das Konfetti nach 5 Sekunden
+    });
+});
