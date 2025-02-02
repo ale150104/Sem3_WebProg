@@ -69,18 +69,17 @@ h1 {
     transition: box-shadow 0.3s ease, height 0.3s ease-in-out;
     overflow: hidden;
     height: 50px;
-    display: flex; /* Flexbox aktivieren */
-    justify-content: flex-start; /* Elemente oben anordnen */
-    align-items: center; /* Horizontale Zentrierung */
-    flex-direction: column; /* Vertikale Ausrichtung der Kinder */
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
 .box-container h2 {
     position: relative;
     z-index: 2;
     font-size: 1.5rem;
-    margin: 0; /* Verhindert zusätzlichen Abstand */
+    margin: 0;
 }
 
 .box::before {
@@ -90,19 +89,19 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Halbtransparentes Schwarz */
-    z-index: 1; /* Overlay wird unter den Text gelegt */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .content {
     position: relative;
-    z-index: 2; /* Text wird über dem Overlay angezeigt */
+    z-index: 2;
     opacity: 0;
 }
 
 
 .box:hover::before {
-    background: rgba(0, 0, 0, 0.8); /* Dunklerer Hintergrund beim Hover */
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .box:hover {
@@ -116,16 +115,65 @@ h1 {
 .banner {
     position: relative;
     width: 100%;
-    aspect-ratio: 5 / 1;
-    border: 1px solid black;
+    aspect-ratio: 8 / 1;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin-top: 20px;
+
 }
 
+#banner1 {
+    background-image: url('https://pbs.twimg.com/media/FQOLMqiWYAUlKK_.jpg:large');
+}
+
+#banner2 {
+
+    background-image: url('https://pbs.twimg.com/media/FQOLMqiWYAUlKK_.jpg:large');
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider_container {
+    border: 1px solid black;
+    width: 100%;
+    height: 30vh;
+    margin-top: 20px;
+    padding: 10%;
+}
+
+.inner_box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.trophy {
+    position: relative;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+    background-image: url('imgbin_fc-bayern-munich-dfb-pokal-1966-67-bundesliga-meisterschale-football-png.png');
+    background-size: contain; /* Das Bild bleibt im Container, ohne abgeschnitten zu werden */
+    background-position: center; /* Das Bild wird zentriert */
+    background-repeat: no-repeat; /* Das Bild wird nicht wiederholt */
+    float: left;
+    margin-right: 15px; /* Abstand zwischen Bild und Text */
+}
+
+.trophy_picture {
+    width: 100%; /* Optional: Wenn du später ein Bild in einem anderen Container hast */
+    height: 100%;
+
+}
+
+.text_container {
+    overflow: hidden; /* Verhindert, dass der Text um das Bild fließt */
+}
 
 @media (min-width: 600px) {
     h1 {
@@ -146,40 +194,35 @@ h1 {
     .box {
         min-height: 200px;
     }
+
+    .slider_container {
+        height: 100vh;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
 }
 
-footer {
-    background-color: #004990;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
-}
+@media (max-width: 599px) {
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer p {
-    margin: 10px 0;
-    font-size: 1rem;
-}
-
-.footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+.text_container h2 {
     font-size: 0.9rem;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.text_container p {
+    font-size: 0.6rem;
+}
+
+.content {
+    font-size: 0.6rem;
+}
+
+.box h2 {
+    font-size: 0.9rem;
+}
 }
