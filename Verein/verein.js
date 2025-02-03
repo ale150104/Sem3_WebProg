@@ -18,9 +18,9 @@ document.querySelectorAll(".Meisterschale, .DFB-Pokal, .DFL-Ligapokal, .UEFA-Pok
         const confettiSettings = { target: 'confetti-canvas' };
         const confetti = new ConfettiGenerator(confettiSettings);
         
-        confetti.render(); // Startet das Konfetti
+        confetti.render();
 
-        setTimeout(() => confetti.clear(), 3000); // Stoppt das Konfetti nach 5 Sekunden
+        setTimeout(() => confetti.clear(), 3000);
     });
 });
 
@@ -39,8 +39,8 @@ async function fetchWeather() {
         if (!response.ok) throw new Error(`HTTP-Fehler! Status: ${response.status}`);
 
         const data = await response.json();
-        console.log("Wetterdaten:", data); // Debugging
-
+        console.log("Wetterdaten:", data);
+        
         if (!data.main || !data.weather || !data.wind) throw new Error("Ungültige Wetterdaten erhalten");
 
         updateWeatherUI(data);
@@ -73,6 +73,3 @@ function setTextContent(id, text) {
         console.warn(`Element mit ID '${id}' nicht gefunden`);
     }
 }
-
-
-
