@@ -1,123 +1,130 @@
-img{
-    width: 600px;
-    height: 300px;
+/* Allgemeine Styles */
+img {
+    width: 100%;  /* Bilder auf 100% der Breite skalieren */
+    height: auto; /* Höhe wird proportional angepasst */
     border: 3px solid white;
 }
 
-body{
-    margin-left: 5%;
-    margin-right: 5%;
+body {
     box-sizing: border-box;
     border-radius: 8px;
 }
 
-h2{
+h2 {
     background-color: #004b9c;
     border: 3px solid #042c56;
     color: white;
-    font-size: 50px;
-    padding-left: 10px;
+    font-size: 1.5rem;
     margin-top: 20px;
     border-radius: 8px;
+    padding: 20px;
+    width: 100%;
 }
-header{
+
+header {
     padding: 0%;
     margin: 0%;
-
 }
 
-/*.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: 1px solid red;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-*/
-.main{
+.main {
     margin-top: 0;
     padding-top: 0;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'men women';
     cursor: pointer;
-
 }
-#männer{
+
+#männer {
     background-color: #004b9c;
-    border: 3px solid #042c56;
+    border: 0.1875em solid #042c56;
     grid-area: men;
     padding-bottom: 50px;
     border-radius: 8px;
     margin-right: 5px;
 }
 
-#frauen{
+#frauen {
     background: #004b9c;
-    border: 3px solid #042c56;
+    border: 0.1875em solid #042c56;
     grid-area: women;
     margin-left: 5px;
     padding-bottom: 50px;
     border-radius: 8px;
-
 }
 
-
-
-footer{
-   
+footer {
     margin-top: 20px;
     background-color: #004b9c;
     color: white;
-    border: 3px solid #042c56;
+    border: 0.1875em solid #042c56;
     font-size: larger;
     height: 30%;
     border-radius: 8px;
 }
-h1{
+
+h1 {
     margin-bottom: 0px;
     color: white;
     width: 600px;
-    padding-top:0px;
-    padding-bottom:10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
     text-decoration: underline white;
     border-radius: 8px;
-
+    font-size: 1.0rem;
 }
 
-
-.thefoot{
-    display:grid;
+.thefoot {
+    display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'p1 p2 p3';
 }
 
-
-#foot1{
+#foot1 {
     grid-area: p1;
 }
 
-#foot2{
+#foot2 {
     grid-area: p2;
 }
 
-#foot3{
+#foot3 {
     grid-area: p3;
 }
 
+/* Media Query für kleinere Bildschirme */
+@media screen and (max-width: 600px) {
+    /* CSS-Regeln für Bildschirme mit max. Breite von 600px */
+    
+    /* Footer */
+    .thefoot {
+        display: grid;
+        grid-template-columns: 1fr;  /* Eine Spalte */
+        align-items: center;
+        justify-items: center;
+        grid-template-areas: 'p1' 'p2' 'p3';
+    }
+
+    /* Main Grid für die Teams */
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;  /* Eine Spalte */
+        grid-template-areas: 'men' 'women';
+    }
+
+    /* Verkleinerung der Schriftgröße für h2 */
+    h2 {
+        font-size: 1rem;  /* Schriftgröße verringern */
+    }
+
+    /* Verkleinerung der Schriftgröße für h1 */
+    h1 {
+        font-size: 0.75rem;  /* Schriftgröße verringern */
+    }
+
+    /* Bilder auf 100% der Breite skalieren */
+    img {
+        width: 100%;  /* Bilder auf die volle Breite des Containers setzen */
+        height: auto;  /* Höhe wird automatisch angepasst */
+    }
+}
