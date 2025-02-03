@@ -9,20 +9,64 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="navbarandfooter.css">
     <script src="script.js" defer></script>
+    <style>
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.slideshow-container {
+    flex: 1;
+    min-width: 300px; /* Mindestbreite, damit es nicht zu schmal wird */
+}
+
+.ersterarticle {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+/* Für kleine Bildschirme: Artikel unter der Slideshow */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+    </style>
+
+    <!-- FontAwesome für das Menü-Icon -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
 </head>
 
 <body>
-    <nav class="w3-bar" style="background-color: #004b9c;">
-        <div class="w3-dropdown-hover" style="background-color: #004b9c;">
-            <button class="w3-button w3-hide-medium w3-hide-large"><i style="background-color: #004b9c;" class=" fa fa-bars"></i></button>
-            <div class="w3-dropdown-content">
-                <a class="w3-bar-item w3-button w3-mobile" style="color: white;" href="index.html">Home</a>
-                <a class="w3-bar-item w3-button w3-mobile" style="color: white;" href="aktuelleSpiele/spiele.html">Spiele</a>
-                <a class="w3-bar-item w3-button w3-mobile" style="color: white;" href="Verein/verein.html">Verein</a>
-                <a class="w3-bar-item w3-button w3-mobile" style="color: white;" href="teams/teams.html">Teams</a>
-            </div>
+    <nav class="w3-bar" style="background-color: #004b9c; padding: 10px; border-bottom: #003166 solid;">
+        <!-- Hamburger-Menü-Button für kleine Bildschirme -->
+        <button style="background-color: #004b9c;color: white; font-size: 24px;" class="w3-button w3-hide-large w3-hide-medium" onclick="toggleDropdown()" >
+            <i style="background-color: #004b9c;" class=" fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Normale Navbar für große Bildschirme -->
+        <div class="w3-bar w3-hide-small">
+            <a class="w3-bar-item w3-button" style="color: white;" href="index.html">Home</a>
+            <a class="w3-bar-item w3-button" style="color: white;" href="aktuelleSpiele/spiele.html">Spiele</a>
+            <a class="w3-bar-item w3-button" style="color: white;" href="Verein/verein.html">Verein</a>
+            <a class="w3-bar-item w3-button" style="color: white;" href="teams/teams.html">Teams</a>
         </div>
     </nav>
+
+    <!-- Dropdown-Menü für kleine Bildschirme (versteckt sich anfangs) -->
+    <div id="dropdownMenu" style="background-color: #004b9c; color: white;" class="w3-hide w3-bar-block">
+        <a class="w3-bar-item w3-button" href="index.html">Home</a>
+        <a class="w3-bar-item w3-button" href="aktuelleSpiele/spiele.html">Spiele</a>
+        <a class="w3-bar-item w3-button" href="Verein/verein.html">Verein</a>
+        <a class="w3-bar-item w3-button" href="teams/teams.html">Teams</a>
+    </div>
+
+
 
     <main class="w3-row main-container">
         <!-- Slideshow -->
@@ -32,8 +76,9 @@
             <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-3.jpg" alt="Mannschaftsbild">
         </div>
 
+        <div id="parent2">
         <!-- Erster Artikel -->
-        <article class="w3-col l6 m6 s12 ersterarticle">
+        <article id="element" class="w3-col l6 m6 s12 ersterarticle">
             <h1>Willkommen beim FC Schalke 04</h1>
             <p>Der FC Schalke 04 ist nicht nur ein Fußballverein - er ist eine Leidenschaft, eine Tradition und eine
                 Familie, die Generationen verbindet. Seit 1904 stehen wir für Emotionen, Teamgeist und den
@@ -43,21 +88,14 @@
                 wir sind: Echte Liebe in Königsblau!
             </p>
         </article>
+        </div>
     </main>
 
     <!-- Weitere Artikel untereinander -->
-    <section class="w3-container">
-        <article>
-            <h1>Willkommen beim FC Schalke 04</h1>
-            <p>Der FC Schalke 04 ist nicht nur ein Fußballverein - er ist eine Leidenschaft, eine Tradition und eine
-                Familie, die Generationen verbindet. Seit 1904 stehen wir für Emotionen, Teamgeist und den
-                einzigartigen
-                Kampfgeist, der uns auszeichnet. Unsere Fans, unsere Stadt und unsere Geschichte machen uns zu dem,
-                was
-                wir sind: Echte Liebe in Königsblau!
-            </p>
-        </article>
-        <article>
+    <section id="parent1" class="w3-container">
+        
+        
+        <article id="element2">
             <h2>Aktuelle News - Alles rund um S04</h2>
             <p>Bleib immer auf dem Laufenden! Hier findest du die neuesten Entwicklungen, exklusive Interviews und alles
                 Wissenswerte rund um den Verein.<br>
@@ -116,93 +154,41 @@
             setTimeout(showSlides, 8000);
         }
     </script>
-</body>
-
-</html>
-
-
-<!--
-
-
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Schalke 04</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="navfooter" href="navbarandfooter.css">
-    <script src="script.js"></script>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-
-<body>
-        
-        <nav class="" style="background-color: #004b9c;">
-            <a style="color: white;" class="w3-bar-item w3-button w3-mobile" href="index.html">Home</a>
-            <a style="color: white;" class="w3-bar-item w3-button w3-mobile" href="aktuelleSpiele/spiele.html">Spiele</a>
-            <a style="color: white;" class="w3-bar-item w3-button w3-mobile" href="Verein/verein.html">Verein</a>
-            <a style="color: white;" class="w3-bar-item w3-button w3-mobile" href="teams/teams.html">Teams</a>
-        </nav>
-    
-
-    <main class="main-container">
-         Slideshow 
-        <div class="slideshow-container">
-            <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-1.jpg" alt="Manschaftsbild">
-            <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-2.jpg" alt="Manschaftsbild">
-            <img class="slideshow" src="/Sem3_WebProg/Bilder Home/Schalke04-3.jpg" alt="Manschaftsbild">
-        </div>
-
-         Erster Artikel neben der Slideshow 
-        <article class="w3-hide-small ersterarticle">
-           
-        </article>
-    </main>
-    <article>
-        
-    </article>
-     Weitere Artikel darunter 
-    <article>
-        
-    </article>
-
-    <article>
-        
-    </article>
-
-    <article>
-       
-    </article>
-
-    <article>
-       
-    </article>
-
-    <article>
-       
-    </article>
-
-    <footer></footer>
-
     <script>
-        let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            let slides = document.getElementsByClassName("slideshow");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+        function verschiebe() {
+            let parent1 = document.getElementById("parent1");
+            let parent2 = document.getElementById("parent2");
+            let element = document.getElementById("element");
+            let element2 = document.getElementById("element2");
+    
+            if (window.innerWidth <= 768) {
+                if (!parent1.contains(element)) {
+                    parent1.insertBefore(element,element2);
+                }
+            } else {
+                if (!parent2.contains(element)) {
+                    parent2.appendChild(element);
+                }
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
+        }
+    
+        // Ruft die Funktion bei Seitenladung auf
+        window.onload = verschiebe;
+        // Ruft die Funktion auf, wenn sich die Fenstergröße ändert
+        window.onresize = verschiebe;
+    </script>
+    
+    <script>
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+            if (dropdown.classList.contains("w3-hide")) {
+                dropdown.classList.remove("w3-hide");
+            } else {
+                dropdown.classList.add("w3-hide");
             }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 8000);
         }
     </script>
 </body>
 
 </html>
-  -->
+
