@@ -1,30 +1,440 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Frauen</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
 
 
-    <nav class=" w3-bar" style="background-color:#004b9c">
-        <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../Verein/verein.html">Verein</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="teams.html">Teams</a>
-    </nav> 
-    <header>
-        <h1>Bei den Frauen</h1>
+        <title>Herren</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    </header>
+    </head>
+    <body>
 
-    <main>
+        <nav class=" w3-bar" style="background-color:#004b9c">
+            <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
+            <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
+            <a style="color: white;" class="w3-bar-item w3-button" href="../Verein/verein.html">Verein</a>
+            <a style="color: white;" class="w3-bar-item w3-button" href="teams.html">Teams</a>
+        </nav> 
 
-    </main>
+        <header>
 
-    <footer>
 
-    </footer>
-</body>
+        </header>
+           
+            <center>
+               <nav class="Navigating">
+                
+                <h1>Herren</h1>
+                <h3 onclick="switchToKader()">Kader</h3>
+                <h4 onclick="switchToInfos()">Infos</h4>
 
+
+               </nav>
+
+               <script>
+                function switchToInfos(){
+                    let e = document.getElementsByTagName("main");
+                    let kader=document.getElementsByTagName("h3");
+                    let info=document.getElementsByTagName("h4");
+                    let text=document.getElementById("hiddenText");
+
+                    e[0].style.display="none";
+                    kader[0].style.color="white" ;
+                    info[0].style.color="#53defd";
+                    text.style.display="block";
+                    
+
+             
+                      
+
+                }
+
+                function switchToKader(){
+                    let e = document.getElementsByTagName("main");
+                    let kader=document.getElementsByTagName("h3");
+                    let info=document.getElementsByTagName("h4");
+                    let text=document.getElementById("hiddenText");
+
+                    e[0].style.display="block";
+                    kader[0].style.color="#53defd";
+                    info[0].style.color="white";
+                    text.style.display="none";
+                   
+                }
+                
+               </script>
+               
+
+                <div id="bild1">
+                    <img id="Mannschaftsbild" src="/Teams/bilder/2024-25_Team1-MannschaftsfotoDamen.webp" alt="mannschaftsfoto_24_25">
+                    <p id="Unterschrift">Mannschaftsbild des ersten FC Schalke 04 Damen</p>
+
+                </div>
+           
+            <br>
+            <p id="hiddenText"><strong id="ueberschrift"> <br>Die Frauen Mannschaft des FC Schalke 04</strong> <br> <br>
+
+Die Frauenmannschaft des FC Schalke 04 ist eine aufstrebende Kraft im deutschen Frauenfußball und steht für Leidenschaft, Teamgeist und den unerschütterlichen Willen, die Spitze zu erreichen. Der FC Schalke 04, bekannt für seine beeindruckende Tradition im Männerfußball, hat auch im Frauenbereich eine engagierte und talentierte Mannschaft aufgebaut, die regelmäßig in der 2. Bundesliga für Furore sorgt und den Aufstieg in die 1. Bundesliga anstrebt. <br><br>
+
+Die Frauenmannschaft wurde in den frühen 1970er Jahren gegründet und hat sich im Laufe der Jahre kontinuierlich weiterentwickelt. Schalke 04 verfolgt im Frauenfußball die gleiche Philosophie wie bei den Männern: eine Kombination aus erfahrenen Spielerinnen und vielversprechenden Talenten aus der eigenen Jugend, die zu einer harmonischen Einheit zusammenwachsen. Im Zentrum dieser Entwicklung steht die enge Zusammenarbeit mit der Schalker Knappenschmiede, die seit Jahren als eine der besten Ausbildungsstätten für junge Talente in Deutschland gilt. <br> <br>
+
+Die Mannschaft hat in den letzten Jahren bedeutende Fortschritte gemacht und sich als eines der Top-Teams in der 2. Bundesliga etabliert. Besonders in den letzten Saisons konnte die Mannschaft durch eine starke Teamleistung und taktische Disziplin überzeugen und sich einen Platz unter den besten Teams der Liga sichern. Die Spielerinnen des FC Schalke 04 zeichnen sich durch ihren Kampfgeist und ihre technische Finesse aus und sind ein Paradebeispiel für die Leidenschaft, die den Verein auszeichnet. <br><br>
+
+Die Heimspiele der Frauenmannschaft finden ebenfalls im heimischen Stadion statt, und die Atmosphäre ist geprägt von der gleichen Energie und Begeisterung, die die Fans auch bei den Spielen der Herrenmannschaft zu bieten haben. Die „Schalker Knappen“, wie die Anhänger liebevoll genannt werden, unterstützen ihre Mannschaft mit Herzblut und sorgen für eine unvergessliche Stimmung in der Arena, die jedes Heimspiel zu einem besonderen Ereignis macht. <br><br>
+
+Der FC Schalke 04 setzt nicht nur auf den Erfolg seiner Profimannschaft, sondern legt auch großen Wert auf die Förderung des Frauenfußballs insgesamt. Der Verein unterstützt die Entwicklung junger Spielerinnen und bietet ihnen eine Plattform, ihre Fähigkeiten weiterzuentwickeln. Diese nachhaltige Nachwuchsarbeit zeigt sich in der kontinuierlichen Integration junger Talente in die Frauenmannschaft und in den Aufbau einer langfristig erfolgreichen Vereinsstruktur. <br><br>
+
+Die Zukunft der Frauenmannschaft des FC Schalke 04 sieht vielversprechend aus. Mit einer starken Vereinsführung, einer klaren Vision und einer talentierten Mannschaft hat der Verein das Ziel, bald in der 1. Bundesliga mitzuspielen und sich dort langfristig zu etablieren. Der Erfolg der Mannschaft ist nicht nur das Resultat von harten Trainings und taktischer Disziplin, sondern auch von der engen Verbundenheit zwischen Team und Fans, die die Frauenmannschaft genauso leidenschaftlich unterstützen wie die Herrenmannschaft. <br><br>
+
+Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leidenschaft, die den Verein seit mehr als einem Jahrhundert prägen. Mit einer Mischung aus Erfahrung und jungem Talent blickt der Verein optimistisch in die Zukunft und wird weiterhin alles daran setzen, die Werte von Tradition, Zusammenhalt und Erfolg im Frauenfußball zu vertreten und neue Geschichte zu schreiben. <br>
+            </p>
+            <main>
+                
+                
+
+
+                <div class="Spieler">
+
+
+                    <h2>Torwart</h2>
+                    <section class="Torwart">
+                        
+                        <img id="T1" src="/Teams/bilder/TSophie-Kleinpas-24-25.jpg" alt=""> 
+                        <img id="T2" src="/Teams/bilder/TJulia-Matuszek-24-25.jpg" alt="">                        
+                   
+                    </section>
+
+
+                    <h2>Verteidiger</h2>
+                    <section  class="Verteidiger">
+
+                        <img id="V1" src="/Teams/bilder/VAntonia-Heilker-24-25.jpg" alt="">
+                        <img id="V2" src="/Teams/bilder/VBarakissa-Coulibaly-24-25.jpg" alt="">
+                        <img id="V3" src="/Teams/bilder/VMeltem-Karadag-24-25.jpg" alt="">
+                        <img id="V4" src="/Teams/bilder/VMichelle-Biskup-24-25.jpg" alt="">
+                        <img id="V5" src="/Teams/bilder/VShari-Noffke-24-25.jpg" alt="">
+                        <img id="V6" src="/Teams/bilder/VTracy-Boahen-24-25.jpg" alt="">
+                   
+                    </section>
+
+
+                    <h2>Mittelfeld</h2>
+                    <section class="Mittelfeld">
+                        
+                        <img id="M1" src="/Teams/bilder/Alina-HonoldM-24-25.jpg" alt="">
+                        <img id="M2" src="/Teams/bilder/MHana-Hamdi-24-25.jpg "alt="">
+                        <img id="M3" src="/Teams/bilder/MJana-Barbara-24-25.jpg" alt="">
+                        <img id="M4" src="/Teams/bilder/MPia-Beyer-24-25.jpg" alt="">
+                    
+                    </section>
+
+
+                    <h2>Stürmer</h2>
+                    <section class="Stürmer">
+                       
+                        <img id="S1" src="/Teams/bilder/SAlina-Honold-24-25.jpg" alt="">
+                        <img id="S2" src="/Teams/bilder/SDana-Salic-24-25.jpg" alt="">
+                        <img id="S3" src="/Teams/bilder/SVada-Webbeler-24-25.jpg" alt="">
+
+                    </section>
+                    
+
+                </div>
+               
+
+            </center>
+           
+           
+            <style>
+                #ueberschrift{
+                    font-size: 20px;
+                    padding: 10px;
+                }
+
+                #hiddenText{
+                    
+                    display: none;
+                    color: white;
+                    background-color:  #004b9c;
+                    border: 3px solid #042c56;
+                    border-radius: 8px;
+                }
+
+
+                #T1{
+                    grid-area: T1;
+                }
+                #T2{
+                    grid-area: T2;
+                }
+                
+               #S1{
+                grid-area: S1;
+               }
+               #S2{
+                grid-area: S2;
+               }
+               #S3{
+                grid-area: S3;
+               }
+               #V1{
+                grid-area: V1;
+               }
+               #V2{
+                grid-area: V2;
+               }
+               #V3{
+                grid-area: V3;
+               }
+               #V4{
+                grid-area: V4;
+               }
+               #V5{
+                grid-area: V5;
+               }
+               #V6{
+                grid-area: V6;
+               }
+               #M1{
+                grid-area: M1;
+               }
+               #M2{
+                grid-area: M2;
+               }
+               #M3{
+                grid-area: M3;
+               }
+               #M4{
+                grid-area: M4;
+               }
+
+
+            
+
+                .Spieler{
+                    
+                    display: grid;
+                    grid-template-columns: 4fr;
+                    border-radius: 8px;
+                    grid-template-areas: 'T1 T2'
+                                         'V1 V2 V3 V4'
+                                         'V5 V6'
+                                         'M1 M2 M3 M4'
+                                         'S1 S2 S3';
+                                         
+                }
+
+                #Unterschrift{
+                    color: white;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 20px;
+                }
+
+                h2{
+                    background-color: #1666ba;
+                    color: white;
+                    font-size: 50px;
+                    text-align: center;
+                }
+                
+
+                #bild1{
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
+                    padding: 50px;
+                    border-radius: 8px;
+                }
+                body{
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    
+                }
+
+                img{
+                    border: solid 3px #0b4481;
+                }
+                #Mannschaftsbild{
+                    width: auto;
+                    height: 600px;
+                    align-items: center;
+                }
+                div{
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
+
+                }
+
+                h1{
+                    background-color: #004b9c;
+                    border: 3px solid #042c56;
+                    color: white;
+                    font-size: 50px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Herren;
+                    border-radius: 8px;
+
+                }
+
+                h3{
+                    background-color: #004b9c;
+                    border: 3px solid #53defd;
+                    color: #53defd;
+                    font-size: 35px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Kader;
+                    text-align: center;
+                    cursor: pointer;
+                    border-radius: 8px;
+                }
+
+                h4{
+                    background-color: #004b9c;
+                    border: 3px solid #53defd;
+                    color: white;
+                    font-size: 35px;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-bottom: 1px;
+                    grid-area: Infos;
+                    cursor: pointer;
+                    border-radius: 8px;
+                }
+
+                .Navigating{
+                    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);;
+                    grid-template-areas:'Kader Herren Infos';
+                    border-radius: 8px;
+
+                }
+
+
+
+
+                header{
+                    margin-bottom: 20px;
+                    
+                }
+            </style>
+
+        </main>
+
+        <footer>
+            <center>
+                <div class="thefoot">
+                    <article id="foot1">
+                        <h5>FC Schalke 04</h5>
+                        <p >FC Gelsenkirchen-Schalke 04 e.V. <br>
+        
+                            Ernst-Kuzorra-Weg 1
+                            <br>
+                            45891 Gelsenkirchen
+                            <br>
+                            
+                            E-Mail: wirdSindEigKeineSchalkeFans@schalke04.de
+                            <br>
+                            Telefon: 0209 | 97751877
+                            <br>
+                            
+                            © 1904-2025 FC Gelsenkirchen-Schalke 04 e.V.</p>
+    
+                    </article>
+                    
+                    <article id="foot2">
+                        <h5>Infos</h5>
+    
+                        <p >
+                            Impressum
+                            <br>
+                            Kontakt Schalke 04
+                            <br>
+                            FAQ
+                            <br>
+                            Medien/Presse
+                            <br>
+                            Datenschutz
+                            <br>
+                            Haftungsausschluss
+                            <br>
+                            Cookie-Einstellungen</p>
+    
+                    </article>
+    
+                    <article id="foot3">
+                        <h5>Social Media</h5>
+    
+                        <p>
+                            Facebook <br>
+                            X <br>
+                            Instagram <br>
+                            Threads <br>
+                            YouTube <br>
+                            WhatsApp <br>
+                            TikTok <br>
+                            Sina Weibo <br>
+                            LinkedIn</p>
+    
+                    </article>
+                       
+            
+                           
+        
+        
+        
+                </div>
+                
+
+                    <style>
+                    footer{
+                        margin-top: 20px;
+                        background-color: #004b9c;
+                        color: white;
+                        border: 3px solid #042c56;
+                        font-size: larger;
+                        height: 30%;
+                        border-radius: 8px;
+                    }
+
+                    .thefoot{
+                        display:grid;
+                        grid-template-columns: 1fr 2fr 1fr;
+                        grid-template-areas: 'p1 p2 p3';
+                    }
+
+
+                    #foot1{
+                    
+                       grid-area: p1;
+                    }
+
+                    #foot2{
+                       grid-area: p2;
+                    }
+
+                    #foot3{
+                        grid-area: p3;
+                    }
+
+                    h5{
+                        border: 0px;
+                        font-weight: bolder;
+                    }
+
+                    </style>
+    
+    
+            </center>
+
+        </footer>
+        
+    </body>
 </html>
