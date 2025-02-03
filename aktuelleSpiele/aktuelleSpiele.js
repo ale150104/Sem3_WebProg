@@ -240,13 +240,23 @@
 
 function detailsVisibility(id)
 {
-   let el = document.getElementById(id);
-   if(el.style.display == "none")
-    {
-       el.style.display = "block";
-       return;
+   let temp = document.getElementById(id);
+   if(temp.style.display == "block")
+   {
+      console.log("Dieses Detail war schon geöffnet, also wird es nun geschlossen!");
+      temp.style.display = "none";
+      return;
    }
 
-   el.style.display = "none";
+   var y = document.getElementsByClassName("gameDetails");
+
+   for(let i = 0; i < y.length; i++)
+   {
+         console.log(y[i].style.display);
+         y[i].style.display = "none";
+   }
+
+   let el = document.getElementById(id);
+   el.style.display = "block";
 
 }
