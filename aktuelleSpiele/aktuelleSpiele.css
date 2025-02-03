@@ -1,3 +1,11 @@
+
+#container{
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 10px;
+
+}
+
 img{
     width: 50px;
     height: auto;
@@ -20,9 +28,20 @@ img{
     overflow: hidden;
 }
 
+.team {
+    width: 33.33%;
+}
+
+/* Provisorisch für die Probe-Ansicht in HTML */
 .team1 {
     width: 33.33%;
 }
+
+.team2 {
+    width: 33.33%;
+}
+
+/* ------------------------------------ */
 
 .result {
     width: 33.33%;
@@ -58,16 +77,7 @@ img{
     text-overflow: ellipsis;
 }
 
-.team2 {
-    width: 33.33%;
-}
 
-#container{
-    width: 90%;
-    margin-left: 5%;
-    padding: 10px;
-
-}
 
 
 .GameContainer{
@@ -78,8 +88,12 @@ img{
 
 }
 
+.GameContainer .ShortInfo {
+    pointer-events: none;
+}
+
 .gameDetails {
-    /* display: none; */
+    display: none;
 }
 
 .NameOfTeam{
@@ -94,14 +108,45 @@ img{
     
 }
 
+.LocationAndTimeInfos{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: underline;
+
+}
+
+.LocationAndTimeInfos *{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.detailedInfos .mySlides ~ .mySlides{
+    display: none;
+}
+
+.Player-Informations{
+    border-collapse: collapse;
+}
 .Player-Informations > article{
-    width: 80%;
+    width: 70%;
     max-height: 50px;
     margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .Player-Informations > article *
 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 5px 0px 5px 0px;
 }
 
@@ -115,4 +160,12 @@ img{
 
 .gameDetails hr {
     width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+
+
+a{
+    pointer-events: all;
 }

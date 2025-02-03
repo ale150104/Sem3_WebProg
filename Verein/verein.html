@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="verein.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="navfooter" href="navbarandfooter.css">
 </head>
 
 <body>
+
+    <canvas id="confetti-canvas"></canvas>
+
     <nav class=" w3-bar" style="background-color:#004b9c">
         <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
         <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
@@ -19,8 +21,12 @@
         <a style="color: white;" class="w3-bar-item w3-button" href="../Teams/teams.html">Teams</a>
     </nav>
 
-    <div id="container">
+    <header>
         <h1>FC Schalke 04 - mehr als ein Verein</h1>
+    </header>
+
+
+    <div id="container">
         <div class="video-container">
             <iframe src="https://www.youtube-nocookie.com/embed/6KPTpcSWKBg?si=brHhWzQbqckvNdYf"
                 title="YouTube video player" frameborder="0"
@@ -31,9 +37,10 @@
         <section class="banner" id="banner1"></section>
 
         <div class="box-container">
-            <div class="box" id="box1">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box1">
                 <h2>Historie</h2>
-                <div class="content">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und entwickelte sich
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und
+                    entwickelte sich
                     schnell zu einem der erfolgreichsten Fußballvereine Deutschlands. In den 1930er- und 1940er-Jahren
                     dominierte Schalke den deutschen Fußball und gewann insgesamt sieben Meisterschaften. Nach
                     schwierigen Jahrzehnten folgte in den 1990ern ein sportlicher Aufschwung, gekrönt vom UEFA-Cup-Sieg
@@ -41,258 +48,236 @@
                     Ruhrgebiet. Trotz sportlicher Höhen und Tiefen bleibt Schalke 04 eine feste Größe im deutschen
                     Fußball.</div>
             </div>
-            <div class="box" id="box2">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box2">
                 <h2>Tradition</h2>
-                <div class="content">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und entwickelte sich
-                    schnell zu einem der erfolgreichsten Fußballvereine Deutschlands. In den 1930er- und 1940er-Jahren
-                    dominierte Schalke den deutschen Fußball und gewann insgesamt sieben Meisterschaften. Nach
-                    schwierigen Jahrzehnten folgte in den 1990ern ein sportlicher Aufschwung, gekrönt vom UEFA-Cup-Sieg
-                    1997. Der Verein ist bekannt für seine leidenschaftlichen Fans und die enge Verbundenheit mit dem
-                    Ruhrgebiet. Trotz sportlicher Höhen und Tiefen bleibt Schalke 04 eine feste Größe im deutschen
-                    Fußball.</div>
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04, 1904 in Gelsenkirchen gegründet, ist ein
+                    Verein mit einer tief
+                    verwurzelten Tradition. In den ersten Jahrzehnten seines Bestehens prägte Schalke den deutschen
+                    Fußball, besonders in den 1930er- und 1940er-Jahren, als der Club sieben Meistertitel errang und als
+                    unangefochtener Spitzenclub galt. In den folgenden Jahrzehnten durchlebte der Verein Höhen und
+                    Tiefen, doch in den 1990ern erlebte Schalke ein sportliches Comeback, das mit dem Gewinn des
+                    UEFA-Cups 1997 seinen Höhepunkt fand. Schalke ist nicht nur für seine sportlichen Erfolge bekannt,
+                    sondern auch für die leidenschaftliche Anhängerschaft und die enge Verbindung zu seiner Heimat im
+                    Ruhrgebiet. Trotz aller Herausforderungen bleibt der Verein ein unverzichtbarer Bestandteil der
+                    deutschen Fußballlandschaft.</div>
             </div>
-            <div class="box" id="box3">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box3">
                 <h2>Karriere</h2>
-                <div class="content">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und entwickelte sich
-                    schnell zu einem der erfolgreichsten Fußballvereine Deutschlands. In den 1930er- und 1940er-Jahren
-                    dominierte Schalke den deutschen Fußball und gewann insgesamt sieben Meisterschaften. Nach
-                    schwierigen Jahrzehnten folgte in den 1990ern ein sportlicher Aufschwung, gekrönt vom UEFA-Cup-Sieg
-                    1997. Der Verein ist bekannt für seine leidenschaftlichen Fans und die enge Verbundenheit mit dem
-                    Ruhrgebiet. Trotz sportlicher Höhen und Tiefen bleibt Schalke 04 eine feste Größe im deutschen
-                    Fußball.</div>
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04 bietet seinen Mitgliedern und Anhängern
+                    nicht nur spannende
+                    Fußballerlebnisse, sondern auch zahlreiche Karrieremöglichkeiten. Der Verein ist ein bedeutender
+                    Arbeitgeber in der Region Gelsenkirchen und bietet Arbeitsplätze in verschiedenen Bereichen,
+                    darunter Verwaltung, Marketing, Eventmanagement, Jugendförderung und Sportwissenschaften. Schalke
+                    legt großen Wert auf die Entwicklung von Talenten und die Förderung von Nachwuchskräften, sowohl auf
+                    als auch neben dem Platz. Durch Kooperationen mit Bildungseinrichtungen und Praktikumsangebote
+                    können junge Menschen wertvolle Erfahrungen sammeln und ihre berufliche Zukunft im Sport- und
+                    Vereinsumfeld gestalten. Darüber hinaus sind die Arbeitsbedingungen und das Teamklima bei Schalke 04
+                    bekannt für ihre familiäre Atmosphäre und die enge Zusammenarbeit auf allen Ebenen des Vereins.
+                </div>
             </div>
-            <div class="box" id="box4">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box4">
                 <h2>Nachhaltigkeit</h2>
-                <div class="content">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und entwickelte sich
-                    schnell zu einem der erfolgreichsten Fußballvereine Deutschlands. In den 1930er- und 1940er-Jahren
-                    dominierte Schalke den deutschen Fußball und gewann insgesamt sieben Meisterschaften. Nach
-                    schwierigen Jahrzehnten folgte in den 1990ern ein sportlicher Aufschwung, gekrönt vom UEFA-Cup-Sieg
-                    1997. Der Verein ist bekannt für seine leidenschaftlichen Fans und die enge Verbundenheit mit dem
-                    Ruhrgebiet. Trotz sportlicher Höhen und Tiefen bleibt Schalke 04 eine feste Größe im deutschen
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04 setzt sich aktiv für Nachhaltigkeit und
+                    den Schutz der Umwelt
+                    ein. Der Verein verfolgt eine Reihe von Initiativen, um seinen ökologischen Fußabdruck zu verringern
+                    und ein verantwortungsbewusstes Handeln zu fördern. Dazu gehören Maßnahmen wie die Reduzierung des
+                    Energieverbrauchs in den Vereinsgebäuden, der Einsatz von umweltfreundlichen Materialien im Stadion
+                    und die Förderung von Mobilität durch umweltbewusste Transportlösungen für Fans und Mitarbeiter.
+                    Schalke unterstützt auch Projekte zur Förderung von Natur- und Klimaschutz in der Region. Durch
+                    Partnerschaften mit nachhaltigen Marken und die Implementierung von grünen Praktiken im täglichen
+                    Betrieb zeigt der Verein Verantwortung gegenüber der Umwelt und setzt ein Zeichen für nachhaltigen
                     Fußball.</div>
             </div>
         </div>
-
-        <!DOCTYPE html>
-        <html lang="de">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Slideshow</title>
-            <link rel="stylesheet" href="styles.css">
-        </head>
-
-        <body>
-            <div class="slider_container">
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy1.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1934 – Deutsche Meisterschaft</h2>
-                        <p>Schalke sicherte sich seinen ersten Meistertitel mit einem 2:1-Sieg gegen den 1. FC Nürnberg.
-                        </p>
-                    </div>
+        <div class="slider_container">
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
                 </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy2.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1935 – Deutsche Meisterschaft</h2>
-                        <p>Schalke setzte seine Erfolgsgeschichte fort und gewann die Meisterschaft erneut, diesmal in
-                            einem spektakulären Finale gegen den VfB Stuttgart mit 6:4.</p>
-                    </div>
+                <div class="text_container">
+                    <h2>1934 – Deutsche Meisterschaft</h2>
+                    <p>Schalke sicherte sich seinen ersten Meistertitel mit einem 2:1-Sieg gegen den 1. FC Nürnberg.
+                    </p>
                 </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1937 – Deutsche Meisterschaft</h2>
-                        <p>Mit einem souveränen 2:0 gegen den 1. FC Nürnberg holte Schalke seinen dritten Meistertitel.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1937 – Deutsche Meisterschaft</h2>
-                        <p>In diesem Jahr sicherte sich Schalke erneut die Meisterschaft, indem sie den 1. FC Nürnberg
-                            mit 2:0 besiegten.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1937 – Deutsche Meisterschaft</h2>
-                        <p>Mit einem souveränen 2:0 gegen den 1. FC Nürnberg holte Schalke seinen dritten Meistertitel.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFB-Pokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1937 – DFB-Pokal </h2>
-                        <p>Schalke konnte auch den ersten DFB-Pokal in der Vereinsgeschichte gewinnen und besiegte im
-                            Finale Fortuna Düsseldorf mit 2:1.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1939 – Deutsche Meisterschaft</h2>
-                        <p>Eine besonders hohe und überzeugende Leistung: Schalke besiegte Admira Wien mit 9:0 und
-                            sicherte sich erneut den Titel in einer internationalen Meisterschaft.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1940 – Deutsche Meisterschaft</h2>
-                        <p>Der FC Schalke setzte seine Dominanz fort und holte sich den Meistertitel mit einem knappen
-                            1:0-Sieg gegen den Dresdner SC.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1942 – Deutsche Meisterschaft</h2>
-                        <p>Schalke triumphierte erneut auf internationaler Ebene, als sie sich gegen Vienna Wien mit 2:0
-                            durchsetzten und den Meistertitel gewannen.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="Meisterschale">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1958 – Deutsche Meisterschaft</h2>
-                        <p>Mit einem klaren 3:0-Sieg gegen den Hamburger SV sicherte sich Schalke in diesem Jahr die
-                            Meisterschaft.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFB-Pokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1972 – DFB-Pokal</h2>
-                        <p>In diesem Jahr gewann Schalke den DFB-Pokal mit einem beeindruckenden 5:0-Sieg gegen den 1.
-                            FC Kaiserslautern.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="UEFA-Pokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>1997 – UEFA-Pokal</h2>
-                        <p>Schalke feierte einen historischen Triumph im UEFA-Pokal, indem sie Inter Mailand nach einem
-                            spannenden Rückspiel und einem Sieg im Elfmeterschießen besiegten.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFB-Pokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>2001 – DFB-Pokal </h2>
-                        <p>Schalke holte sich den DFB-Pokal 2001 mit einem soliden 2:0-Sieg gegen den 1. FC Union
-                            Berlin.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFB-Pokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>2002 – DFB-Pokal</h2>
-                        <p>Im Finale besiegte Schalke Bayer Leverkusen mit 4:2 und sicherte sich damit ihren vierten
-                            Pokalsieg.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFL-Ligapokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>2005 – DFL-Ligapokal</h2>
-                        <p>Schalke gewann 2005 den DFL-Ligapokal durch ein 1:0 im Finale gegen den VfB Stuttgart, was
-                            den ersten Titel unter Trainer Ralf Rangnick darstellte.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFB-Pokal">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>2011 – DFB-Pokal</h2>
-                        <p>Schalke siegte mit 5:0 im DFB-Pokal-Finale gegen den MSV Duisburg und feierte einen klaren
-                            Erfolg.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="inner_box">
-                    <div class="DFL-Supercup">
-                        <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
-                    </div>
-                    <div class="text_container">
-                        <h2>2011 – DFL-Supercup</h2>
-                        <p>Der FC Schalke gewann den DFL-Supercup im Jahr 2011 im Elfmeterschießen gegen Borussia
-                            Dortmund und sicherte sich so den ersten Titel dieser Art.
-                        </p>
-                    </div>
-                </div>
-
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
 
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1935 – Deutsche Meisterschaft</h2>
+                    <p>Schalke setzte seine Erfolgsgeschichte fort und gewann die Meisterschaft erneut, diesmal in
+                        einem spektakulären Finale gegen den VfB Stuttgart mit 6:4.</p>
+                </div>
+            </div>
 
-            <section class="banner" id="banner2"></section>
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1937 – Deutsche Meisterschaft</h2>
+                    <p>In diesem Jahr sicherte sich Schalke erneut die Meisterschaft, indem sie den 1. FC Nürnberg
+                        mit 2:0 besiegten.
+                    </p>
+                </div>
+            </div>
 
-            <script src="verein.js"></script>
-        </body>
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1939 – Deutsche Meisterschaft</h2>
+                    <p>Eine besonders hohe und überzeugende Leistung: Schalke besiegte Admira Wien mit 9:0 und
+                        sicherte sich erneut den Titel in einer internationalen Meisterschaft.
+                    </p>
+                </div>
+            </div>
 
-        </html>
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1940 – Deutsche Meisterschaft</h2>
+                    <p>Der FC Schalke setzte seine Dominanz fort und holte sich den Meistertitel mit einem knappen
+                        1:0-Sieg gegen den Dresdner SC.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1942 – Deutsche Meisterschaft</h2>
+                    <p>Schalke triumphierte erneut auf internationaler Ebene, als sie sich gegen Vienna Wien mit 2:0
+                        durchsetzten und den Meistertitel gewannen.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="Meisterschale">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1958 – Deutsche Meisterschaft</h2>
+                    <p>Mit einem klaren 3:0-Sieg gegen den Hamburger SV sicherte sich Schalke in diesem Jahr die
+                        Meisterschaft.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="DFB-Pokal">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1972 – DFB-Pokal</h2>
+                    <p>In diesem Jahr gewann Schalke den DFB-Pokal mit einem beeindruckenden 5:0-Sieg gegen den 1.
+                        FC Kaiserslautern.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="UEFA-Pokal">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>1997 – UEFA-Pokal</h2>
+                    <p>Schalke feierte einen historischen Triumph im UEFA-Pokal, indem sie Inter Mailand nach einem
+                        spannenden Rückspiel und einem Sieg im Elfmeterschießen besiegten.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="DFB-Pokal">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>2001 – DFB-Pokal </h2>
+                    <p>Schalke holte sich den DFB-Pokal 2001 mit einem soliden 2:0-Sieg gegen den 1. FC Union
+                        Berlin.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="DFB-Pokal">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>2002 – DFB-Pokal</h2>
+                    <p>Im Finale besiegte Schalke Bayer Leverkusen mit 4:2 und sicherte sich damit ihren vierten
+                        Pokalsieg.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="DFL-Ligapokal">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>2005 – DFL-Ligapokal</h2>
+                    <p>Schalke gewann 2005 den DFL-Ligapokal durch ein 1:0 im Finale gegen den VfB Stuttgart, was
+                        den ersten Titel unter Trainer Ralf Rangnick darstellte.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="DFB-Pokal">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>2011 – DFB-Pokal</h2>
+                    <p>Schalke siegte mit 5:0 im DFB-Pokal-Finale gegen den MSV Duisburg und feierte einen klaren
+                        Erfolg.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inner_box">
+                <div class="DFL-Supercup">
+                    <div class="trophy_picture"></div>
+                </div>
+                <div class="text_container">
+                    <h2>2011 – DFL-Supercup</h2>
+                    <p>Der FC Schalke gewann den DFL-Supercup im Jahr 2011 im Elfmeterschießen gegen Borussia
+                        Dortmund und sicherte sich so den ersten Titel dieser Art.
+                    </p>
+                </div>
+            </div>
+
+            <button class="prev w3-button w3-white" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next w3-button w3-white" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <section class="stadion">
+            <div class="stadion_picture w3-round-xlarge w3-hover-shadow"></div>
+            <div class="API_information w3-round-xlarge w3-hover-shadow">
+                <h2>Veltins Arena</h2>
+                <p><span role="img" aria-label="temperature">🌡️</span> Temperatur: <span
+                        id="temperature">Laden...</span></p>
+                <p><span role="img" aria-label="weather">☁️</span> Wetter: <span id="weather">Laden...</span></p>
+                <p><span role="img" aria-label="rain">🌧️</span> Niederschlag: <span id="rain">Laden...</span></p>
+                <p><span role="img" aria-label="wind">💨</span> Wind: <span id="wind">Laden...</span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner2"></section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <script src="verein.js"></script>
+    
+</body>
+
+</html>
