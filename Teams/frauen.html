@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
 
         <title>Herren</title>
@@ -25,7 +25,7 @@
             <center>
                <nav class="Navigating">
                 
-                <h1>Herren</h1>
+                <h1>Damen</h1>
                 <h3 onclick="switchToKader()">Kader</h3>
                 <h4 onclick="switchToInfos()">Infos</h4>
 
@@ -224,6 +224,29 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                                          'S1 S2 S3';
                                          
                 }
+                .Torwart img{
+                    height: 380px;
+                    width: 380px;
+
+                }
+
+                .Verteidiger img{
+                    height: 380px;
+                    width: 380px;
+
+                }
+
+                .Mittelfeld img{
+                    height: 380px;
+                    width: 380px;
+
+                }
+
+                .Stürmer img{
+                    height: 380px;
+                    width: 380px;
+
+                }
 
                 #Unterschrift{
                     color: white;
@@ -239,12 +262,14 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                 }
                 
 
-                #bild1{
-                    background-color: #004b9c;
-                    border: 3px solid #042c56;
-                    padding: 50px;
-                    border-radius: 8px;
-                }
+                #bild1 {
+                    width: 100%; /* Container nimmt die volle Breite des Elternelements ein */
+    padding: 10px;  /* Etwas Abstand um das Bild */
+    background-color: #004b9c;
+    border: 0.1875em solid #042c56;
+    border-radius: 8px;
+    text-align: center;
+}
                 body{
                     margin-left: 5%;
                     margin-right: 5%;
@@ -254,11 +279,12 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                 img{
                     border: solid 3px #0b4481;
                 }
-                #Mannschaftsbild{
-                    width: auto;
-                    height: 600px;
-                    align-items: center;
-                }
+                #Mannschaftsbild {
+    width: 100%;  /* Bild wird 100% der Breite des Containers einnehmen */
+    height: auto;  /* Höhe wird automatisch angepasst */
+    max-width: 100%;  /* Sicherstellen, dass das Bild nicht größer als der Container wird */
+    border: 3px solid white;  /* Optional, wenn du einen Rand möchtest */
+}
                 div{
                     background-color: #004b9c;
                     border: 3px solid #042c56;
@@ -428,6 +454,43 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                         border: 0px;
                         font-weight: bolder;
                     }
+
+                    @media screen and (max-width: 600px) {
+
+    
+.thefoot {
+    display: grid;
+    grid-template-columns: 1fr;  /* Eine Spalte */
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: 'p1' 'p2' 'p3';
+}
+
+/* Main Grid für die Teams */
+
+/* Verkleinerung der Schriftgröße für h2 */
+h2 {
+    font-size: 1,0rem;    }
+
+/* Verkleinerung der Schriftgröße für h1 */
+h1 {
+    font-size: 1,0rem;  /* Schriftgröße verringern */
+}
+
+h3{
+    font-size: 1,0rem;    }
+
+h4{
+    font-size: 1,0rem;    }
+h5{
+    font-size: 1,0rem;    }
+
+/* Bilder auf 100% der Breite skalieren */
+img {
+    width: 100%;  /* Bilder auf die volle Breite des Containers setzen */
+    height: auto;  /* Höhe wird automatisch angepasst */
+}
+}
 
                     </style>
     
