@@ -13,13 +13,13 @@ function changeSlide(direction) {
 
 showSlide(currentSlide);
 
-document.querySelectorAll(".inner_box").forEach(box => {
+document.querySelectorAll(".Meisterschale, .DFB-Pokal, .DFL-Ligapokal, .UEFA-Pokal, .DFL-Supercup").forEach(box => {
     box.addEventListener("click", () => {
         const confettiSettings = { target: 'confetti-canvas' };
         const confetti = new ConfettiGenerator(confettiSettings);
         
         confetti.render(); // Startet das Konfetti
 
-        setTimeout(() => confetti.clear(), 10000); // Stoppt das Konfetti nach 5 Sekunden
+        setTimeout(() => confetti.clear(), 3000); // Stoppt das Konfetti nach 5 Sekunden
     });
 });

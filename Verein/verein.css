@@ -178,7 +178,6 @@ h1 {
     right: 10px;
 }
 
-/* Hover-Effekte */
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -204,6 +203,7 @@ h1 {
     background-repeat: no-repeat;
     float: left;
     margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .DFB-Pokal {
@@ -217,6 +217,7 @@ h1 {
     background-repeat: no-repeat;
     float: left;
     margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .DFL-Ligapokal {
@@ -230,6 +231,7 @@ h1 {
     background-repeat: no-repeat;
     float: left;
     margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .UEFA-Pokal {
@@ -243,6 +245,7 @@ h1 {
     background-repeat: no-repeat;
     float: left;
     margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .DFL-Supercup {
@@ -256,6 +259,15 @@ h1 {
     background-repeat: no-repeat;
     float: left;
     margin-right: 15px;
+}
+
+.Meisterschale:hover,
+.DFB-Pokal:hover,
+.DFL-Ligapokal:hover,
+.UEFA-Pokal:hover,
+.DFL-Supercup:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .trophy_picture {
@@ -274,6 +286,24 @@ h1 {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
+    z-index: -20;
+}
+
+footer {
+    background-color: #004da8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 600px) {
@@ -341,5 +371,13 @@ h1 {
         bottom: 10px;
         transform: none;
         font-size: 12px;
+    }
+
+    body h1 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
     }
 }
