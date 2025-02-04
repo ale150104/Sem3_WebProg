@@ -149,6 +149,14 @@ footer {
     max-width: 100%;
     border-radius: 8px;
 }
+a {
+    text-decoration: none; /* Kein Unterstrich */
+}
+
+/* Unterstreichung nur beim Hover */
+a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
 
 h1 {
     margin-bottom: 0px;
