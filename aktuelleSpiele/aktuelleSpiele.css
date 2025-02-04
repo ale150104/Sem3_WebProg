@@ -17,6 +17,7 @@
     position:fixed;
     z-index: 99;
     width:100%;
+    top:50px;
 }
 
 /* Standard Navbar (für große Bildschirme) */
@@ -39,6 +40,7 @@
     font-size: 24px;
     cursor: pointer;
     display: none;
+    height: 42.5px;
 }
 
 /* Dropdown-Menü für Mobile */

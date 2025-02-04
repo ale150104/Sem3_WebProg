@@ -44,7 +44,7 @@
         if(window.innerWidth>=769) {
             if(dropdown.getAttribute("class")=="dropdown"){
                 dropdown.classList.toggle("hidden");
-                firstelement.setAttribute("style","margin-top:80px;");
+                firstelement.setAttribute("style","margin-top:60px;");
             }
         }
        
@@ -58,7 +58,7 @@
                 firstelement.setAttribute("style", "margin-top:60px;")
             }
             if (dropdown.getAttribute("class") == "dropdown") {
-                firstelement.setAttribute("style", "margin-top:220px;")
+                firstelement.setAttribute("style", "margin-top:230px;")
             }
         }
     </script>
@@ -81,6 +81,7 @@
         .nav-links {
             display: flex;
             gap: 15px;
+            border:0;
         }
 
         .nav-links a {
@@ -97,6 +98,7 @@
             font-size: 24px;
             cursor: pointer;
             display: none;
+            height: 42.5px;
         }
 
         /* Dropdown-Menü für Mobile */
@@ -112,8 +114,9 @@
             position: fixed;
             width: 100%;
             border: 0;
-            top: 40px;
+            top: 50px;
             left: 0;
+
         }
 
         .dropdown a {

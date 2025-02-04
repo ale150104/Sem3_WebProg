@@ -45,12 +45,13 @@
     font-size: 24px;
     cursor: pointer;
     display: none;
+    height: 42.5px;
 }
 
 #dropdownMenu{
     position: fixed;
     width:100%;
-    top:45px;
+    top:50px;
     z-index: 100;
 }
 
