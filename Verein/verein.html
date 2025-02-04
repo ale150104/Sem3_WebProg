@@ -6,23 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="verein.css">
-    <link rel="stylesheet" href="../styles.css">
+    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="navfooter" href="navbarandfooter.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
 </head>
 
 <body>
 
     <canvas id="confetti-canvas"></canvas>
 
-    <nav class=" w3-bar" style="background-color:#004b9c">
-        <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="verein.html">Verein</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../Teams/teams.html">Teams</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Burger-Menü für Mobile -->
+        <button class="burger-menu" onclick="toggleDropdown()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!-- Normale Navigation für große Bildschirme -->
+        <div class="nav-links">
+            <a href="../Homepage/index.html">Home</a>
+            <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+            <a href="../Verein/verein.html">Verein</a>
+            <a href="../Teams/teams.html">Teams</a>
+        </div>
     </nav>
 
-    <h1>FC Schalke 04 - mehr als ein Verein</h1>
+    <!-- Dropdown-Menü für Mobile -->
+    <div id="dropdownMenu" class="dropdown hidden">
+        <a style=" padding-top: 1px ;margin-top: 50px;" href="../Homepage/index.html">Home</a>
+        <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+        <a href="../Verein/verein.html">Verein</a>
+        <a href="../Teams/teams.html">Teams</a>
+    </div>
+    <script>
+    
+    function toggleDropdown() {
+        let dropdown = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
+        if(dropdown.getAttribute("class")== "dropdown hidden"){
+            firstelement.setAttribute("style","margin-top:70px;")
+        }
+        if(dropdown.getAttribute("class")=="dropdown"){
+            firstelement.setAttribute("style","margin-top:245px;")
+        }
+    }
+
+    </script>
+
+    <header>
+        <h1 id="erstesElement" >FC Schalke 04 - mehr als ein Verein</h1>
+    </header>
+
 
     <div id="container">
         <div class="video-container">
@@ -35,9 +70,10 @@
         <section class="banner" id="banner1"></section>
 
         <div class="box-container">
-            <div class="box" id="box1">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box1">
                 <h2>Historie</h2>
-                <div class="content">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und entwickelte sich
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04 wurde 1904 in Gelsenkirchen gegründet und
+                    entwickelte sich
                     schnell zu einem der erfolgreichsten Fußballvereine Deutschlands. In den 1930er- und 1940er-Jahren
                     dominierte Schalke den deutschen Fußball und gewann insgesamt sieben Meisterschaften. Nach
                     schwierigen Jahrzehnten folgte in den 1990ern ein sportlicher Aufschwung, gekrönt vom UEFA-Cup-Sieg
@@ -45,9 +81,10 @@
                     Ruhrgebiet. Trotz sportlicher Höhen und Tiefen bleibt Schalke 04 eine feste Größe im deutschen
                     Fußball.</div>
             </div>
-            <div class="box" id="box2">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box2">
                 <h2>Tradition</h2>
-                <div class="content">Der FC Schalke 04, 1904 in Gelsenkirchen gegründet, ist ein Verein mit einer tief
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04, 1904 in Gelsenkirchen gegründet, ist ein
+                    Verein mit einer tief
                     verwurzelten Tradition. In den ersten Jahrzehnten seines Bestehens prägte Schalke den deutschen
                     Fußball, besonders in den 1930er- und 1940er-Jahren, als der Club sieben Meistertitel errang und als
                     unangefochtener Spitzenclub galt. In den folgenden Jahrzehnten durchlebte der Verein Höhen und
@@ -57,9 +94,10 @@
                     Ruhrgebiet. Trotz aller Herausforderungen bleibt der Verein ein unverzichtbarer Bestandteil der
                     deutschen Fußballlandschaft.</div>
             </div>
-            <div class="box" id="box3">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box3">
                 <h2>Karriere</h2>
-                <div class="content">Der FC Schalke 04 bietet seinen Mitgliedern und Anhängern nicht nur spannende
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04 bietet seinen Mitgliedern und Anhängern
+                    nicht nur spannende
                     Fußballerlebnisse, sondern auch zahlreiche Karrieremöglichkeiten. Der Verein ist ein bedeutender
                     Arbeitgeber in der Region Gelsenkirchen und bietet Arbeitsplätze in verschiedenen Bereichen,
                     darunter Verwaltung, Marketing, Eventmanagement, Jugendförderung und Sportwissenschaften. Schalke
@@ -70,9 +108,10 @@
                     bekannt für ihre familiäre Atmosphäre und die enge Zusammenarbeit auf allen Ebenen des Vereins.
                 </div>
             </div>
-            <div class="box" id="box4">
+            <div class="box w3-round-xlarge w3-hover-shadow" id="box4">
                 <h2>Nachhaltigkeit</h2>
-                <div class="content">Der FC Schalke 04 setzt sich aktiv für Nachhaltigkeit und den Schutz der Umwelt
+                <div class="content w3-panel w3-padding-16">Der FC Schalke 04 setzt sich aktiv für Nachhaltigkeit und
+                    den Schutz der Umwelt
                     ein. Der Verein verfolgt eine Reihe von Initiativen, um seinen ökologischen Fußabdruck zu verringern
                     und ein verantwortungsbewusstes Handeln zu fördern. Dazu gehören Maßnahmen wie die Reduzierung des
                     Energieverbrauchs in den Vereinsgebäuden, der Einsatz von umweltfreundlichen Materialien im Stadion
@@ -84,10 +123,9 @@
             </div>
         </div>
         <div class="slider_container">
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy1.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1934 – Deutsche Meisterschaft</h2>
@@ -98,7 +136,7 @@
 
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy2.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1935 – Deutsche Meisterschaft</h2>
@@ -109,7 +147,7 @@
 
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1937 – Deutsche Meisterschaft</h2>
@@ -121,7 +159,7 @@
 
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1939 – Deutsche Meisterschaft</h2>
@@ -133,7 +171,7 @@
 
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1940 – Deutsche Meisterschaft</h2>
@@ -145,7 +183,7 @@
 
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1942 – Deutsche Meisterschaft</h2>
@@ -157,7 +195,7 @@
 
             <div class="inner_box">
                 <div class="Meisterschale">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1958 – Deutsche Meisterschaft</h2>
@@ -169,7 +207,7 @@
 
             <div class="inner_box">
                 <div class="DFB-Pokal">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1972 – DFB-Pokal</h2>
@@ -181,7 +219,7 @@
 
             <div class="inner_box">
                 <div class="UEFA-Pokal">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>1997 – UEFA-Pokal</h2>
@@ -193,7 +231,7 @@
 
             <div class="inner_box">
                 <div class="DFB-Pokal">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>2001 – DFB-Pokal </h2>
@@ -205,7 +243,7 @@
 
             <div class="inner_box">
                 <div class="DFB-Pokal">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>2002 – DFB-Pokal</h2>
@@ -217,7 +255,7 @@
 
             <div class="inner_box">
                 <div class="DFL-Ligapokal">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>2005 – DFL-Ligapokal</h2>
@@ -229,7 +267,7 @@
 
             <div class="inner_box">
                 <div class="DFB-Pokal">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>2011 – DFB-Pokal</h2>
@@ -241,7 +279,7 @@
 
             <div class="inner_box">
                 <div class="DFL-Supercup">
-                    <img class="trophy_picture" src="trophy3.png" alt="Trophäe">
+                    <div class="trophy_picture"></div>
                 </div>
                 <div class="text_container">
                     <h2>2011 – DFL-Supercup</h2>
@@ -251,15 +289,16 @@
                 </div>
             </div>
 
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <button class="prev w3-button w3-white" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next w3-button w3-white" onclick="changeSlide(1)">&#10095;</button>
         </div>
 
         <section class="stadion">
-            <div class="stadion_picture"></div>
-
-            <div class="API_information">
+            <div class="stadion_picture w3-round-xlarge w3-hover-shadow"></div>
+            <div class="API_information w3-round-xlarge w3-hover-shadow">
                 <h2>Veltins Arena</h2>
-                <p><span role="img" aria-label="temperature">🌡️</span> Temperatur: <span id="temperature">Laden...</span></p>
+                <p><span role="img" aria-label="temperature">🌡️</span> Temperatur: <span
+                        id="temperature">Laden...</span></p>
                 <p><span role="img" aria-label="weather">☁️</span> Wetter: <span id="weather">Laden...</span></p>
                 <p><span role="img" aria-label="rain">🌧️</span> Niederschlag: <span id="rain">Laden...</span></p>
                 <p><span role="img" aria-label="wind">💨</span> Wind: <span id="wind">Laden...</span></p>
@@ -267,16 +306,11 @@
         </section>
 
         <section class="banner" id="banner2"></section>
-
     </div>
-
-    <footer>
-        <p>&copy; 2025 FC Schalke 04. Alle Rechte vorbehalten.</p>
-        <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
     <script src="verein.js"></script>
+    
 </body>
 
 </html>

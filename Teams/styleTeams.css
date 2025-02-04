@@ -1,3 +1,90 @@
+
+/* Navigation */
+.navbar {
+    position:fixed;
+    margin:0;
+    top:0;
+    background-color: #004b9c;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Mobile-Ansicht */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
+    }
+}
+
+
+/* Standard Navbar (für große Bildschirme) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Burger-Button (Standard ausgeblendet) */
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+#dropdownMenu{
+    position: fixed;
+    width:100%;
+    top:45px;
+    z-index: 100;
+}
+
+/* Dropdown-Menü für Mobile */
+.dropdown {
+    background-color: #004b9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Verstecktes Dropdown-Menü */
+.hidden {
+    display: none;
+}
+
+/* Mobile-Ansicht */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
+    }
+}
+
 /* Allgemeine Styles */
 img {
     width: 100%;  /* Bilder auf 100% der Breite skalieren */
@@ -14,10 +101,20 @@ h2 {
     border: 3px solid #042c56;
     color: white;
     font-size: 1.5rem;
-    margin-top: 20px;
+   
     border-radius: 8px;
-    padding: 20px;
+   
     width: 100%;
+    
+}
+
+#dropdownMenu{
+
+    width:100%;
+}
+
+header h2{
+    margin-top: 70px;
 }
 
 header {
@@ -125,5 +222,13 @@ h1 {
     img {
         width: 100%;  /* Bilder auf die volle Breite des Containers setzen */
         height: auto;  /* Höhe wird automatisch angepasst */
+    }
+
+    .nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
     }
 }

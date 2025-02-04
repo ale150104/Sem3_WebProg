@@ -1,3 +1,88 @@
+
+/* Navigation */
+.navbar {
+    position:fixed;
+    margin:0;
+    top:0;
+    background-color: #004b9c;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#dropdownMenu{
+    position:fixed;
+    z-index: 99;
+}
+
+/* Standard Navbar (für große Bildschirme) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Burger-Button (Standard ausgeblendet) */
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown-Menü für Mobile */
+.dropdown {
+    background-color: #004b9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Verstecktes Dropdown-Menü */
+.hidden {
+    display: none;
+}
+
+
+/* Mobile-Ansicht */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
+    }
+}
+
+section article{
+    margin-top:65px;
+}
+
+#container{
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 10px;
+
+}
+
 img{
     width: 50px;
     height: auto;
@@ -69,12 +154,7 @@ img{
     text-overflow: ellipsis;
 }
 
-#container{
-    width: 90%;
-    margin-left: 5%;
-    padding: 10px;
 
-}
 
 
 .GameContainer{
@@ -85,7 +165,7 @@ img{
 
 }
 
-.GameContainer *{
+.GameContainer .ShortInfo {
     pointer-events: none;
 }
 
@@ -105,14 +185,45 @@ img{
     
 }
 
+.LocationAndTimeInfos{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: underline;
+
+}
+
+.LocationAndTimeInfos *{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.detailedInfos .mySlides ~ .mySlides{
+    display: none;
+}
+
+.Player-Informations{
+    border-collapse: collapse;
+}
 .Player-Informations > article{
-    width: 80%;
+    width: 70%;
     max-height: 50px;
     margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .Player-Informations > article *
 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 5px 0px 5px 0px;
 }
 
@@ -126,4 +237,14 @@ img{
 
 .gameDetails hr {
     width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
 }
+
+
+
+a{
+    pointer-events: all;
+}
+
+

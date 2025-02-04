@@ -2,6 +2,73 @@ html {
     font-size: 16px;
 }
 
+
+.navbar {
+    position:fixed;
+    margin:0;
+    top:0;
+    background-color: #004b9c;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Standard Navbar (für große Bildschirme) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Burger-Button (Standard ausgeblendet) */
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown-Menü für Mobile */
+.dropdown {
+    position:fixed;
+  
+    background-color: #004b9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Verstecktes Dropdown-Menü */
+.hidden {
+    display: none;
+}
+
+#dropdownMenu{
+    position:fixed;
+    z-index: 99;
+    width: 100%;
+    top:0 !important;
+}
+
+
+
 #container {
     position: relative;
     padding-left: 2.5%;
@@ -10,13 +77,14 @@ html {
     box-sizing: border-box;
 }
 
-h1 {
+header h1 {
     color: white;
     font-size: 1.5rem;
     text-align: left;
     background-color: #004990;
     padding: 20px;
     width: 100%;
+    margin-top: 70px;
 }
 
 .video-container {
@@ -43,19 +111,19 @@ h1 {
 }
 
 #box1 {
-    background-image: url('https://storage.schalke04.de/2017/10/Schalke04_49446_Mannschaftsfoto-1440x810.jpg');
+    background-image: url('./Bilder/Historie.jpg');
 }
 
 #box2 {
-    background-image: url('https://la-melle.de/cdn/shop/files/fotorollo-schalke04-fan-support-raum-1.webp?v=1696249668');
+    background-image: url('./Bilder/Tradition.jpeg');
 }
 
 #box3 {
-    background-image: url('https://storage.schalke04.de/sites/1/2024/03/wa_berufseinsteiger-1440x810.jpg');
+    background-image: url('./Bilder/Karriere.jpg');
 }
 
 #box4 {
-    background-image: url('https://storage.schalke04.de/sites/1/2024/05/umwelt-motiv-text-s04-rgb-1440x810.jpg');
+    background-image: url('./Bilder/Nachhaltigkeit.jpg');
 }
 
 .box {
@@ -63,10 +131,8 @@ h1 {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 20px;
     text-align: center;
     font-size: 1rem;
-    border-radius: 8px;
     transition: box-shadow 0.3s ease, height 0.3s ease-in-out;
     overflow: hidden;
     height: 50px;
@@ -81,6 +147,7 @@ h1 {
     z-index: 2;
     font-size: 1.5rem;
     margin: 0;
+    padding: 16px;
 }
 
 .box::before {
@@ -126,11 +193,11 @@ h1 {
 }
 
 #banner1 {
-    background-image: url('https://pbs.twimg.com/media/FQOLMqiWYAUlKK_.jpg:large');
+    background-image: url('./Bilder/Banner.jpg');
 }
 
 #banner2 {
-    background-image: url('https://pbs.twimg.com/media/FQOLMqiWYAUlKK_.jpg:large');
+    background-image: url('./Bilder/Banner.jpg');
     background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -157,17 +224,6 @@ h1 {
 .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: #333;
-    border: 2px solid #ddd;
-    padding: 12px 20px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 6px;
-    z-index: 3;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .prev {
@@ -178,26 +234,12 @@ h1 {
     right: 10px;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    border-color: #bbb;
-}
-
-.prev:focus,
-.next:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
-}
-
-
 .Meisterschale {
     position: relative;
     left: 0;
     width: 30%;
     height: 100%;
-    background-image: url('imgbin_fc-bayern-munich-dfb-pokal-1966-67-bundesliga-meisterschale-football-png.png');
+    background-image: url('./Bilder/Meisterschale.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,7 +253,7 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    background-image: url('dfb-pokal-trophaee.png');
+    background-image: url('./Bilder/DFB-Pokal.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -225,7 +267,7 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    background-image: url('13ecrl1650460604.png');
+    background-image: url('./Bilder/DFL-Ligapokal.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -239,7 +281,7 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    background-image: url('5842fe18a6515b1e0ad75b3d.png');
+    background-image: url('./Bilder/UEFA-Pokal.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -253,7 +295,7 @@ h1 {
     left: 0;
     width: 30%;
     height: 100%;
-    background-image: url('312.png');
+    background-image: url('./Bilder/DFL-Supercup.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -289,38 +331,20 @@ h1 {
     z-index: -20;
 }
 
-footer {
-    background-color: #004da8;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 1rem;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 .stadion {
     width: 100%;
     height: 500px;
-    max-height: 500px;  /* Maximale Höhe bleibt auf 500px */
-    display: flex;  /* Flexbox aktivieren, um die Kinder nebeneinander anzuzeigen */
+    max-height: 500px;
+    display: flex;
     gap: 10px;
 }
 
 .stadion_picture {
     width: 50%;
     height: 100%;
-    background-image: url('https://img.sparknews.funkemedien.de/406442587/406442587_1718697178_v16_9_1200.jpeg');
-    background-size: cover; /* Bild anpassen, damit es den Bereich ausfüllt */
+    background-image: url('./Bilder/Stadion.jpeg');
+    background-size: cover;
     background-position: center;
-    border-radius: 8px;
 }
 
 .API_information {
@@ -328,15 +352,14 @@ footer a:hover {
     font-size: 1rem;
     color: white;
     background-color: #004da8;
-    padding: 20px; 
+    padding: 16px; 
     box-sizing: border-box; 
-    display: flex;  /* Flexbox aktivieren */
-    flex-direction: column;  /* Elemente vertikal anordnen */
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width: 600px) {
-    h1 {
+@media (min-width: 768px) {
+    header h1 {
         font-size: 3rem;
     }
 
@@ -372,7 +395,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
 
     .text_container h2 {
         font-size: 0.9rem;
@@ -424,5 +447,16 @@ footer a:hover {
 
     footer {
         font-size: 0.6rem;
+    }
+}
+
+/* Mobile-Ansicht */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
     }
 }
