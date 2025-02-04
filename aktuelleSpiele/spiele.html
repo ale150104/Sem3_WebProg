@@ -110,23 +110,45 @@
     </div>
 
 <script>
+    window.addEventListener("resize",function toggleDropdownResize(){
+        let dropdown  = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        if(window.innerWidth>=769) {
+            if(dropdown.getAttribute("class")=="dropdown"){
+                dropdown.classList.toggle("hidden");
+                firstelement.setAttribute("style","margin-top:80px;");
+            }
+        }
+       
+    });
+
     function toggleDropdown() {
         let dropdown = document.getElementById("dropdownMenu");
         let firstelement = document.getElementById("erstesElement");
         dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
         if(dropdown.getAttribute("class")== "dropdown hidden"){
-            firstelement.setAttribute("style","margin-top:0px;")
+            firstelement.setAttribute("style","margin-top:80px;")
         }
         if(dropdown.getAttribute("class")=="dropdown"){
-            firstelement.setAttribute("style","margin-top:0px;")
+            firstelement.setAttribute("style","margin-top:250px;")
         }
+    }
+
+    function toggleDropdownResize(){
+        let dropdown  = document.getElementById("dropdownMenu");
+        if(document.getElementById("screen-width").innerText>=769) {
+            if(dropdown.getAttribute("class")=="dropdown"){
+                dropdown.classList.toggle("hidden");
+            }
+        }
+       
     }
 </script>
 
     <section id="container">
-        <article class="GameContainer w3-center w3-border w3-round-xlarge w3-hover-shadow w3-padding-16" onclick="detailsVisibility('gameDetails')">
+        <article id="erstesElement" style="margin-top:80px" class="GameContainer w3-center w3-border w3-round-xlarge w3-hover-shadow w3-padding-16" onclick="detailsVisibility('gameDetails')">
 
-            <article id="erstesElement" class="ShortInfo">
+            <article  class="ShortInfo">
                 <aside class="team1">
                     <img src="../assets/schalke.png" id="schalke" alt="Schalke-Logo">
                     <p class="NameOfTeam">Schalke 04</p>

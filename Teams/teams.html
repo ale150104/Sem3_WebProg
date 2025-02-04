@@ -36,6 +36,31 @@
         <a href="../Teams/teams.html">Teams</a>
     </div>
  <script>
+ window.addEventListener("resize",function toggleDropdownResize(){
+        let dropdown  = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        if(window.innerWidth>=769) {
+            if(dropdown.getAttribute("class")=="dropdown"){
+                dropdown.classList.toggle("hidden");
+                firstelement.setAttribute("style","margin-top:80px;");
+            }
+        }
+       
+    });
+
+
+
+    window.addEventListener("resize",function resizeArticleMargin(){
+        let article1 = document.getElementById("frauen");
+        let article2 = document.getElementById("männer");
+        if(window.innerWidth<=768) {
+            article1.setAttribute("style","margin-left:2.5vw; margin-right:2.5vw;");
+            article2.setAttribute("style","margin-right:2.5vw; margin-left:2.5vw;");
+        }
+       
+    });
+
+
      function toggleDropdown() {
             let dropdown = document.getElementById("dropdownMenu");
             let firstelement = document.getElementById("erstesElement");
@@ -50,7 +75,7 @@
  </script>
 
     <header>
-        <h2 id="erstesElement" > 🔵⚪Teams 🔵⚪</h2>      
+        <h2 style="margin-top: 70px;" id="erstesElement" > 🔵⚪Teams 🔵⚪</h2>      
     </header>
     <main class="w3-round-xlarge">
             <div class="main">

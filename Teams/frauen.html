@@ -38,6 +38,18 @@
     </div>
 
     <script>
+ window.addEventListener("resize",function toggleDropdownResize(){
+        let dropdown  = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        if(window.innerWidth>=769) {
+            if(dropdown.getAttribute("class")=="dropdown"){
+                dropdown.classList.toggle("hidden");
+                firstelement.setAttribute("style","margin-top:80px;");
+            }
+        }
+       
+    });
+
         function toggleDropdown() {
             let dropdown = document.getElementById("dropdownMenu");
             let firstelement = document.getElementById("erstesElement");

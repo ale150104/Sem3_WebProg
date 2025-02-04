@@ -16,6 +16,7 @@
 #dropdownMenu{
     position:fixed;
     z-index: 99;
+    width:100%;
 }
 
 /* Standard Navbar (für große Bildschirme) */

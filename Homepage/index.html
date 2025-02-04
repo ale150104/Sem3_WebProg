@@ -60,15 +60,26 @@
             setTimeout(showSlides, 8000);
         }
         
+        window.addEventListener("resize",function toggleDropdownResize(){
+        let dropdown  = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        if(window.innerWidth>=769) {
+            if(dropdown.getAttribute("class")=="dropdown"){
+                dropdown.classList.toggle("hidden");
+                firstelement.setAttribute("style","margin-top:15px;");
+            }
+        }
+       
+    });
         function toggleDropdown() {
             let dropdown = document.getElementById("dropdownMenu");
             let firstelement = document.getElementById("erstesElement");
             dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
             if(dropdown.getAttribute("class")== "dropdown hidden"){
-            firstelement.setAttribute("style","margin-top:5px;")
+            firstelement.setAttribute("style","margin-top:15px;")
             }
             if(dropdown.getAttribute("class")=="dropdown"){
-            firstelement.setAttribute("style","margin-top:170px;")
+            firstelement.setAttribute("style","margin-top:180px;")
             }
         }
     </script>
