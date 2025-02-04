@@ -94,35 +94,22 @@ img {
 
 body {
     box-sizing: border-box;
-}
-
-h2 {
-    background-color: #004b9c;
-    border: 3px solid #042c56;
-    color: white;
-    font-size: 1.5rem;
-   text-align: center;
-    border-radius: 8px;
-   
-    width: 100%;
     
 }
+
 
 #dropdownMenu{
 
     width:100%;
 }
 
-header h2{
-    width: 100%;
-    margin-top: 70px;
-    height: auto;
+article{
+    margin: 2.5vw;
 }
 
-header {
-    padding: 0%;
-    margin: 0%;
-}
+
+
+
 
 .main {
     margin-top: 0;
@@ -139,6 +126,8 @@ header {
     grid-area: men;
     padding-bottom: 50px;
     border-radius: 8px;
+    margin-right:1.25vw;
+
 }
 
 #frauen {
@@ -147,6 +136,7 @@ header {
     grid-area: women;
     padding-bottom: 50px;
     border-radius: 8px;
+    margin-left:1.25vw;
 }
 
 footer {
@@ -156,18 +146,20 @@ footer {
     border: 0.1875em solid #042c56;
     font-size: larger;
     width:100%;
+    max-width: 100%;
     border-radius: 8px;
 }
 
 h1 {
     margin-bottom: 0px;
     color: white;
-    width: 600px;
+    width: 100%;
     padding-top: 0px;
     padding-bottom: 10px;
     text-decoration: underline white;
     border-radius: 8px;
     font-size: 1.0rem;
+    
 }
 
 .thefoot {
@@ -188,10 +180,27 @@ h1 {
     grid-area: p3;
 }
 
+#erstesElement{
+    margin:2.5vw;  
+    
+    background-color: #004b9c;
+    border: 3px solid #042c56;
+    color: white;
+    font-size: 1.5vw;
+   text-align: center;
+   margin-top: 70px;
+   height: auto;
+    border-radius: 8px;
+    
+    
+}
+
 /* Media Query für kleinere Bildschirme */
 @media screen and (max-width: 768px) {
     /* CSS-Regeln für Bildschirme mit max. Breite von 600px */
-    
+    #erstesElement{
+        margin:2.5vw;
+    }
     /* Footer */
     .thefoot {
         display: grid;
@@ -215,7 +224,8 @@ h1 {
     /* Verkleinerung der Schriftgröße für h2 */
     h2 {
         font-size: 1rem; 
-        width: 100%; /* Schriftgröße verringern */
+         /* Schriftgröße verringern */
+        margin: 0 2.5%;
     }
 
     /* Verkleinerung der Schriftgröße für h1 */
@@ -235,5 +245,8 @@ h1 {
 
     .burger-menu {
         display: block; /* Burger-Icon einblenden */
+    }
+    article{
+        margin: 2.5vw;
     }
 }
