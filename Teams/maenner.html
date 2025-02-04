@@ -42,11 +42,7 @@
                     e[0].style.display="none";
                     kader[0].style.color="white" ;
                     info[0].style.color="#53defd";
-                    text.style.display="block";
-                    
-
-             
-                      
+                    text.style.display="block";        
 
                 }
 
@@ -91,10 +87,6 @@
               
             </p>
             <main>
-                
-                
-
-
                 <div class="Spieler">
 
 
@@ -213,9 +205,6 @@
                 grid-area: M4;
                }
 
-
-            
-
                 .Spieler{
                     
                     display: grid;
@@ -245,28 +234,26 @@
 
                 #bild1 {
                     width: 100%; /* Container nimmt die volle Breite des Elternelements ein */
-    padding: 10px;  /* Etwas Abstand um das Bild */
-    background-color: #004b9c;
-    border: 0.1875em solid #042c56;
-    border-radius: 8px;
-    text-align: center;
-}
-                body{
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    
-                }
+                    padding: 10px;  /* Etwas Abstand um das Bild */
+                    background-color: #004b9c;
+                    border: 0.1875em solid #042c56;
+                    border-radius: 8px;
+                    text-align: center;
+                    }
+
+                
 
                 img{
                     border: solid 3px #0b4481;
                     height: auto;
                 }
                 #Mannschaftsbild {
-    width: 100%;  /* Bild wird 100% der Breite des Containers einnehmen */
-    height: auto;  /* Höhe wird automatisch angepasst */
-    max-width: 100%;  /* Sicherstellen, dass das Bild nicht größer als der Container wird */
-    border: 3px solid white;  /* Optional, wenn du einen Rand möchtest */
-}
+                    width: 100%;  
+                    height: auto;
+                    max-width: 100%;  
+                    border: 3px solid white;  
+                    }
+
                 div{
                     background-color: #004b9c;
                     border: 3px solid #042c56;
@@ -325,15 +312,11 @@
 
                 }
 
-
-
-
                 header{
                     margin-bottom: 20px;
                     
                 }
-
-                
+  
             </style>
 
         </main>
@@ -394,11 +377,6 @@
                             LinkedIn</p>
     
                     </article>
-                       
-            
-                           
-        
-        
         
                 </div>
                 
@@ -416,6 +394,8 @@
 
                     .thefoot{
                         display:grid;
+                        align-items: center;
+                        align-self: center;
                         grid-template-columns: 1fr 2fr 1fr;
                         grid-template-areas: 'p1 p2 p3';
                     }
@@ -442,39 +422,40 @@
                     @media screen and (max-width: 600px) {
 
     
-.thefoot {
-    display: grid;
-    grid-template-columns: 1fr;  /* Eine Spalte */
-    align-items: center;
-    justify-items: center;
-    grid-template-areas: 'p1' 'p2' 'p3';
-}
+                        .thefoot {
+                        display: grid;
+                        grid-template-columns: 1fr;  /* Eine Spalte */
+                        align-items: center;
+                        justify-items: center;
+                        grid-template-areas: 'p1' 'p2' 'p3';
+                    }
 
-/* Main Grid für die Teams */
 
-/* Verkleinerung der Schriftgröße für h2 */
-h2 {
-    font-size: 1,0rem;    }
 
-/* Verkleinerung der Schriftgröße für h1 */
-h1 {
-    font-size: 1,0rem;  /* Schriftgröße verringern */
-}
+                    h2 {
+                    font-size: 1,0rem;    }
 
-h3{
-    font-size: 1,0rem;    }
 
-h4{
-    font-size: 1,0rem;    }
-h5{
-    font-size: 1,0rem;    }
+                    h1 {
+                    font-size: 1,0rem;  
+                    }
 
-/* Bilder auf 100% der Breite skalieren */
-img {
-    width: 100%;  /* Bilder auf die volle Breite des Containers setzen */
-    height: auto;  /* Höhe wird automatisch angepasst */
-}
-}
+                    h3{
+                    font-size: 1,0rem;    }
+
+                    h4{
+                    font-size: 1,0rem;    }
+                    h5{
+                    font-size: 1,0rem;    }
+
+
+                    img {
+                    width: 100%; 
+                    height: auto; 
+                }
+                }
+
+                    
 
                     </style>
     
