@@ -41,14 +41,18 @@
             let firstelement = document.getElementById("erstesElement");
             dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
             if(dropdown.getAttribute("class")== "dropdown hidden"){
-            firstelement.setAttribute("style","margin-top:5px;")
+            firstelement.setAttribute("style","margin-top:60px;")
             }
             if(dropdown.getAttribute("class")=="dropdown"){
-            firstelement.setAttribute("style","margin-top:170px;")
+            firstelement.setAttribute("style","margin-top:220px;")
             }
         }
     </script>
 <style>
+
+
+
+
     /* Navigation */
 .navbar {
     position:fixed;
@@ -60,6 +64,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    left:0;
 }
 
 /* Standard Navbar (für große Bildschirme) */
@@ -97,6 +102,8 @@
     position:fixed;
     width:100%;
     border:0;
+    top: 40px;
+    left:0;
 }
 
 .dropdown a {
@@ -114,14 +121,9 @@
 
 </style> 
 
-
-        <header>
-
-
-        </header>
            
             <center>
-               <nav style="margin-top: 80px;" class="Navigating">
+               <nav  id="erstesElement" style="margin-top: 60px;" class="Navigating">
                 
                 <h1>Damen</h1>
                 <h3 onclick="switchToKader()">Kader</h3>
@@ -142,6 +144,10 @@
                     info[0].style.color="#53defd";
                     text.style.display="block";
                     
+
+             
+                      
+
                 }
 
                 function switchToKader(){
@@ -542,7 +548,7 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                         font-weight: bolder;
                     }
 
-                    @media screen and (max-width: 600px) {
+                    @media screen and (max-width: 768px) {
 
     
                         .thefoot {
@@ -576,6 +582,17 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                     width: 100%; 
                     height: auto; 
                 }
+
+.nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
+    }
+
+
+
                 }
 
                     </style>
