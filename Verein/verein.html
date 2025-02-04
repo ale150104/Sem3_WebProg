@@ -6,23 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="verein.css">
-    <link rel="stylesheet" href="../styles.css">
+    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
 </head>
 
 <body>
 
     <canvas id="confetti-canvas"></canvas>
 
-    <nav class=" w3-bar" style="background-color:#004b9c">
-        <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="verein.html">Verein</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../Teams/teams.html">Teams</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Burger-Menü für Mobile -->
+        <button class="burger-menu" onclick="toggleDropdown()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!-- Normale Navigation für große Bildschirme -->
+        <div class="nav-links">
+            <a href="../Homepage/index.html">Home</a>
+            <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+            <a href="../Verein/verein.html">Verein</a>
+            <a href="../Teams/teams.html">Teams</a>
+        </div>
     </nav>
 
+    <!-- Dropdown-Menü für Mobile -->
+    <div id="dropdownMenu" class="dropdown hidden">
+        <a style=" padding-top: 1px ;margin-top: 50px;" href="../Homepage/index.html">Home</a>
+        <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+        <a href="../Verein/verein.html">Verein</a>
+        <a href="../Teams/teams.html">Teams</a>
+    </div>
+    <script>
+    
+    function toggleDropdown() {
+        let dropdown = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
+        if(dropdown.getAttribute("class")== "dropdown hidden"){
+            firstelement.setAttribute("style","margin-top:70px;")
+        }
+        if(dropdown.getAttribute("class")=="dropdown"){
+            firstelement.setAttribute("style","margin-top:245px;")
+        }
+    }
+
+    </script>
+
     <header>
-        <h1>FC Schalke 04 - mehr als ein Verein</h1>
+        <h1 id="erstesElement" >FC Schalke 04 - mehr als ein Verein</h1>
     </header>
 
 

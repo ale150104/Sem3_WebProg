@@ -1,1 +1,124 @@
+
 <!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Schalke 04</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Burger-Menü für Mobile -->
+        <button class="burger-menu" onclick="toggleDropdown()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!-- Normale Navigation für große Bildschirme -->
+        <div class="nav-links">
+            <a href="../Homepage/index.html">Home</a>
+            <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+            <a href="../Verein/verein.html">Verein</a>
+            <a href="../Teams/teams.html">Teams</a>
+        </div>
+    </nav>
+
+    <!-- Dropdown-Menü für Mobile -->
+    <div id="dropdownMenu" class="dropdown hidden">
+        <a style="padding-top: 1px;" href="../Homepage/index.html">Home</a>
+        <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+        <a href="../Verein/verein.html">Verein</a>
+        <a href="../Teams/teams.html">Teams</a>
+    </div>
+    <h1 id="erstesElement" >Willkommen beim FC Schalke 04</h1>
+
+    <div class="w3-col l6 m6 s12 slideshow-container">
+        <img class="slideshow" src="Bilder Home/Schalke04-1.jpg" alt="Mannschaftsbild">
+        <img class="slideshow" src="Bilder Home/Schalke04-2.jpg" alt="Mannschaftsbild">
+        <img class="slideshow" src="Bilder Home/Schalke04-3.jpg" alt="Mannschaftsbild">
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slideshow");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 8000);
+        }
+        
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+            let firstelement = document.getElementById("erstesElement");
+            dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
+            if(dropdown.getAttribute("class")== "dropdown hidden"){
+            firstelement.setAttribute("style","margin-top:5px;")
+            }
+            if(dropdown.getAttribute("class")=="dropdown"){
+            firstelement.setAttribute("style","margin-top:170px;")
+            }
+        }
+    </script>
+
+    <!-- Hauptinhalt -->
+    <main class="content">
+        <section class="w3-container">
+            <article class="w3-round-xlarge">
+                
+                <p>Der FC Schalke 04 ist nicht nur ein Fußballverein - er ist eine Leidenschaft, eine Tradition und eine Familie, die Generationen verbindet. Seit 1904 stehen wir für Emotionen, Teamgeist und den einzigartigen Kampfgeist, der uns auszeichnet. Unsere Fans, unsere Stadt und unsere Geschichte machen uns zu dem, was wir sind: Echte Liebe in Königsblau!</p>
+            </article>
+            <article>
+                <h2>Aktuelle News - Alles rund um S04</h2>
+                <p>Bleib immer auf dem Laufenden! Hier findest du die neuesten Entwicklungen, exklusive Interviews und alles Wissenswerte rund um den Verein.<br>
+                    📢 Breaking News: [Neuester Transfer, Trainer-Updates oder Vereinspolitik]<br>
+                    ⚽ Spielberichte: Analyse der letzten Spiele mit allen Highlights<br>
+                    🎙 Exklusive Interviews: Stimmen der Spieler, Trainer und Legenden<br>
+
+                    👉 Jetzt mehr erfahren</p>
+            </article>
+            <article>
+                <h2>Die Veltins-Arena - Unsere Festung</h2>
+                <p>Unsere Heimat, unser Stolz! Die Veltins-Arena gehört zu den modernsten Stadien Europas und bietet Platz für über 60.000 leidenschaftliche Fans. Egal ob Bundesliga, DFB-Pokal oder internationale Spiele - hier schlägt das königsblaue Herz besonders laut!<br><br>
+                    Highlights der Arena:<br>
+                    🏟 Schiebedach und Rasen-Kassettensystem - Einzigartige Technik für jede Wetterlage<br>
+                    🎤 Events und Konzerte - Auch Stars wie Ed Sheeran oder Metallica rockten hier<br>
+                    🍻 Fan-Erlebnis - Große Auswahl an königsblauen Fanartikeln und Stadionklassikern
+                </p>
+            </article>
+            <article>
+                <h2>Nachwuchs und Tradition - Die Zukunft des S04</h2>
+                <p>🔹 Knappenschmiede - Eine der besten Talentschmieden Deutschlands: Hier begannen Karrieren von Spielern wie Manuel Neuer, Leroy Sané oder Mesut Özil.<br>
+                    🔹 Schalker Legenden - Wir ehren unsere größten Helden und ihre Verdienste für den Verein.<br>
+                    🔹 Soziales Engagement - Schalke setzt sich für die Region ein und lebt Solidarität.</p>
+            </article>
+            <article>
+                <h2>Werde Teil der Schalker Familie!</h2>
+                <p>💙 Mitglied werden - Profitiere von exklusiven Vorteilen und sei Teil unserer Gemeinschaft.<br>
+                    🎫 Dauerkarte sichern - Deine Eintrittskarte zu unvergesslichen Momenten.<br>
+                    🛒 Offizieller Fanshop - Trage Königsblau mit Stolz!<br><br>
+                    🔵⚪ Wir leben Schalke. Wir sind Schalke!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="w3-container w3-center" style="background-color: #004b9c; color: white; padding: 10px;">
+        &copy; 2024 FC Schalke 04. Alle Rechte vorbehalten.
+    </footer>
+
+   
+</body>
+
+</html>

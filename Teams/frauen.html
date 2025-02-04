@@ -6,16 +6,114 @@
 
         <title>Herren</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
 
     </head>
     <body>
 
-        <nav class=" w3-bar" style="background-color:#004b9c">
-            <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
-            <a style="color: white;" class="w3-bar-item w3-button" href="../aktuelleSpiele/spiele.html">Spiele</a>
-            <a style="color: white;" class="w3-bar-item w3-button" href="../Verein/verein.html">Verein</a>
-            <a style="color: white;" class="w3-bar-item w3-button" href="teams.html">Teams</a>
-        </nav> 
+        <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Burger-Menü für Mobile -->
+        <button class="burger-menu" onclick="toggleDropdown()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!-- Normale Navigation für große Bildschirme -->
+        <div class="nav-links">
+            <a href="../Homepage/index.html">Home</a>
+            <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+            <a href="../Verein/verein.html">Verein</a>
+            <a href="../Teams/teams.html">Teams</a>
+        </div>
+    </nav>
+
+    <!-- Dropdown-Menü für Mobile -->
+    <div id="dropdownMenu" class="dropdown hidden">
+        <a style="padding-top: 1px;" href="../Homepage/index.html">Home</a>
+        <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+        <a href="../Verein/verein.html">Verein</a>
+        <a href="../Teams/teams.html">Teams</a>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+            let firstelement = document.getElementById("erstesElement");
+            dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
+            if(dropdown.getAttribute("class")== "dropdown hidden"){
+            firstelement.setAttribute("style","margin-top:5px;")
+            }
+            if(dropdown.getAttribute("class")=="dropdown"){
+            firstelement.setAttribute("style","margin-top:170px;")
+            }
+        }
+    </script>
+<style>
+    /* Navigation */
+.navbar {
+    position:fixed;
+    margin:0;
+    top:0;
+    background-color: #004b9c;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Standard Navbar (für große Bildschirme) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Burger-Button (Standard ausgeblendet) */
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown-Menü für Mobile */
+.dropdown {
+   
+    background-color: #004b9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdownMenu{
+    position:fixed;
+    width:100%;
+    border:0;
+}
+
+.dropdown a {
+   
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Verstecktes Dropdown-Menü */
+.hidden {
+    display: none;
+}
+
+</style> 
+
 
         <header>
 
@@ -23,7 +121,7 @@
         </header>
            
             <center>
-               <nav class="Navigating">
+               <nav style="margin-top: 80px;" class="Navigating">
                 
                 <h1>Damen</h1>
                 <h3 onclick="switchToKader()">Kader</h3>
@@ -67,7 +165,7 @@
                
 
                 <div id="bild1">
-                    <img id="Mannschaftsbild" src="/Teams/bilder/2024-25_Team1-MannschaftsfotoDamen.webp" alt="mannschaftsfoto_24_25">
+                    <img id="Mannschaftsbild" src="bilder/2024-25_Team1-MannschaftsfotoDamen.webp" alt="mannschaftsfoto_24_25">
                     <p id="Unterschrift">Mannschaftsbild des ersten FC Schalke 04 Damen</p>
 
                 </div>
@@ -100,8 +198,8 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                     <h2>Torwart</h2>
                     <section class="Torwart">
                         
-                        <img id="T1" src="/Teams/bilder/TSophie-Kleinpas-24-25.jpg" alt=""> 
-                        <img id="T2" src="/Teams/bilder/TJulia-Matuszek-24-25.jpg" alt="">                        
+                        <img id="T1" src="bilder/TSophie-Kleinpas-24-25.jpg" alt=""> 
+                        <img id="T2" src="bilder/TJulia-Matuszek-24-25.jpg" alt="">                        
                    
                     </section>
 
@@ -109,12 +207,12 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                     <h2>Verteidiger</h2>
                     <section  class="Verteidiger">
 
-                        <img id="V1" src="/Teams/bilder/VAntonia-Heilker-24-25.jpg" alt="">
-                        <img id="V2" src="/Teams/bilder/VBarakissa-Coulibaly-24-25.jpg" alt="">
-                        <img id="V3" src="/Teams/bilder/VMeltem-Karadag-24-25.jpg" alt="">
-                        <img id="V4" src="/Teams/bilder/VMichelle-Biskup-24-25.jpg" alt="">
-                        <img id="V5" src="/Teams/bilder/VShari-Noffke-24-25.jpg" alt="">
-                        <img id="V6" src="/Teams/bilder/VTracy-Boahen-24-25.jpg" alt="">
+                        <img id="V1" src="bilder/VAntonia-Heilker-24-25.jpg" alt="">
+                        <img id="V2" src="bilder/VBarakissa-Coulibaly-24-25.jpg" alt="">
+                        <img id="V3" src="bilder/VMeltem-Karadag-24-25.jpg" alt="">
+                        <img id="V4" src="bilder/VMichelle-Biskup-24-25.jpg" alt="">
+                        <img id="V5" src="bilder/VShari-Noffke-24-25.jpg" alt="">
+                        <img id="V6" src="bilder/VTracy-Boahen-24-25.jpg" alt="">
                    
                     </section>
 
@@ -122,10 +220,10 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                     <h2>Mittelfeld</h2>
                     <section class="Mittelfeld">
                         
-                        <img id="M1" src="/Teams/bilder/Alina-HonoldM-24-25.jpg" alt="">
-                        <img id="M2" src="/Teams/bilder/MHana-Hamdi-24-25.jpg "alt="">
-                        <img id="M3" src="/Teams/bilder/MJana-Barbara-24-25.jpg" alt="">
-                        <img id="M4" src="/Teams/bilder/MPia-Beyer-24-25.jpg" alt="">
+                        <img id="M1" src="bilder/Alina-HonoldM-24-25.jpg" alt="">
+                        <img id="M2" src="bilder/MHana-Hamdi-24-25.jpg" alt="">
+                        <img id="M3" src="bilder/MJana-Barbara-24-25.jpg" alt="">
+                        <img id="M4" src="bilder/MPia-Beyer-24-25.jpg" alt="">
                     
                     </section>
 
@@ -133,9 +231,9 @@ Die Frauenmannschaft des FC Schalke 04 steht für die gleiche Hingabe und Leiden
                     <h2>Stürmer</h2>
                     <section class="Stürmer">
                        
-                        <img id="S1" src="/Teams/bilder/SAlina-Honold-24-25.jpg" alt="">
-                        <img id="S2" src="/Teams/bilder/SDana-Salic-24-25.jpg" alt="">
-                        <img id="S3" src="/Teams/bilder/SVada-Webbeler-24-25.jpg" alt="">
+                        <img id="S1" src="bilder/SAlina-Honold-24-25.jpg" alt="">
+                        <img id="S2" src="bilder/SDana-Salic-24-25.jpg" alt="">
+                        <img id="S3" src="bilder/SVada-Webbeler-24-25.jpg" alt="">
 
                     </section>
                     

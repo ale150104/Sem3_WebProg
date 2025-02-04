@@ -2,6 +2,73 @@ html {
     font-size: 16px;
 }
 
+
+.navbar {
+    position:fixed;
+    margin:0;
+    top:0;
+    background-color: #004b9c;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Standard Navbar (für große Bildschirme) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Burger-Button (Standard ausgeblendet) */
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown-Menü für Mobile */
+.dropdown {
+    position:fixed;
+  
+    background-color: #004b9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Verstecktes Dropdown-Menü */
+.hidden {
+    display: none;
+}
+
+#dropdownMenu{
+    position:fixed;
+    z-index: 99;
+    width: 100%;
+    top:0 !important;
+}
+
+
+
 #container {
     position: relative;
     padding-left: 2.5%;
@@ -17,6 +84,7 @@ header h1 {
     background-color: #004990;
     padding: 20px;
     width: 100%;
+    margin-top: 70px;
 }
 
 .video-container {
@@ -379,5 +447,16 @@ header h1 {
 
     footer {
         font-size: 0.6rem;
+    }
+}
+
+/* Mobile-Ansicht */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
     }
 }

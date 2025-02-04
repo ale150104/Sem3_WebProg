@@ -7,6 +7,8 @@
     <script src="./aktuelleSpiele.js"></script>
     <link rel="stylesheet" href="./aktuelleSpiele.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+
 
 
 
@@ -84,16 +86,47 @@
 </head>
 
 <body>
-    <nav class=" w3-bar" style="background-color:#004b9c">
-        <a style="color: white;" id="home" class="w3-bar-item w3-button" href="../index.html">Home</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="spiele.html">Spiele</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../Verein/verein.html">Verein</a>
-        <a style="color: white;" class="w3-bar-item w3-button" href="../Teams/teams.html">Teams</a>
-    </nav> 
+    <nav class="navbar">
+        <!-- Burger-Menü für Mobile -->
+        <button class="burger-menu" onclick="toggleDropdown()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!-- Normale Navigation für große Bildschirme -->
+        <div class="nav-links">
+            <a href="../Homepage/index.html">Home</a>
+            <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+            <a href="../Verein/verein.html">Verein</a>
+            <a href="../Teams/teams.html">Teams</a>
+        </div>
+    </nav>
+
+    <!-- Dropdown-Menü für Mobile -->
+    <div id="dropdownMenu" class="dropdown hidden">
+        <a style="margin-top: 40px; padding-top: 1px;" href="../Homepage/index.html">Home</a>
+        <a href="../aktuelleSpiele/spiele.html">Spiele</a>
+        <a href="../Verein/verein.html">Verein</a>
+        <a href="../Teams/teams.html">Teams</a>
+    </div>
+
+<script>
+    function toggleDropdown() {
+        let dropdown = document.getElementById("dropdownMenu");
+        let firstelement = document.getElementById("erstesElement");
+        dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
+        if(dropdown.getAttribute("class")== "dropdown hidden"){
+            firstelement.setAttribute("style","margin-top:0px;")
+        }
+        if(dropdown.getAttribute("class")=="dropdown"){
+            firstelement.setAttribute("style","margin-top:0px;")
+        }
+    }
+</script>
+
     <section id="container">
         <article class="GameContainer w3-center w3-border w3-round-xlarge w3-hover-shadow w3-padding-16" onclick="detailsVisibility('gameDetails')">
 
-            <article class="ShortInfo">
+            <article id="erstesElement" class="ShortInfo">
                 <aside class="team1">
                     <img src="../assets/schalke.png" id="schalke" alt="Schalke-Logo">
                     <p class="NameOfTeam">Schalke 04</p>
