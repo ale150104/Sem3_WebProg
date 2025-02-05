@@ -24,8 +24,16 @@ html {
 
 .nav-links a {
     color: white;
-    text-decoration: none;
     padding: 10px;
+}
+
+a {
+    text-decoration: none; /* Kein Unterstrich */
+}
+
+/* Unterstreichung nur beim Hover */
+a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
 /* Burger-Button (Standard ausgeblendet) */
