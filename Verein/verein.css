@@ -4,11 +4,11 @@ html {
 
 
 .navbar {
-    position:fixed;
-    margin:0;
-    top:0;
+    position: fixed;
+    margin: 0;
+    top: 0;
     background-color: #004b9c;
-    width:100%;
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -41,8 +41,8 @@ html {
 
 /* Dropdown-Menü für Mobile */
 .dropdown {
-    position:fixed;
-  
+    position: fixed;
+
     background-color: #004b9c;
     padding: 10px;
     display: flex;
@@ -61,11 +61,11 @@ html {
     display: none;
 }
 
-#dropdownMenu{
-    position:fixed;
+#dropdownMenu {
+    position: fixed;
     z-index: 99;
     width: 100%;
-    top:50px;
+    top: 50px;
 
 }
 
@@ -87,6 +87,7 @@ header h1 {
     padding: 20px;
     width: 100%;
     margin-top: 70px;
+    text-decoration: none;
 }
 
 .video-container {
@@ -350,14 +351,66 @@ header h1 {
 }
 
 .API_information {
-    width: 50%;  
+    width: 50%;
     font-size: 1rem;
     color: white;
     background-color: #004da8;
-    padding: 16px; 
-    box-sizing: border-box; 
+    padding: 16px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #004b9c;
+    color: white;
+    border: 0.1875em solid #042c56;
+    font-size: larger;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    /* Kein Unterstrich */
+}
+
+/* Unterstreichung nur beim Hover */
+a:hover {
+    text-decoration: underline;
+    /* Unterstreichung beim Hover */
+}
+
+h1 {
+    margin-bottom: 0px;
+    color: white;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-decoration: underline white;
+    border-radius: 8px;
+    font-size: 1.0rem;
+
+}
+
+.thefoot {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'p1 p2 p3';
+}
+
+#foot1 {
+    grid-area: p1;
+}
+
+#foot2 {
+    grid-area: p2;
+}
+
+#foot3 {
+    grid-area: p3;
 }
 
 @media (min-width: 768px) {
@@ -447,18 +500,25 @@ header h1 {
         font-size: 1.3rem;
     }
 
-    footer {
-        font-size: 0.6rem;
+    .thefoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        grid-template-areas: 'p1' 'p2' 'p3';
     }
 }
 
 /* Mobile-Ansicht */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Standard-Navbar ausblenden */
+        display: none;
+        /* Standard-Navbar ausblenden */
     }
 
     .burger-menu {
-        display: block; /* Burger-Icon einblenden */
+        display: block;
+        /* Burger-Icon einblenden */
     }
 }
