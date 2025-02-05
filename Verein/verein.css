@@ -399,6 +399,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'p1 p2 p3';
+    padding: 16px;
 }
 
 #foot1 {
