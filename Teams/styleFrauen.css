@@ -38,60 +38,7 @@ h5 {
     font-weight: bolder;
 }
 
-@media screen and (max-width: 768px) {
 
-
-    .thefoot {
-        display: grid;
-        grid-template-columns: 1fr;
-        /* Eine Spalte */
-        align-items: center;
-        justify-items: center;
-        grid-template-areas: 'p1' 'p2' 'p3';
-    }
-
-
-
-    h2 {
-        font-size: 1, 0rem;
-    }
-
-
-    h1 {
-        font-size: 1, 0rem;
-    }
-
-    h3 {
-        font-size: 1, 0rem;
-    }
-
-    h4 {
-        font-size: 1, 0rem;
-    }
-
-    h5 {
-        font-size: 1, 0rem;
-    }
-
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .nav-links {
-        display: none;
-        /* Standard-Navbar ausblenden */
-    }
-
-    .burger-menu {
-        display: block;
-        /* Burger-Icon einblenden */
-    }
-
-
-
-}
 
 #ueberschrift {
     font-size: 20px;

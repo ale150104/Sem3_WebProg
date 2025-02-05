@@ -41,15 +41,4 @@ function switchToKader() {
        
     });
 
-        function toggleDropdown() {
-            let dropdown = document.getElementById("dropdownMenu");
-            let firstelement = document.getElementById("erstesElement");
-            dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
-            if (dropdown.getAttribute("class") == "dropdown hidden") {
-                firstelement.setAttribute("style", "margin-top:60px;")
-            }
-            if (dropdown.getAttribute("class") == "dropdown") {
-                firstelement.setAttribute("style", "margin-top:230px;")
-            }
-        }
-
+       
