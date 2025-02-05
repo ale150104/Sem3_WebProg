@@ -83,10 +83,6 @@ a:hover {
     }
 }
 
-section article{
-    margin-top:65px;
-}
-
 #container{
     width: 95%;
     margin-left: 2.5%;
@@ -219,7 +215,9 @@ img{
 }
 
 .Player-Informations{
+    max-height: 250px;
     border-collapse: collapse;
+    overflow-y: auto;
 }
 .Player-Informations > article{
     width: 70%;
@@ -228,6 +226,7 @@ img{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: left;
 }
 
 .Player-Informations > article *
@@ -242,8 +241,7 @@ img{
     height: 45px;
     width: auto;
     border-radius: 15px;
-    margin-right: 10px;
-
+    margin-right: 20px;
 }
 
 .gameDetails hr {
