@@ -95,11 +95,11 @@ h5 {
 
 #ueberschrift {
     font-size: 20px;
-    padding: 10px;
 }
 
 #hiddenText {
-
+    margin-top:1rem;
+    text-align: center;
     display: none;
     color: white;
     background-color: #004b9c;
@@ -109,6 +109,7 @@ h5 {
 
 
 .Spieler {
+    margin-top:1rem;
     border-radius: 8px;
     text-align:center;
 

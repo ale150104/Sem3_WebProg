@@ -9,11 +9,6 @@ function switchToInfos() {
     kader[0].style.color = "white";
     info[0].style.color = "#53defd";
     text.style.display = "block";
-
-
-
-
-
 }
 
 function switchToKader() {
