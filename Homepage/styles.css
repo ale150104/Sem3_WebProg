@@ -51,6 +51,7 @@ body {
 
 a {
     text-decoration: none; /* Kein Unterstrich */
+    color: white;
 }
 
 /* Unterstreichung nur beim Hover */
@@ -100,6 +101,8 @@ a:hover {
 
 #erstesElement{
     margin-top: 68px;
+    width:95%;
+    margin:auto
 }
 
 /* Inhalt */
@@ -114,7 +117,7 @@ article {
     padding:10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .slideshow-container {
@@ -160,5 +163,139 @@ footer{
 
     .burger-menu {
         display: block; /* Burger-Icon einblenden */
+    }
+}
+
+
+footer {
+    margin-top: 20px;
+    background-color: #004b9c;
+    color: white;
+    border: 0.1875em solid #042c56;
+    font-size: larger;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    /* Kein Unterstrich */
+}
+
+/* Unterstreichung nur beim Hover */
+a:hover {
+    text-decoration: underline;
+    /* Unterstreichung beim Hover */
+}
+
+h1 {
+    margin-bottom: 0px;
+    color: white;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-decoration: underline white;
+    border-radius: 8px;
+    font-size: 1.0rem;
+
+}
+
+.thefoot {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'p1 p2 p3';
+}
+
+#foot1 {
+    grid-area: p1;
+}
+
+#foot2 {
+    grid-area: p2;
+}
+
+#foot3 {
+    grid-area: p3;
+}
+
+#erstesElement {
+    margin: 2.5vw;
+    margin-bottom: 0;
+    background-color: #004b9c;
+    border: 3px solid #042c56;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 70px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
+
+    /* CSS-Regeln für Bildschirme mit max. Breite von 600px */
+    #erstesElement {
+        margin: 2.5vw;
+    }
+
+    /* Footer */
+    .thefoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Eine Spalte */
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        grid-template-areas: 'p1' 'p2' 'p3';
+    }
+
+    /* Main Grid für die Teams */
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Eine Spalte */
+        grid-template-areas: 'men' 'women';
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    /* Verkleinerung der Schriftgröße für h2 */
+    h2 {
+        font-size: 1rem;
+        /* Schriftgröße verringern */
+        margin: 0 2.5%;
+    }
+
+    /* Verkleinerung der Schriftgröße für h1 */
+    h1 {
+        font-size: 0.75rem;
+        /* Schriftgröße verringern */
+    }
+
+    /* Bilder auf 100% der Breite skalieren */
+    img {
+        width: 100%;
+        /* Bilder auf die volle Breite des Containers setzen */
+        height: auto;
+        /* Höhe wird automatisch angepasst */
+    }
+
+    .nav-links {
+        display: none;
+        /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block;
+        /* Burger-Icon einblenden */
+    }
+
+    article {
+        margin: 2.5vw;
     }
 }

@@ -1,5 +1,6 @@
 
 footer {
+    margin: 0;
     margin-top: 20px;
     background-color: #004b9c;
     color: white;
@@ -7,6 +8,7 @@ footer {
     font-size: larger;
     height: 30%;
     border-radius: 8px;
+
 }
 
 .thefoot {
@@ -59,8 +61,13 @@ h5 {
     margin-top:1rem;
     border-radius: 8px;
     text-align:center;
+    background-color: #004b9c;
+    border: 3px solid #042c56;
 
 }
+
+
+
 
 #Unterschrift {
     color: white;
@@ -73,11 +80,13 @@ h2 {
     color: white;
     font-size: 50px;
     text-align: center;
+    border: 3px solid #042c56;
 }
 
 
 #bild1 {
     width: 100%;
+    
     /* Container nimmt die volle Breite des Elternelements ein */
     padding: 10px;
     /* Etwas Abstand um das Bild */
@@ -87,11 +96,7 @@ h2 {
     text-align: center;
 }
 
-body {
-    margin-left: 5%;
-    margin-right: 5%;
 
-}
 
 a {
     text-decoration: none;
@@ -106,6 +111,13 @@ a:hover {
 
 img {
     border: solid 3px #0b4481;
+}
+
+#alles{
+    margin-left:2.5vw;
+    margin-right:2.5vw;
+    background-color: white;
+    border:0;
 }
 
 #Mannschaftsbild {
@@ -133,7 +145,7 @@ h1 {
     font-size: 50px;
     margin: 0;
     margin-bottom: 1px;
-    grid-area: Herren;
+    grid-area:Herren;
     border-radius: 8px;
 
 }
@@ -183,15 +195,7 @@ header {
 
 }
 
-footer {
-    margin-top: 20px;
-    background-color: #004b9c;
-    color: white;
-    border: 3px solid #042c56;
-    font-size: larger;
-    height: 30%;
-    border-radius: 8px;
-}
+
 
 .thefoot {
     display: grid;
