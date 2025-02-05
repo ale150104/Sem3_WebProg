@@ -8,7 +8,8 @@
     <title>Herren</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
-
+    <link rel="stylesheet" href="../Teams/styleFrauen.css">
+    <script src="../Teams/scriptFrauen.js"></script>
 </head>
 
 <body>
@@ -37,20 +38,19 @@
         <a href="../Teams/teams.html">Teams</a>
     </div>
 
-    <script>
- window.addEventListener("resize",function toggleDropdownResize(){
-        let dropdown  = document.getElementById("dropdownMenu");
-        let firstelement = document.getElementById("erstesElement");
-        if(window.innerWidth>=769) {
-            if(dropdown.getAttribute("class")=="dropdown"){
-                dropdown.classList.toggle("hidden");
-                firstelement.setAttribute("style","margin-top:60px;");
-            }
-        }
-       
-    });
+    
+        <nav id="erstesElement" style="margin-top: 60px;" class="Navigating">
 
+            <h1>Damen</h1>
+            <h3 onclick="switchToKader()">Kader</h3>
+            <h4 onclick="switchToInfos()">Infos</h4>
+
+
+        </nav>
+
+<script>
         function toggleDropdown() {
+            alert("hallo");
             let dropdown = document.getElementById("dropdownMenu");
             let firstelement = document.getElementById("erstesElement");
             dropdown.classList.toggle("hidden");  // This will add or remove the "hidden" class
@@ -61,122 +61,63 @@
                 firstelement.setAttribute("style", "margin-top:230px;")
             }
         }
-    </script>
-    <style>
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            margin: 0;
-            top: 0;
-            background-color: #004b9c;
-            width: 100%;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            left: 0;
-        }
-
-        /* Standard Navbar (für große Bildschirme) */
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            border:0;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        /* Burger-Button (Standard ausgeblendet) */
-        .burger-menu {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            display: none;
-            height: 42.5px;
-        }
-
-        /* Dropdown-Menü für Mobile */
-        .dropdown {
-
-            background-color: #004b9c;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #dropdownMenu {
-            position: fixed;
-            width: 100%;
-            border: 0;
-            top: 50px;
-            left: 0;
-
-        }
-
-        .dropdown a {
-
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-        }
-
-        /* Verstecktes Dropdown-Menü */
-        .hidden {
-            display: none;
-        }
-    </style>
+</script>
+<style>
+@media screen and (max-width: 768px) {
 
 
-    <center>
-        <nav id="erstesElement" style="margin-top: 60px;" class="Navigating">
-
-            <h1>Damen</h1>
-            <h3 onclick="switchToKader()">Kader</h3>
-            <h4 onclick="switchToInfos()">Infos</h4>
-
-
-        </nav>
-
-        <script>
-            function switchToInfos() {
-                let e = document.getElementsByTagName("main");
-                let kader = document.getElementsByTagName("h3");
-                let info = document.getElementsByTagName("h4");
-                let text = document.getElementById("hiddenText");
-
-                e[0].style.display = "none";
-                kader[0].style.color = "white";
-                info[0].style.color = "#53defd";
-                text.style.display = "block";
+    .thefoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Eine Spalte */
+        align-items: center;
+        justify-items: center;
+        grid-template-areas: 'p1' 'p2' 'p3';
+    }
 
 
 
+    h2 {
+        font-size: 1, 0rem;
+    }
 
 
-            }
+    h1 {
+        font-size: 1, 0rem;
+    }
 
-            function switchToKader() {
-                let e = document.getElementsByTagName("main");
-                let kader = document.getElementsByTagName("h3");
-                let info = document.getElementsByTagName("h4");
-                let text = document.getElementById("hiddenText");
+    h3 {
+        font-size: 1, 0rem;
+    }
 
-                e[0].style.display = "block";
-                kader[0].style.color = "#53defd";
-                info[0].style.color = "white";
-                text.style.display = "none";
+    h4 {
+        font-size: 1, 0rem;
+    }
 
-            }
+    h5 {
+        font-size: 1, 0rem;
+    }
 
-        </script>
 
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links {
+        display: none;
+        /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block;
+        /* Burger-Icon einblenden */
+    }
+
+
+
+}
+</style>
 
         <div id="bild1">
             <img id="Mannschaftsbild" src="bilder/2024-25_Team1-MannschaftsfotoDamen.webp" alt="mannschaftsfoto_24_25">
@@ -239,8 +180,8 @@
                 <h2>Torwart</h2>
                 <section class="Torwart">
 
-                    <img id="T1" src="bilder/TSophie-Kleinpas-24-25.jpg" alt="">
-                    <img id="T2" src="bilder/TJulia-Matuszek-24-25.jpg" alt="">
+                    <img src="bilder/TSophie-Kleinpas-24-25.jpg" alt="">
+                    <img src="bilder/TJulia-Matuszek-24-25.jpg" alt="">
 
                 </section>
 
@@ -248,12 +189,12 @@
                 <h2>Verteidiger</h2>
                 <section class="Verteidiger">
 
-                    <img id="V1" src="bilder/VAntonia-Heilker-24-25.jpg" alt="">
-                    <img id="V2" src="bilder/VBarakissa-Coulibaly-24-25.jpg" alt="">
-                    <img id="V3" src="bilder/VMeltem-Karadag-24-25.jpg" alt="">
-                    <img id="V4" src="bilder/VMichelle-Biskup-24-25.jpg" alt="">
-                    <img id="V5" src="bilder/VShari-Noffke-24-25.jpg" alt="">
-                    <img id="V6" src="bilder/VTracy-Boahen-24-25.jpg" alt="">
+                    <img src="bilder/VAntonia-Heilker-24-25.jpg" alt="">
+                    <img src="bilder/VBarakissa-Coulibaly-24-25.jpg" alt="">
+                    <img src="bilder/VMeltem-Karadag-24-25.jpg" alt="">
+                    <img src="bilder/VMichelle-Biskup-24-25.jpg" alt="">
+                    <img src="bilder/VShari-Noffke-24-25.jpg" alt="">
+                    <img src="bilder/VTracy-Boahen-24-25.jpg" alt="">
 
                 </section>
 
@@ -261,10 +202,10 @@
                 <h2>Mittelfeld</h2>
                 <section class="Mittelfeld">
 
-                    <img id="M1" src="bilder/Alina-HonoldM-24-25.jpg" alt="">
-                    <img id="M2" src="bilder/MHana-Hamdi-24-25.jpg" alt="">
-                    <img id="M3" src="bilder/MJana-Barbara-24-25.jpg" alt="">
-                    <img id="M4" src="bilder/MPia-Beyer-24-25.jpg" alt="">
+                    <img src="bilder/Alina-HonoldM-24-25.jpg" alt="">
+                    <img src="bilder/MHana-Hamdi-24-25.jpg" alt="">
+                    <img src="bilder/MJana-Barbara-24-25.jpg" alt="">
+                    <img src="bilder/MPia-Beyer-24-25.jpg" alt="">
 
                 </section>
 
@@ -272,9 +213,9 @@
                 <h2>Stürmer</h2>
                 <section class="Stürmer">
 
-                    <img id="S1" src="bilder/SAlina-Honold-24-25.jpg" alt="">
-                    <img id="S2" src="bilder/SDana-Salic-24-25.jpg" alt="">
-                    <img id="S3" src="bilder/SVada-Webbeler-24-25.jpg" alt="">
+                    <img src="bilder/SAlina-Honold-24-25.jpg" alt="">
+                    <img src="bilder/SDana-Salic-24-25.jpg" alt="">
+                    <img src="bilder/SVada-Webbeler-24-25.jpg" alt="">
 
                 </section>
 
@@ -282,7 +223,8 @@
             </div>
 
         </main>
-
+    
+    <footer>
 
         <div class="thefoot w3-round-xlarge w3-padding-16">
             <article id="foot1">
@@ -294,15 +236,15 @@
                     45891 Gelsenkirchen
                     <br>
                     
-                    E-Mail: wirdSindEigKeineSchalkeFans@schalke04.de
+                    E-Mail: wirdSindEigKeine<wbr>SchalkeFans@schalke04.de
                     <br>
                     Telefon: 0209 | 97751877
                     <br>
                     
-                    © 1904-2025 FC Gelsenkirchen-Schalke 04 e.V.</p>
+                    © 1904-2025 FC Gelsenkirchen-<wbr>Schalke 04 e.V.</p>
 
             </article>
-            <footer>
+            
             
             <article  id="foot2">
                 <h5>Infos</h5>
@@ -348,422 +290,6 @@
 
         </div>
                 
-
-                    <style>
-                    footer{
-                        margin-top: 20px;
-                        background-color: #004b9c;
-                        color: white;
-                        border: 3px solid #042c56;
-                        font-size: larger;
-                        height: 30%;
-                        border-radius: 8px;
-                    }
-
-                    .thefoot{
-                        display:grid;
-                        grid-template-columns: 1fr 2fr 1fr;
-                        grid-template-areas: 'p1 p2 p3';
-                    }
-    </style>
-    </center>
-
-
-
-    <style>
-        #ueberschrift {
-            font-size: 20px;
-            padding: 10px;
-        }
-
-        #hiddenText {
-
-            display: none;
-            color: white;
-            background-color: #004b9c;
-            border: 3px solid #042c56;
-            border-radius: 8px;
-        }
-
-
-        #T1 {
-            grid-area: T1;
-        }
-
-        #T2 {
-            grid-area: T2;
-        }
-
-        #S1 {
-            grid-area: S1;
-        }
-
-        #S2 {
-            grid-area: S2;
-        }
-
-        #S3 {
-            grid-area: S3;
-        }
-
-        #V1 {
-            grid-area: V1;
-        }
-
-        #V2 {
-            grid-area: V2;
-        }
-
-        #V3 {
-            grid-area: V3;
-        }
-
-        #V4 {
-            grid-area: V4;
-        }
-
-        #V5 {
-            grid-area: V5;
-        }
-
-        #V6 {
-            grid-area: V6;
-        }
-
-        #M1 {
-            grid-area: M1;
-        }
-
-        #M2 {
-            grid-area: M2;
-        }
-
-        #M3 {
-            grid-area: M3;
-        }
-
-        #M4 {
-            grid-area: M4;
-        }
-
-        .Spieler {
-
-            display: grid;
-            grid-template-columns: 4fr;
-            border-radius: 8px;
-            grid-template-areas: 'T1 T2'
-                'V1 V2 V3 V4'
-                'V5 V6'
-                'M1 M2 M3 M4'
-                'S1 S2 S3';
-
-        }
-
-        .Torwart img {
-            height: 380px;
-            width: 380px;
-
-        }
-
-        .Verteidiger img {
-            height: 380px;
-            width: 380px;
-
-        }
-
-        .Mittelfeld img {
-            height: 380px;
-            width: 380px;
-
-        }
-
-        .Stürmer img {
-            height: 380px;
-            width: 380px;
-
-        }
-
-        #Unterschrift {
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-        }
-
-        h2 {
-            background-color: #1666ba;
-            color: white;
-            font-size: 50px;
-            text-align: center;
-        }
-
-
-        #bild1 {
-            width: 100%;
-            /* Container nimmt die volle Breite des Elternelements ein */
-            padding: 10px;
-            /* Etwas Abstand um das Bild */
-            background-color: #004b9c;
-            border: 0.1875em solid #042c56;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        body {
-            margin-left: 5%;
-            margin-right: 5%;
-
-        }
-
-        a {
-            text-decoration: none; /* Kein Unterstrich */
-        }
-
-        /* Unterstreichung nur beim Hover */
-        a:hover {
-            text-decoration: underline; /* Unterstreichung beim Hover */
-        }
-
-        img {
-            border: solid 3px #0b4481;
-        }
-
-        #Mannschaftsbild {
-            width: 100%;
-            /* Bild wird 100% der Breite des Containers einnehmen */
-            height: auto;
-            /* Höhe wird automatisch angepasst */
-            max-width: 100%;
-            /* Sicherstellen, dass das Bild nicht größer als der Container wird */
-            border: 3px solid white;
-            /* Optional, wenn du einen Rand möchtest */
-        }
-
-        div {
-            background-color: #004b9c;
-            border: 3px solid #042c56;
-
-        }
-
-        h1 {
-            background-color: #004b9c;
-            border: 3px solid #042c56;
-            color: white;
-            font-size: 50px;
-            padding-left: 10px;
-            margin: 0;
-            margin-bottom: 1px;
-            grid-area: Herren;
-            border-radius: 8px;
-
-        }
-
-        h3 {
-            background-color: #004b9c;
-            border: 3px solid #53defd;
-            color: #53defd;
-            font-size: 35px;
-            padding-left: 10px;
-            margin: 0;
-            margin-bottom: 1px;
-            grid-area: Kader;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-
-        h4 {
-            background-color: #004b9c;
-            border: 3px solid #53defd;
-            color: white;
-            font-size: 35px;
-            padding-left: 10px;
-            margin: 0;
-            margin-bottom: 1px;
-            grid-area: Infos;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-
-        .Navigating {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            ;
-            grid-template-areas: 'Kader Herren Infos';
-            border-radius: 8px;
-
-        }
-
-
-        header {
-            margin-bottom: 20px;
-
-        }
-    </style>
-
-    
-
-    <footer>
-        <center>
-            <div class="thefoot">
-                <article id="foot1">
-                    <h5>FC Schalke 04</h5>
-                    <p>FC Gelsenkirchen-Schalke 04 e.V. <br>
-
-                        Ernst-Kuzorra-Weg 1
-                        <br>
-                        45891 Gelsenkirchen
-                        <br>
-
-                        E-Mail: wirdSindEigKeineSchalkeFans@schalke04.de
-                        <br>
-                        Telefon: 0209 | 97751877
-                        <br>
-
-                        © 1904-2025 FC Gelsenkirchen-Schalke 04 e.V.
-                    </p>
-
-                </article>
-
-                <article id="foot2">
-                    <h5>Infos</h5>
-
-                    <p>
-                        Impressum
-                        <br>
-                        Kontakt Schalke 04
-                        <br>
-                        FAQ
-                        <br>
-                        Medien/Presse
-                        <br>
-                        Datenschutz
-                        <br>
-                        Haftungsausschluss
-                        <br>
-                        Cookie-Einstellungen
-                    </p>
-
-                </article>
-
-                <article id="foot3">
-                    <h5>Social Media</h5>
-
-                    <p>
-                        Facebook <br>
-                        X <br>
-                        Instagram <br>
-                        Threads <br>
-                        YouTube <br>
-                        WhatsApp <br>
-                        TikTok <br>
-                        Sina Weibo <br>
-                        LinkedIn</p>
-
-                </article>
-
-
-            </div>
-
-
-            <style>
-                footer {
-                    margin-top: 20px;
-                    background-color: #004b9c;
-                    color: white;
-                    border: 3px solid #042c56;
-                    font-size: larger;
-                    height: 30%;
-                    border-radius: 8px;
-                }
-
-                .thefoot {
-                    display: grid;
-                    grid-template-columns: 1fr 2fr 1fr;
-                    grid-template-areas: 'p1 p2 p3';
-                }
-
-
-                #foot1 {
-
-                    grid-area: p1;
-                }
-
-                #foot2 {
-                    grid-area: p2;
-                }
-
-                #foot3 {
-                    grid-area: p3;
-                }
-
-                h5 {
-                    border: 0px;
-                    font-weight: bolder;
-                }
-
-                @media screen and (max-width: 768px) {
-
-
-                    .thefoot {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        /* Eine Spalte */
-                        align-items: center;
-                        justify-items: center;
-                        grid-template-areas: 'p1' 'p2' 'p3';
-                    }
-
-
-
-                    h2 {
-                        font-size: 1, 0rem;
-                    }
-
-
-                    h1 {
-                        font-size: 1, 0rem;
-                    }
-
-                    h3 {
-                        font-size: 1, 0rem;
-                    }
-
-                    h4 {
-                        font-size: 1, 0rem;
-                    }
-
-                    h5 {
-                        font-size: 1, 0rem;
-                    }
-
-
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
-
-                    .nav-links {
-                        display: none;
-                        /* Standard-Navbar ausblenden */
-                    }
-
-                    .burger-menu {
-                        display: block;
-                        /* Burger-Icon einblenden */
-                    }
-
-
-
-                }
-            </style>
-
-
-        </center>
-
     </footer>
 
 </body>

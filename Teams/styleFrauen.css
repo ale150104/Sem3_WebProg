@@ -1,0 +1,320 @@
+
+footer {
+    margin-top: 20px;
+    background-color: #004b9c;
+    color: white;
+    border: 3px solid #042c56;
+    font-size: larger;
+    height: 30%;
+    border-radius: 8px;
+}
+
+.thefoot {
+    text-align: center;
+    border: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'p1 p2 p3';
+}
+
+
+#foot1 {
+    
+    grid-area: p1;
+}
+
+#foot2 {
+    
+    grid-area: p2;
+}
+
+#foot3 {
+    
+    grid-area: p3;
+}
+
+h5 {
+    border: 0px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .thefoot {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Eine Spalte */
+        align-items: center;
+        justify-items: center;
+        grid-template-areas: 'p1' 'p2' 'p3';
+    }
+
+
+
+    h2 {
+        font-size: 1, 0rem;
+    }
+
+
+    h1 {
+        font-size: 1, 0rem;
+    }
+
+    h3 {
+        font-size: 1, 0rem;
+    }
+
+    h4 {
+        font-size: 1, 0rem;
+    }
+
+    h5 {
+        font-size: 1, 0rem;
+    }
+
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links {
+        display: none;
+        /* Standard-Navbar ausblenden */
+    }
+
+    .burger-menu {
+        display: block;
+        /* Burger-Icon einblenden */
+    }
+
+
+
+}
+
+#ueberschrift {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#hiddenText {
+
+    display: none;
+    color: white;
+    background-color: #004b9c;
+    border: 3px solid #042c56;
+    border-radius: 8px;
+}
+
+
+.Spieler {
+    border-radius: 8px;
+    text-align:center;
+
+}
+
+#Unterschrift {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    background-color: #1666ba;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+#bild1 {
+    width: 100%;
+    /* Container nimmt die volle Breite des Elternelements ein */
+    padding: 10px;
+    /* Etwas Abstand um das Bild */
+    background-color: #004b9c;
+    border: 0.1875em solid #042c56;
+    border-radius: 8px;
+    text-align: center;
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+a {
+    text-decoration: none;
+    /* Kein Unterstrich */
+}
+
+/* Unterstreichung nur beim Hover */
+a:hover {
+    text-decoration: underline;
+    /* Unterstreichung beim Hover */
+}
+
+img {
+    border: solid 3px #0b4481;
+}
+
+#Mannschaftsbild {
+    width: 100%;
+    /* Bild wird 100% der Breite des Containers einnehmen */
+    height: auto;
+    /* Höhe wird automatisch angepasst */
+    max-width: 100%;
+    /* Sicherstellen, dass das Bild nicht größer als der Container wird */
+    border: 3px solid white;
+    /* Optional, wenn du einen Rand möchtest */
+}
+
+div {
+    background-color: #004b9c;
+    border: 3px solid #042c56;
+
+}
+
+h1 {
+    text-align: center;
+    background-color: #004b9c;
+    border: 3px solid #042c56;
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 1px;
+    grid-area: Herren;
+    border-radius: 8px;
+
+}
+
+h3 {
+    background-color: #004b9c;
+    border: 3px solid #53defd;
+    color: #53defd;
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 1px;
+    grid-area: Kader;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+h4 {
+    text-align: center;
+    background-color: #004b9c;
+    border: 3px solid #53defd;
+    color: white;
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 1px;
+    grid-area: Infos;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.Navigating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    ;
+    grid-template-areas: 'Kader Herren Infos';
+    border-radius: 8px;
+
+}
+
+
+header {
+    margin-bottom: 20px;
+
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #004b9c;
+    color: white;
+    border: 3px solid #042c56;
+    font-size: larger;
+    height: 30%;
+    border-radius: 8px;
+}
+
+.thefoot {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'p1 p2 p3';
+}
+
+.navbar {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    background-color: #004b9c;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+}
+
+/* Standard Navbar (für große Bildschirme) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    border: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Burger-Button (Standard ausgeblendet) */
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    height: 42.5px;
+}
+
+/* Dropdown-Menü für Mobile */
+.dropdown {
+
+    background-color: #004b9c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdownMenu {
+    position: fixed;
+    width: 100%;
+    border: 0;
+    top: 50px;
+    left: 0;
+
+}
+
+.dropdown a {
+
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Verstecktes Dropdown-Menü */
+.hidden {
+    display: none;
+}

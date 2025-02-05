@@ -16,7 +16,7 @@ html{
 /* Allgemeine Styles */
 body {
     
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
     background-color: #f4f4f4;
     margin:0;
     width:100%;
@@ -32,6 +32,7 @@ body {
     background-color: #004b9c;
     width:100%;
     padding: 10px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,8 +46,16 @@ body {
 
 .nav-links a {
     color: white;
-    text-decoration: none;
     padding: 10px;
+}
+
+a {
+    text-decoration: none; /* Kein Unterstrich */
+}
+
+/* Unterstreichung nur beim Hover */
+a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
 /* Burger-Button (Standard ausgeblendet) */
@@ -86,6 +95,11 @@ body {
 /* Verstecktes Dropdown-Menü */
 .hidden {
     display: none;
+}
+
+
+#erstesElement{
+    margin-top: 68px;
 }
 
 /* Inhalt */
@@ -130,6 +144,12 @@ h1{
 
 img{
     margin-bottom: 10px;
+}
+
+footer{
+    background-color: #004b9c;
+    color: white;
+    padding: 10px;
 }
 
 /* Mobile-Ansicht */

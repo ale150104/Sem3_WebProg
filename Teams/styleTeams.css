@@ -127,6 +127,7 @@ article {
 }
 
 #männer {
+    text-align: center;
     background-color: #004b9c;
     border: 0.1875em solid #042c56;
     grid-area: men;
@@ -137,6 +138,7 @@ article {
 }
 
 #frauen {
+    text-align: center;
     background: #004b9c;
     border: 0.1875em solid #042c56;
     grid-area: women;
@@ -180,6 +182,7 @@ h1 {
 }
 
 .thefoot {
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'p1 p2 p3';
@@ -199,7 +202,7 @@ h1 {
 
 #erstesElement {
     margin: 2.5vw;
-
+    margin-bottom: 0;
     background-color: #004b9c;
     border: 3px solid #042c56;
     color: white;
